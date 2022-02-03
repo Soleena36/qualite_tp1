@@ -2,6 +2,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 class LOCMetricsMeasurer{
     
@@ -28,11 +30,27 @@ class LOCMetricsMeasurer{
             File classFile = new File(classFileName);
             Scanner scanner = new Scanner(classFile);
             Boolean insideBlockComment = false;
+            //Boolean insideMethod = false;
+            int nb_methods=0;
+            //(?!if|while|for|catch|do|new|return)^(public\s+|private\s+|protected\s+).+(.)\s{$ 
+            //above is regex for matching function definition from:
+            // https://stackoverflow.com/questions/47387307/regular-expression-that-matches-java-method-definition
+            Pattern method_def = Pattern.compile("(?!if|while|for|catch|do|new|return)^(public\\s+|private\\s+|protected\\s+).+(.)\\s?\\{$", Pattern.CASE_INSENSITIVE);
+            Matcher matcher;
             while (scanner.hasNextLine()){
                 String line = scanner.nextLine().strip();
+                matcher = method_def.matcher(line);
                 //System.out.println(line);
                 if (line.isEmpty()){
                     continue;
+                // } else if ((line.startsWith("public") ||
+                //             line.startsWith("private") ||
+                //             line.startsWith("protected") ) &&
+                //             !line.contains("class")){
+                //                 insideMethod = true;
+                } if (matcher.find()){
+                    //insideMethod = true;
+                    nb_methods++;
                 } else if (insideBlockComment){
                     loc++;
                     cloc++;
@@ -48,6 +66,7 @@ class LOCMetricsMeasurer{
                     loc++;
                 }
             }
+            System.out.println(nb_methods);
             scanner.close();
         } catch(FileNotFoundException e){ //TODO: should have other file IO errors in there too
             System.out.println("Error reading class file.");
