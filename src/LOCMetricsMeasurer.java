@@ -38,7 +38,7 @@ class LOCMetricsMeasurer{
             Pattern method_def = Pattern.compile("(?!if|while|for|catch|do|new|return)^(public\\s+|private\\s+|protected\\s+).+(.)\\s?\\{$", Pattern.CASE_INSENSITIVE);
             Matcher matcher;
             while (scanner.hasNextLine()){
-                String line = scanner.nextLine().strip();
+                String line = scanner.nextLine().trim(); // please remember
                 matcher = method_def.matcher(line);
                 //System.out.println(line);
                 if (line.isEmpty()){
