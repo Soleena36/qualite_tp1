@@ -26,12 +26,14 @@ class LOCMetricsMeasurer{
         //TODO: change so this throws an exception and caller has to handle file error
         int loc = 0;
         int cloc = 0;
+        float wmc = 1;
         try{
             File classFile = new File(classFileName);
             Scanner scanner = new Scanner(classFile);
             Boolean insideBlockComment = false;
             //Boolean insideMethod = false;
             int nb_methods=0;
+            int nb_predicates = 0;
             //(?!if|while|for|catch|do|new|return)^(public\s+|private\s+|protected\s+).+(.)\s{$ 
             //above is regex for matching function definition from:
             // https://stackoverflow.com/questions/47387307/regular-expression-that-matches-java-method-definition
@@ -65,15 +67,23 @@ class LOCMetricsMeasurer{
                 } else {
                     loc++;
                 }
+
+                if (line.contains("if") ||
+                    line.contains("else") ||
+                    line.contains("while") ||
+                    line.contains("for")){
+                        nb_predicates++;
+                    }
             }
-            System.out.println(nb_methods);
+            wmc = (nb_methods + nb_predicates)/ (float)nb_methods;
             scanner.close();
         } catch(FileNotFoundException e){ //TODO: should have other file IO errors in there too
             System.out.println("Error reading class file.");
             e.printStackTrace();
         }
 
-        return new LOCMetrics(loc, cloc);
+
+        return new LOCMetrics(loc, cloc, wmc);
     }
 
     public LOCMetrics computePackageLOCMetrics(ArrayList<LOCMetrics> childrenMetrics){
