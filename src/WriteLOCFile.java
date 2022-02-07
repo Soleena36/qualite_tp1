@@ -25,7 +25,7 @@ public class WriteLOCFile {
 
         return javaFile + ","+ String.valueOf(loc) + "," + String.valueOf(cloc) + "," + String.valueOf(dc);
     }
-
+    
     public static void main(String[] args) {
 
     }
