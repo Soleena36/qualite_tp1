@@ -31,4 +31,16 @@ class LOCMetrics{
 
         return res;
     }
+
+    public float getDc() {
+        return dc;
+    }
+
+    public int getCloc() {
+        return cloc;
+    }
+
+    public int getLoc() {
+        return loc;
+    }
 }
