@@ -83,11 +83,20 @@ class LOCMetricsMeasurer{
         }
 
 
-        return new LOCMetrics(loc, cloc, wmc);
+        return new LOCMetrics(classFileName, false, loc, cloc, wmc);
     }
 
-    public LOCMetrics computePackageLOCMetrics(ArrayList<LOCMetrics> childrenMetrics){
-       //TODO: implement
-        return new LOCMetrics();
+    public static LOCMetrics computePackageLOCMetrics(String dirName, ArrayList<LOCMetrics> childrenMetrics){
+        int tot_loc = 0;
+        int tot_cloc = 0;
+        float tot_wmc = 0;
+
+        for (LOCMetrics childMetric : childrenMetrics){
+            tot_loc += childMetric.getLoc();
+            tot_cloc += childMetric.getCloc();
+            tot_wmc += childMetric.getWmc();
+        }
+
+        return new LOCMetrics(dirName, true, tot_loc, tot_cloc, tot_wmc);
     }
 }

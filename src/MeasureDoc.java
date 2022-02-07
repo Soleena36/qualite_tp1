@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -25,7 +26,7 @@ public class MeasureDoc{
         return output;
     }
 
-    public static void recursiveListFiles(String root, String margin){
+    public static void recursivePrintFiles(String root, String margin){
         System.out.println(margin + "Directory: " + root);
         if (root.endsWith("/")){ //making sure we don't have extra slashes
             root = root.substring(0, root.length()-1);
@@ -45,7 +46,7 @@ public class MeasureDoc{
                 continue;
             } else if (filesMap.get(key)){
                 //in a directory
-                recursiveListFiles(root+"/"+key, margin);
+                recursivePrintFiles(root+"/"+key, margin);
             } else{
                 System.out.println(margin + "Source file: " + key); 
             }
@@ -54,19 +55,55 @@ public class MeasureDoc{
 
     }
 
-    public static void main(String[] args){
-        // Map<String, Boolean> testmap = listFiles("./");
+    public static LOCMetrics recursiveListFiles(String root, LOCMetricsMeasurer measurer){
+        if (root.endsWith("/")){ //making sure we don't have extra slashes
+            root = root.substring(0, root.length()-1);
+        }
 
-        // for (String key : testmap.keySet()) {
-        //    System.out.println(key + " " + testmap.get(key)); 
+        HashSet<String> ignore_list = new HashSet<>();
+        ignore_list.add(".git");
+        ignore_list.add(".idea");
+        ignore_list.add(".vscode");
+        //ignore_list.add("tests"); //that one is questionable
+
+        Map<String, Boolean> filesMap = listFiles(root);
+        
+        //first pass through the file map to see if this contains source files
+        // boolean is_package = false;
+        // for (String key : filesMap.keySet()) {
         // }
 
-        recursiveListFiles("./", "\t");
-       
+        ArrayList<LOCMetrics> childrenMetrics = new ArrayList<>();
+
+        for (String key : filesMap.keySet()) {
+            if (ignore_list.contains(key)){
+                continue;
+            } else if (filesMap.get(key)){
+                //in a directory
+                childrenMetrics.add(recursiveListFiles(root+"/"+key, measurer));
+            } else{
+                //ideally this should be in a try catch and measureClassLOCMetrics should just throw
+                LOCMetrics childMetrics = measurer.measureClassLOCMetrics(root+"/"+key);
+               //childrenMetrics.add(measurer.measureClassLOCMetrics(root+"/"+key)); 
+               childrenMetrics.add(childMetrics); 
+               System.out.println(childMetrics+"\n");
+            }
+        }
+
+        LOCMetrics self_metrics =  LOCMetricsMeasurer.computePackageLOCMetrics(root, childrenMetrics);
+        System.out.println(self_metrics+"\n");
+        return self_metrics;
+
+    }
+
+    public static void main(String[] args){
 
         //first unit test
         LOCMetricsMeasurer metricsMeasurer = new LOCMetricsMeasurer("/*", "*/", "//");
-        LOCMetrics metrics = metricsMeasurer.measureClassLOCMetrics("tests/test1.java");
-        System.out.println(metrics); //23
+        recursivePrintFiles("tests", "\t");
+        recursiveListFiles("tests", metricsMeasurer);
+
+        // LOCMetrics metrics = metricsMeasurer.measureClassLOCMetrics("tests/test1.java");
+        // System.out.println(metrics); //23
     }
 }
