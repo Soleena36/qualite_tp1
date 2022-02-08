@@ -28,14 +28,10 @@ class LOCMetricsMeasurer{
             FileReader fileIn = new FileReader(path);
 
             while ((content = filein.readLine()) != null){
-                content += filein.readLine();
+                content = filein.readLine();
+                System.out.println(content);
             }
 
-            /*
-            int i;
-            while((i = fileIn.read())!=-1){
-                System.out.println((char)i);
-            } */
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -44,33 +40,37 @@ class LOCMetricsMeasurer{
         return content;
     }
 
+
     public LOCMetrics measureClassLOCMetrics(String classFileName){
         //TODO: change so this throws an exception and caller has to handle file error
-        String line = readFile(classFileName);
         int loc = 0;
         int cloc = 0;
-        Boolean insideBlockComment = false;
-        try{
+        float wmc = 1;
+        String filecontent = readFile(classFileName);
 
 
+
+            Scanner scanner = new Scanner(filecontent);
+            Boolean insideBlockComment = false;
             //Boolean insideMethod = false;
             int nb_methods=0;
+            int nb_predicates = 0;
             //(?!if|while|for|catch|do|new|return)^(public\s+|private\s+|protected\s+).+(.)\s{$
             //above is regex for matching function definition from:
             // https://stackoverflow.com/questions/47387307/regular-expression-that-matches-java-method-definition
             Pattern method_def = Pattern.compile("(?!if|while|for|catch|do|new|return)^(public\\s+|private\\s+|protected\\s+).+(.)\\s?\\{$", Pattern.CASE_INSENSITIVE);
             Matcher matcher;
-
-            
+            while (scanner.hasNextLine()){
+                String line = scanner.nextLine().trim(); // please remember
                 matcher = method_def.matcher(line);
                 //System.out.println(line);
                 if (line.isEmpty()){
                     continue;
-                // } else if ((line.startsWith("public") ||
-                //             line.startsWith("private") ||
-                //             line.startsWith("protected") ) &&
-                //             !line.contains("class")){
-                //                 insideMethod = true;
+                    // } else if ((line.startsWith("public") ||
+                    //             line.startsWith("private") ||
+                    //             line.startsWith("protected") ) &&
+                    //             !line.contains("class")){
+                    //                 insideMethod = true;
                 } if (matcher.find()){
                     //insideMethod = true;
                     nb_methods++;
@@ -89,16 +89,18 @@ class LOCMetricsMeasurer{
                     loc++;
                 }
 
-            System.out.println(nb_methods);
-
-        } catch(FileNotFoundException e){ //TODO: should have other file IO errors in there too
-            System.out.println("Error reading class file.");
-            e.printStackTrace();
-        }
+                if (line.contains("if") ||
+                        line.contains("else") ||
+                        line.contains("while") ||
+                        line.contains("for")){
+                    nb_predicates++;
+                }
+            }
+            wmc = (nb_methods + nb_predicates)/ (float)nb_methods;
+            scanner.close();
 
         return new LOCMetrics(loc, cloc);
     }
-
 
     public LOCMetrics computePackageLOCMetrics(ArrayList<LOCMetrics> childrenMetrics){
        //TODO: implement

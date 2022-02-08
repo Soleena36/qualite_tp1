@@ -9,7 +9,8 @@ public class WriteLOCFile {
     LOCMetrics lm = new LOCMetrics();
 
     public String classCSVLign(String files){
-        String content = lmm.readFile(files);
+        lm = lmm.measureClassLOCMetrics(files);
+
         int loc = lm.getLoc();
         int cloc = lm.getCloc();
         float dc = lm.getDc();
@@ -25,7 +26,7 @@ public class WriteLOCFile {
         return javaFile + ","+ String.valueOf(loc) + "," + String.valueOf(cloc) + "," + String.valueOf(dc);
     }
 //inspiré de : https://stackoverflow.com/questions/3332486/program-to-get-all-files-within-a-directory-in-java
-//mais inversé la logique du programme
+//mais inversé la logique du programme et adapté à nos besoins spécifiques
     public void getFiles(File f) {
         File files[];
         if (f.isDirectory()){
@@ -35,11 +36,14 @@ public class WriteLOCFile {
             }
         }
         else if(f.isFile() && f.getAbsolutePath().indexOf(".java") != -1){
-            System.out.println(f.getAbsolutePath());
+            System.out.println(f.getAbsolutePath().substring(f.getAbsolutePath().indexOf("/jfreechart"),f.getAbsolutePath().length()));
+            System.out.println(classCSVLign(f.getAbsolutePath()));
         }
     }
     public static void main(String[] args) {
+
         String a = new WriteLOCFile().classCSVLign("/home/celia/qualite_tp1/jfreechart/src/test/java/org/jfree/data/xy/VectorTest.java");
+        System.out.println(a);
         //new WriteLOCFile().getFiles(new File("/home/celia/qualite_tp1/jfreechart"));
 
     }
