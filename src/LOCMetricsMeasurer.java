@@ -1,5 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -22,23 +21,47 @@ class LOCMetricsMeasurer{
         this.inlineCommentStart = inlineCommentStart;
     }
 
+    public String readFile(String path){
+        String content = "";
+        try {
+            BufferedReader filein = new BufferedReader(new FileReader(new File(path)));
+            FileReader fileIn = new FileReader(path);
+
+            while ((content = filein.readLine()) != null){
+                content += filein.readLine();
+            }
+
+            /*
+            int i;
+            while((i = fileIn.read())!=-1){
+                System.out.println((char)i);
+            } */
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return content;
+    }
+
     public LOCMetrics measureClassLOCMetrics(String classFileName){
         //TODO: change so this throws an exception and caller has to handle file error
+        String line = readFile(classFileName);
         int loc = 0;
         int cloc = 0;
+        Boolean insideBlockComment = false;
         try{
-            File classFile = new File(classFileName);
-            Scanner scanner = new Scanner(classFile);
-            Boolean insideBlockComment = false;
+
+
             //Boolean insideMethod = false;
             int nb_methods=0;
-            //(?!if|while|for|catch|do|new|return)^(public\s+|private\s+|protected\s+).+(.)\s{$ 
+            //(?!if|while|for|catch|do|new|return)^(public\s+|private\s+|protected\s+).+(.)\s{$
             //above is regex for matching function definition from:
             // https://stackoverflow.com/questions/47387307/regular-expression-that-matches-java-method-definition
             Pattern method_def = Pattern.compile("(?!if|while|for|catch|do|new|return)^(public\\s+|private\\s+|protected\\s+).+(.)\\s?\\{$", Pattern.CASE_INSENSITIVE);
             Matcher matcher;
-            while (scanner.hasNextLine()){
-                String line = scanner.nextLine().trim(); // please remember
+
+            
                 matcher = method_def.matcher(line);
                 //System.out.println(line);
                 if (line.isEmpty()){
@@ -65,9 +88,9 @@ class LOCMetricsMeasurer{
                 } else {
                     loc++;
                 }
-            }
+
             System.out.println(nb_methods);
-            scanner.close();
+
         } catch(FileNotFoundException e){ //TODO: should have other file IO errors in there too
             System.out.println("Error reading class file.");
             e.printStackTrace();
@@ -75,6 +98,7 @@ class LOCMetricsMeasurer{
 
         return new LOCMetrics(loc, cloc);
     }
+
 
     public LOCMetrics computePackageLOCMetrics(ArrayList<LOCMetrics> childrenMetrics){
        //TODO: implement
