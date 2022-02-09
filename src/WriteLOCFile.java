@@ -71,10 +71,14 @@ public class WriteLOCFile {
                 path2Mesures.get(packages.get(i)).setCloc(cloc);
             }
         }
+        
         for(int i=0;i<packages.size();i++){
             LOCMetrics cur_element = path2Mesures.get(packages.get(i));
-            if(!(lignes.contains(packages.get(i)))){
-                lignes.add(packages.get(i) + "," + packages.get(i).replace("/",".") + ","+cur_element.getLoc()+","+cur_element.getCloc()+","+((float)cur_element.getCloc()/(float)cur_element.getLoc()));
+            String oneLine = packages.get(i) + "," + packages.get(i).replace("/",".") + ","+cur_element.getLoc()+","+cur_element.getCloc()+","+((float)cur_element.getCloc()/(float)cur_element.getLoc());
+            if(!lignes.contains(oneLine)){
+
+                lignes.add(oneLine);
+                System.out.println(oneLine);
             }
         }
         return lignes;
