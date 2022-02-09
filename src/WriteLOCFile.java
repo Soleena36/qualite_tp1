@@ -41,7 +41,7 @@ public class WriteLOCFile {
     public void application(){
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(new File("classes.csv")));
-            bw.write("chemin, class, classe_LOC, classe_CLOC, classe_DC");
+            bw.write("chemin, class, classe_LOC, classe_CLOC, classe_DC\n");
             for(int i=0 ; i<pathList.size();i++){
                 csvLign.add(classCSVLign(pathList.get(i)));
             }
@@ -74,7 +74,7 @@ public class WriteLOCFile {
         }
         try {
             BufferedWriter bwriter = new BufferedWriter(new FileWriter(new File("paquets.csv")));
-            bwriter.write("chemin, paquet, paquet_LOC, paquet_CLOC, paquet_DC");
+            bwriter.write("chemin, paquet, paquet_LOC, paquet_CLOC, paquet_DC\n");
             for (int i = 0; i < packages.size(); i++) {
                 LOCMetrics cur_element = path2Mesures.get(packages.get(i));
                 String oneLine = packages.get(i) + "," + packages.get(i).replace("/", ".") + "," + cur_element.getLoc() + "," + cur_element.getCloc() + "," + ((float) cur_element.getCloc() / (float) cur_element.getLoc());

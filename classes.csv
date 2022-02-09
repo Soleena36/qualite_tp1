@@ -1,3 +1,4 @@
+chemin, class, classe_LOC, classe_CLOC, classe_DC
 jfreechart/src/main/java/module-info.java,module-info.java,43,3,0.069767445
 jfreechart/src/main/java/org/jfree/chart/urls/package-info.java,package-info.java,4,3,0.75
 jfreechart/src/main/java/org/jfree/chart/urls/CategoryURLGenerator.java,CategoryURLGenerator.java,72,67,0.9305556
