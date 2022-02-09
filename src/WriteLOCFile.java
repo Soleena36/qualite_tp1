@@ -71,32 +71,25 @@ public class WriteLOCFile {
                 path2Mesures.get(packages.get(i)).setCloc(cloc);
             }
         }
-
-        for(int i=0;i<packages.size();i++){
-            LOCMetrics cur_element = path2Mesures.get(packages.get(i));
-            String oneLine = packages.get(i) + "," + packages.get(i).replace("/",".") + ","+cur_element.getLoc()+","+cur_element.getCloc()+","+((float)cur_element.getCloc()/(float)cur_element.getLoc());
-            if(!lignes.contains(oneLine)){
-
-                lignes.add(oneLine);
-
-            }
-        }
-
-        return lignes;
-    }
-
-    public void writePackageFile(){
-        ArrayList<String> ligns = setMap();
-
         try {
-            BufferedWriter bw = new BufferedWriter(new FileWriter(new File("paq1.csv")));
-            for(int i=0;i<ligns.size();i++){
-                System.out.println(ligns.get(i));
-                bw.write(ligns.get(i)+"\n");
+            BufferedWriter bwriter = new BufferedWriter(new FileWriter(new File("paquets.csv")));
+            for (int i = 0; i < packages.size(); i++) {
+                LOCMetrics cur_element = path2Mesures.get(packages.get(i));
+                String oneLine = packages.get(i) + "," + packages.get(i).replace("/", ".") + "," + cur_element.getLoc() + "," + cur_element.getCloc() + "," + ((float) cur_element.getCloc() / (float) cur_element.getLoc());
+
+                if (!lignes.contains(oneLine)) {
+                    lignes.add(oneLine);
+                    bwriter.write(oneLine + "\n");
+                }
             }
-        } catch (IOException e) {
+            bwriter.close();
+        }
+        catch(IOException e){
             e.printStackTrace();
         }
+
+
+        return lignes;
     }
 
     public static void main(String[] args) {
@@ -105,6 +98,5 @@ public class WriteLOCFile {
         wlf.getFiles(new File(System.getProperty("user.dir")+"/jfreechart"));
         wlf.application();
         wlf.setMap();
-        
     }
 }
