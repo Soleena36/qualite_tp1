@@ -47,6 +47,7 @@ public class WriteLOCFile {
             for(int i=0;i<csvLign.size();i++){
                 bw.write(csvLign.get(i)+"\n");
             }
+            bw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
