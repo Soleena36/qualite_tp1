@@ -41,6 +41,7 @@ public class WriteLOCFile {
     public void application(){
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(new File("classes.csv")));
+            bw.write("chemin, class, classe_LOC, classe_CLOC, classe_DC");
             for(int i=0 ; i<pathList.size();i++){
                 csvLign.add(classCSVLign(pathList.get(i)));
             }
@@ -53,7 +54,7 @@ public class WriteLOCFile {
         }
     }
 
-    public ArrayList<String> setMap(){
+    public void setMap(){
         HashMap<String,LOCMetrics> path2Mesures = new HashMap<>();
         ArrayList<String> lignes = new ArrayList<>();
 
@@ -62,7 +63,6 @@ public class WriteLOCFile {
             int cloc = Integer.parseInt(csvLign.get(i).split(",")[3]);
             if(!path2Mesures.containsKey(packages.get(i))){
                 path2Mesures.put(packages.get(i),new LOCMetrics(packages.get(i),true,loc,cloc,0));
-                //System.out.println("ha!");
             }
             else{
                 int demo = path2Mesures.get(packages.get(i)).getLoc() + loc;
@@ -74,6 +74,7 @@ public class WriteLOCFile {
         }
         try {
             BufferedWriter bwriter = new BufferedWriter(new FileWriter(new File("paquets.csv")));
+            bwriter.write("chemin, paquet, paquet_LOC, paquet_CLOC, paquet_DC");
             for (int i = 0; i < packages.size(); i++) {
                 LOCMetrics cur_element = path2Mesures.get(packages.get(i));
                 String oneLine = packages.get(i) + "," + packages.get(i).replace("/", ".") + "," + cur_element.getLoc() + "," + cur_element.getCloc() + "," + ((float) cur_element.getCloc() / (float) cur_element.getLoc());
@@ -88,9 +89,6 @@ public class WriteLOCFile {
         catch(IOException e){
             e.printStackTrace();
         }
-
-
-        return lignes;
     }
 
     public static void main(String[] args) {
