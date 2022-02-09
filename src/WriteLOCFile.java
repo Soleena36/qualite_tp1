@@ -71,24 +71,27 @@ public class WriteLOCFile {
                 path2Mesures.get(packages.get(i)).setCloc(cloc);
             }
         }
-        
+
         for(int i=0;i<packages.size();i++){
             LOCMetrics cur_element = path2Mesures.get(packages.get(i));
             String oneLine = packages.get(i) + "," + packages.get(i).replace("/",".") + ","+cur_element.getLoc()+","+cur_element.getCloc()+","+((float)cur_element.getCloc()/(float)cur_element.getLoc());
             if(!lignes.contains(oneLine)){
 
                 lignes.add(oneLine);
-                System.out.println(oneLine);
+
             }
         }
+
         return lignes;
     }
 
     public void writePackageFile(){
         ArrayList<String> ligns = setMap();
+
         try {
-            BufferedWriter bw = new BufferedWriter(new FileWriter(new File("paquets.csv")));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(new File("paq1.csv")));
             for(int i=0;i<ligns.size();i++){
+                System.out.println(ligns.get(i));
                 bw.write(ligns.get(i)+"\n");
             }
         } catch (IOException e) {
@@ -98,12 +101,10 @@ public class WriteLOCFile {
 
     public static void main(String[] args) {
 
-        //String a = new WriteLOCFile().classCSVLign("/home/celia/qualite_tp1/jfreechart/src/test/java/org/jfree/data/xy/VectorTest.java");
-        //System.out.println(a);
         WriteLOCFile wlf = new WriteLOCFile();
         wlf.getFiles(new File(System.getProperty("user.dir")+"/jfreechart"));
         wlf.application();
         wlf.setMap();
-        wlf.writePackageFile();
+        
     }
 }
