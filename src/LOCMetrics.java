@@ -62,4 +62,16 @@ class LOCMetrics{
     public boolean getIsPackage(){
         return is_package;
     }
+
+    public void setBc(float bc) {
+        this.bc = bc;
+    }
+
+    public void setCloc(int cloc) {
+        this.cloc = cloc;
+    }
+
+    public void setLoc(int loc) {
+        this.loc = loc;
+    }
 }
