@@ -1,55 +1,88 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
+/**
+ * Classe responsable de la mesure de la taille d'une entité
+ * (classe/paquet).  Store les informations mesurées dans
+ * un objet de type LOCMetrics.
+ */
 class LOCMetricsMeasurer{
-    
+
     private String blockCommentStart;
     private String blockCommentEnd;;
     private String inlineCommentStart;
     //TODO: should we handle documentation comment blocks seperately?
-    
-    public LOCMetricsMeasurer(){
-        //TODO: write constructor if necessary
-    }
 
+    /**
+     * Seul constructeur de la classe.
+     * @param blockCommentStart //chaîne qui débute un commentaire multiligne
+     * @param blockCommentEnd //chaîne qui met fin à un commentaire multiligne
+     * @param inlineCommentStart //chaîne qui début un commentaire inline
+     */
     public LOCMetricsMeasurer(String blockCommentStart, String blockCommentEnd, String inlineCommentStart){
         this.blockCommentStart = blockCommentStart;
         this.blockCommentEnd = blockCommentEnd;
         this.inlineCommentStart = inlineCommentStart;
     }
 
+    // public String readFile(String path){
+    //     String content = "";
+    //     try {
+    //         BufferedReader filein = new BufferedReader(new FileReader(new File(path)));
+    //         FileReader fileIn = new FileReader(path);
+
+    //         while ((content = filein.readLine()) != null){
+    //             content += filein.readLine();
+
+    //         }
+    //         System.out.println(content);
+
+    //     } catch (FileNotFoundException e) {
+    //         e.printStackTrace();
+    //     } catch (IOException e) {
+    //         e.printStackTrace();
+    //     }
+    //     return content;
+    // }
+
+    /**
+     * Opère sur un fichier source de classe java pour mesurer ses métriques de taille
+     * @param classFileName nom de la classe (pas le path)
+     * @return un objet LOCMetrics contenant les métriques de taille
+     */
     public LOCMetrics measureClassLOCMetrics(String classFileName){
         //TODO: change so this throws an exception and caller has to handle file error
         int loc = 0;
         int cloc = 0;
+        float wmc = 1;
+
         try{
             File classFile = new File(classFileName);
             Scanner scanner = new Scanner(classFile);
             Boolean insideBlockComment = false;
             //Boolean insideMethod = false;
             int nb_methods=0;
-            //(?!if|while|for|catch|do|new|return)^(public\s+|private\s+|protected\s+).+(.)\s{$ 
-            //above is regex for matching function definition from:
+            int nb_predicates = 0;
+            //regex for matching function definition adapted from:
             // https://stackoverflow.com/questions/47387307/regular-expression-that-matches-java-method-definition
-            Pattern method_def = Pattern.compile("(?!if|while|for|catch|do|new|return)^(public\\s+|private\\s+|protected\\s+).+(.)\\s?\\{$", Pattern.CASE_INSENSITIVE);
+            //Basically we want a word that's not a keyword followed by some parentheses,
+            //possibly preceded by public/private/protected,
+            //followed by opening brackets.
+            Pattern method_def = Pattern.compile(
+                "(?!if|while|for|catch|do|new|return)^(public\\s+|private\\s+|protected\\s+).+(.)\\s?\\{$", 
+                Pattern.CASE_INSENSITIVE);
             Matcher matcher;
-            while (scanner.hasNextLine()){
-                String line = scanner.nextLine().strip();
+
+            while (scanner.hasNextLine()){ 
+                String line = scanner.nextLine().trim(); // please remember TODO: remember what?
                 matcher = method_def.matcher(line);
-                //System.out.println(line);
+                //if (line.isEmpty() || line == null){
                 if (line.isEmpty()){
                     continue;
-                // } else if ((line.startsWith("public") ||
-                //             line.startsWith("private") ||
-                //             line.startsWith("protected") ) &&
-                //             !line.contains("class")){
-                //                 insideMethod = true;
                 } if (matcher.find()){
-                    //insideMethod = true;
                     nb_methods++;
                 } else if (insideBlockComment){
                     loc++;
@@ -65,19 +98,44 @@ class LOCMetricsMeasurer{
                 } else {
                     loc++;
                 }
+
+                if (line.contains("if") ||
+                        line.contains("else") ||
+                        line.contains("while") ||
+                        line.contains("for")){
+                    nb_predicates++;
+                }
             }
-            System.out.println(nb_methods);
+            wmc = (nb_methods + nb_predicates)/ (float)nb_methods;
             scanner.close();
         } catch(FileNotFoundException e){ //TODO: should have other file IO errors in there too
             System.out.println("Error reading class file.");
             e.printStackTrace();
         }
 
-        return new LOCMetrics(loc, cloc);
+        return new LOCMetrics(classFileName, false, loc, cloc, wmc);
     }
 
-    public LOCMetrics computePackageLOCMetrics(ArrayList<LOCMetrics> childrenMetrics){
-       //TODO: implement
-        return new LOCMetrics();
+    /**
+     * Collige les métriques des classes/paquets enfants d'un paquets pour obtenir ses
+     * métriques. 
+     * @param dirName //nom du paquet
+     * @param childrenMetrics //liste d'objets LOCMetrics associés aux enfants du paquet
+     * @return un objet LOCMetrics contenant les métriques du paquet
+     */
+    public static LOCMetrics computePackageLOCMetrics(String dirName, ArrayList<LOCMetrics> childrenMetrics){
+        int tot_loc = 0;
+        int tot_cloc = 0;
+        float tot_wmc = 0;
+
+        for (LOCMetrics childMetric : childrenMetrics){
+            if (!childMetric.getIsPackage()){//on n'additionne pas les LOC, CLOC des paquets enfants
+                tot_loc += childMetric.getLoc();
+                tot_cloc += childMetric.getCloc();
+            } 
+            tot_wmc += childMetric.getWmc();
+        }
+
+        return new LOCMetrics(dirName, true, tot_loc, tot_cloc, tot_wmc);
     }
 }
