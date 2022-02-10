@@ -11,7 +11,7 @@ public class WriteLOCFile {
 
 
     public String classCSVLign(String path){
-        LOCMetrics lm = new LOCMetricsMeasurer("/*", "*/", "//").measureClassLOCMetrics(path);
+        LOCMetrics lm = new LOCMetricsMeasurer("/*", "*/", "//").measureClassLOCMetrics(path); //TODO: mettre dans fichier externe
 
         int loc = lm.getLoc();
         int cloc = lm.getCloc();

@@ -1,16 +1,26 @@
+/**
+ * Classe de donnée pour contenir des métriques sur la taille des classes
+ * et des paquets, ainsi que sur leur commentaires.  Cette classe est
+ * réutilisée pour les deux (classe et paquet) puisque les métriques sont
+ * calculées de la même façon à une exception près.
+ */
 class LOCMetrics{
-    private String name; //name of thing being measured
-    private boolean is_package; //true if it's a package
-    private int loc; //nb of lines of code
-    private int cloc; //nb of comment lines of code
-    private float dc; //comment density cloc/loc
+    private String name; //nom de la classe/du paquet
+    private boolean is_package; //vrai si un paquet
+    private int loc; //nb de lignes de codes
+    private int cloc; //nb de lignes de commentaires
+    private float dc; //densité de commentaires cloc/loc
     private float wmc; //weighted methods per class
-    private float bc; // high if well commented : dc/wmc
+    private float bc; // hautsi bien commenté : dc/wmc
 
-    public LOCMetrics(){
-        //TODO: remove when done implementing
-    }
-
+    /**
+     * Seul constructeur de la classe.
+     * @param name le nom de l'entitée mesurée (pas un chemin)
+     * @param is_package vrai si l'entité est un paquet, faux si une classe
+     * @param loc lignes de code de l'entité
+     * @param cloc lignes de comentaires de l'entité
+     * @param wmc wighted methods per class, avec complexité de McCabe
+     */
     public LOCMetrics(String name, boolean is_package, int loc, int cloc, float wmc){
         this.name = name;
         this.is_package = is_package;
@@ -20,15 +30,6 @@ class LOCMetrics{
         this.wmc = wmc;
         this.bc = dc/wmc;
     }
-
-    // public static LOCMetrics concat_metrics(String name, LOCMetrics m1, LOCMetrics m2){
-    //     int tot_loc = m1.getLoc() + m2.getCloc();
-    //     int tot_cloc = m1.getCloc() + m2.getCloc();
-    //     float tot_wmc = m1.getWmc() + m2.getWmc();
-
-    //     //true because we only concat for packages
-    //     return new LOCMetrics(name, true, tot_loc, tot_cloc, tot_wmc);
-    // }
 
     @Override
     public String toString(){
