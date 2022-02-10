@@ -55,25 +55,23 @@ class LOCMetricsMeasurer{
             //Boolean insideMethod = false;
             int nb_methods=0;
             int nb_predicates = 0;
-            //(?!if|while|for|catch|do|new|return)^(public\s+|private\s+|protected\s+).+(.)\s{$
-            //above is regex for matching function definition from:
+            //regex for matching function definition adapted from:
             // https://stackoverflow.com/questions/47387307/regular-expression-that-matches-java-method-definition
-            Pattern method_def = Pattern.compile("(?!if|while|for|catch|do|new|return)^(public\\s+|private\\s+|protected\\s+).+(.)\\s?\\{$", Pattern.CASE_INSENSITIVE);
+            //Basically we want a word that's not a keyword followed by some parentheses,
+            //possibly preceded by public/private/protected,
+            //followed by opening brackets.
+            Pattern method_def = Pattern.compile(
+                "(?!if|while|for|catch|do|new|return)^(public\\s+|private\\s+|protected\\s+).+(.)\\s?\\{$", 
+                Pattern.CASE_INSENSITIVE);
             Matcher matcher;
 
-            while (scanner.hasNextLine()){
-                String line = scanner.nextLine().trim(); // please remember
+            while (scanner.hasNextLine()){ 
+                String line = scanner.nextLine().trim(); // please remember TODO: remember what?
                 matcher = method_def.matcher(line);
-                //System.out.println(line);
-                if (line.isEmpty() || line == null){
+                //if (line.isEmpty() || line == null){
+                if (line.isEmpty()){
                     continue;
-                    // } else if ((line.startsWith("public") ||
-                    //             line.startsWith("private") ||
-                    //             line.startsWith("protected") ) &&
-                    //             !line.contains("class")){
-                    //                 insideMethod = true;
                 } if (matcher.find()){
-                    //insideMethod = true;
                     nb_methods++;
                 } else if (insideBlockComment){
                     loc++;
@@ -116,9 +114,10 @@ class LOCMetricsMeasurer{
         float tot_wmc = 0;
 
         for (LOCMetrics childMetric : childrenMetrics){
-            tot_loc += childMetric.getLoc();
-            tot_cloc += childMetric.getCloc();
-            tot_wmc += childMetric.getWmc();
+            if (!childMetric.getIsPackage()) //we don't sum package metrics together
+                tot_loc += childMetric.getLoc();
+                tot_cloc += childMetric.getCloc();
+                tot_wmc += childMetric.getWmc();
         }
 
 

@@ -23,18 +23,18 @@ public class WriteLOCFile {
     }
 //inspiré de : https://stackoverflow.com/questions/3332486/program-to-get-all-files-within-a-directory-in-java
 //mais inversé la logique du programme et adapté à nos besoins spécifiques
-    public void getFiles(File f) {
+    public void getFiles(File f, String target) {
         File files[];
         if (f.isDirectory()){
             files = f.listFiles();
             for (int i = 0; i < files.length; i++) {
-                getFiles(files[i]);
+                getFiles(files[i], target);
             }
         }
         else if(f.isFile() && f.getAbsolutePath().indexOf(".java") != -1){
             String absPath = f.getAbsolutePath();
-            pathList.add(absPath.substring(absPath.indexOf("jfreechart"),absPath.length()));
-            packages.add(absPath.substring(absPath.indexOf("jfreechart"),absPath.lastIndexOf("/")));
+            pathList.add(absPath.substring(absPath.indexOf(target),absPath.length()));
+            packages.add(absPath.substring(absPath.indexOf(target),absPath.lastIndexOf("/")));
         }
     }
 
@@ -94,7 +94,7 @@ public class WriteLOCFile {
     public static void main(String[] args) {
 
         WriteLOCFile wlf = new WriteLOCFile();
-        wlf.getFiles(new File(System.getProperty("user.dir")+"/jfreechart"));
+        wlf.getFiles(new File(System.getProperty("user.dir")+"/" + args[0]), args[0]);
         wlf.application();
         wlf.setMap();
     }
