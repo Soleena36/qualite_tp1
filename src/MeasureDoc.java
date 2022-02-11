@@ -1,3 +1,8 @@
+/**
+ * Classe principale qui mesure les métriques des classes (ou paquets) contenus dans un dossier.
+ * Mesure LOC, CLOC, DC = CLOC/LOC, WMC (WMP), DC/WMC (DC/WMP)
+ */
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,19 +12,23 @@ import java.util.Map;
 
 public class MeasureDoc{
 
-    //Adapted from https://stackoverflow.com/questions/5694385/getting-the-filenames-of-all-files-in-a-folder
+    /**
+     * Liste tous les fichiers/dossiers dans un répertoire
+     * adapté de https://stackoverflow.com/questions/5694385/getting-the-filenames-of-all-files-in-a-folder
+     * @param root chemin relatif vers répertoire
+     * @return une map<string, boolean> des fichiers, boolean est true si un dossier
+     */
     public static Map<String, Boolean> listFiles(String root){
         File folder = new File(root);
         File[] listOfFiles = folder.listFiles();
-        HashMap<String,Boolean> output = new HashMap<>(); //Boolean will be true if file is directory
+        HashMap<String,Boolean> output = new HashMap<>();
 
         for (int i = 0; i < listOfFiles.length; i++) {
             String filename = listOfFiles[i].getName();
             if (listOfFiles[i].isFile() && filename.contains(".java")) {
-                //System.out.println("File " + filename);
+                //fichier source
                 output.put(filename, false); 
             } else if (listOfFiles[i].isDirectory()) {
-                //System.out.println("Directory " + filename);
                 output.put(filename, true); 
             }
         }
@@ -27,7 +36,15 @@ public class MeasureDoc{
         return output;
     }
 
-    public static ArrayList<LOCMetrics> recursiveListFiles(String root, LOCMetricsMeasurer measurer, CSVWriter writer){
+    /**
+     * Parcours le dossier root pour imprimer toutes les métriques des paquets/classes contenues.
+     * @param root chemin relatif vers le dossier
+     * @param measurer classe qui s'occupe du parsing des .java pour obtenir les métriques
+     * @param writer classe qui écrit les métriques dans un CSV
+     * @return une liste de LOCMetrics.  De taille 1 si dossier est un paquet: renvoie ses propres métriques
+     * Si pas un paquet, renvoie les une liste contenant les métriques des sous-paquets.
+     */
+    private static ArrayList<LOCMetrics> recursiveListFiles(String root, LOCMetricsMeasurer measurer, CSVWriter writer){
         ArrayList<LOCMetrics> output = new ArrayList<>();
         if (root.endsWith("/")){ //making sure we don't have extra slashes
             root = root.substring(0, root.length()-1);
@@ -52,6 +69,8 @@ public class MeasureDoc{
         if (!has_java_files){ //dossier n'est pas un paquet
             for (String key: filesInDirectory.keySet()){
                 output.addAll(recursiveListFiles(root+"/" + key, measurer, writer));
+                //On doit utiliser une liste, sinon on aura des problèmes à traiter les
+                //descendants d'un dossier qui ne contient que des dossiers
             }
             return output;
         }

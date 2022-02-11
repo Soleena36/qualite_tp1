@@ -57,13 +57,14 @@ class LOCMetricsMeasurer{
             Matcher matcher;
 
             while (scanner.hasNextLine()){ 
-                String line = scanner.nextLine().trim(); // please remember TODO: remember what?
+                String line = scanner.nextLine().trim();
                 matcher = method_def.matcher(line);
                 //if (line.isEmpty() || line == null){
                 if (line.isEmpty()){
                     continue;
                 } if (matcher.find()){
                     nb_methods++;
+                    System.out.println("method:" + line);
                 } else if (insideBlockComment){
                     loc++;
                     cloc++;
@@ -73,16 +74,14 @@ class LOCMetricsMeasurer{
                     loc++;
                     cloc++;
                 } else {
+                    //this line is not part of a block comment
                     if (line.contains(inlineCommentStart)){
-                    loc++;
-                    cloc++;
-                    } else if ((line.contains("if") ||
-                        line.contains("else") ||
-                        line.contains("while") ||
-                        line.contains("for")) &&
-                        !insideBlockComment){
+                        cloc++;
+                    } else if ((line.startsWith("if") || line.startsWith("while") || line.startsWith("for"))
+                        && !insideBlockComment){
                             nb_predicates++;
-                        }
+                            System.out.println("predicate:" + line);
+                    }
                     loc++;
                 }
             }
@@ -93,8 +92,9 @@ class LOCMetricsMeasurer{
             * Donc dans les faits, on peut juste faire sum(nb_predicates) + nb_methods
             * et on obtient le WMC.  Donc on compte les predicats sans se soucier
             * dans quelle méthode ils sont.
+            * Le -1 est parce que notre regex trouve aussi la ligne de définition de classe.
             */
-            wmc = nb_methods + nb_predicates;
+            wmc = nb_methods + nb_predicates - 1;
             scanner.close();
         } catch(IOException e){ 
             e.printStackTrace();
@@ -124,5 +124,9 @@ class LOCMetricsMeasurer{
         }
 
         return new LOCMetrics(dirName, true, tot_loc, tot_cloc, tot_wmc);
+    }
+public static void main(String args[]){
+        LOCMetricsMeasurer measurer = new LOCMetricsMeasurer("/*", "*/", "//");
+        System.out.println(measurer.measureClassLOCMetrics("DomainOrderTest.java"));
     }
 }
