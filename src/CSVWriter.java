@@ -27,7 +27,7 @@ public class CSVWriter {
     }
 
     /**
-     * Ferme les BufferedWriter utilisées par la classe.
+     * Ferme les BufferedWriter utilisés par la classe.
      * @throws IOException
      */
     public void close() throws IOException{

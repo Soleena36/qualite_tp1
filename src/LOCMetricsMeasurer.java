@@ -64,7 +64,7 @@ class LOCMetricsMeasurer{
                     continue;
                 } if (matcher.find()){
                     nb_methods++;
-                    System.out.println("method:" + line);
+                    //System.out.println("method:" + line);
                 } else if (insideBlockComment){
                     loc++;
                     cloc++;
@@ -77,10 +77,10 @@ class LOCMetricsMeasurer{
                     //this line is not part of a block comment
                     if (line.contains(inlineCommentStart)){
                         cloc++;
-                    } else if ((line.startsWith("if") || line.startsWith("while") || line.startsWith("for"))
+                    } else if ((line.startsWith("if") || line.startsWith("while") || line.startsWith("for") || line.startsWith("switch"))
                         && !insideBlockComment){
                             nb_predicates++;
-                            System.out.println("predicate:" + line);
+                            //System.out.println("predicate:" + line);
                     }
                     loc++;
                 }
@@ -125,7 +125,7 @@ class LOCMetricsMeasurer{
 
         return new LOCMetrics(dirName, true, tot_loc, tot_cloc, tot_wmc);
     }
-public static void main(String args[]){
+public static void main(String args[]){ //TODO: enlever
         LOCMetricsMeasurer measurer = new LOCMetricsMeasurer("/*", "*/", "//");
         System.out.println(measurer.measureClassLOCMetrics("DomainOrderTest.java"));
     }
