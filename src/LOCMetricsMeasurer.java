@@ -66,25 +66,24 @@ class LOCMetricsMeasurer{
                     nb_methods++;
                     //System.out.println("method:" + line);
                 } else if (insideBlockComment){
-                    loc++;
                     cloc++;
                     if (line.endsWith(blockCommentEnd)) insideBlockComment = false;
                 } else if (line.startsWith(blockCommentStart)){
                     insideBlockComment = true;
-                    loc++;
                     cloc++;
                 } else {
                     //this line is not part of a block comment
                     if (line.contains(inlineCommentStart)){
                         cloc++;
-                    } else if ((line.startsWith("if") || line.startsWith("while") || line.startsWith("for") || line.startsWith("switch"))
+                    }
+                    if ((line.startsWith("if") || line.startsWith("while") || line.startsWith("for") || line.startsWith("switch"))
                          || line.contains("esle if")
                         && !insideBlockComment){
                             nb_predicates++;
                             //System.out.println("predicate:" + line);
                     }
-                    loc++;
                 }
+                loc++;
             }
 
             /*On peut obtenir WMC en obtenant la somme des complexités de chaque méthode.
@@ -95,6 +94,8 @@ class LOCMetricsMeasurer{
             * dans quelle méthode ils sont.
             */
             wmc = nb_methods + nb_predicates;
+            if (wmc == 0)
+                wmc =1; //solution un peu hacky pour dealer avec certains fichiers de type info/script mal parsés
             scanner.close();
         } catch(IOException e){ 
             e.printStackTrace();
@@ -122,7 +123,7 @@ class LOCMetricsMeasurer{
             } 
             tot_wmc += childMetric.getWmc();
         }
-
+        
         return new LOCMetrics(dirName, true, tot_loc, tot_cloc, tot_wmc);
     }
 public static void main(String args[]){ //TODO: enlever
