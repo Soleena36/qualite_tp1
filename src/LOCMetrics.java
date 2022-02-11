@@ -10,7 +10,7 @@ class LOCMetrics{
     private int loc; //nb de lignes de codes
     private int cloc; //nb de lignes de commentaires
     private float dc; //densité de commentaires cloc/loc
-    private float wmc; //weighted methods per class
+    private int wmc; //weighted methods per class
     private float bc; // hautsi bien commenté : dc/wmc
 
     /**
@@ -21,7 +21,7 @@ class LOCMetrics{
      * @param cloc lignes de comentaires de l'entité
      * @param wmc wighted methods per class, avec complexité de McCabe
      */
-    public LOCMetrics(String name, boolean is_package, int loc, int cloc, float wmc){
+    public LOCMetrics(String name, boolean is_package, int loc, int cloc, int wmc){
         this.name = name;
         this.is_package = is_package;
         this.loc = loc;
@@ -56,8 +56,12 @@ class LOCMetrics{
         return loc;
     }
 
-    public float getWmc(){
+    public int getWmc(){
         return wmc;
+    }
+
+    public float getBc(){
+        return bc;
     }
 
     public boolean getIsPackage(){
