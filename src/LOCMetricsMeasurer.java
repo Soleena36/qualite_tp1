@@ -122,7 +122,6 @@ class LOCMetricsMeasurer{
             } 
             tot_wmc += childMetric.getWmc();
         }
-            System.out.println(tot_wmc);
 
         return new LOCMetrics(dirName, true, tot_loc, tot_cloc, tot_wmc);
     }
