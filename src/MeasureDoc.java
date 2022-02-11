@@ -110,6 +110,11 @@ public class MeasureDoc{
     }
 
     public static void main(String[] args){
+        if (args.length != 1){
+            System.out.println("Usage:\njavar -jar MeasureDoc.jar <relative-path-to-folder-to-analyse>");
+            return;
+        }
+
         String target = args[0];
         LOCMetricsMeasurer measurer = new LOCMetricsMeasurer("/*", "*/", "//");
         try{

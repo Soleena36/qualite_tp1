@@ -18,6 +18,9 @@ java MeasureDoc.class <chemin-relatif>
 Pour créer le jar:
 La classe principale est MeasureDoc.java
 
-Ces commandes peut générer le jar du fichier src:
+Ces commandes peut générer le jar à partir du dossier src:
 javac *
 jar cfe MeasureDoc.jar MeasureDoc *.class
+
+EXEMPLE DE COMMANDE COMPLÈTE POUR ANALYSER JFREECHART:
+java -jar MeasureDoc.jar jfreechart

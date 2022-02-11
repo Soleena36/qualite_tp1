@@ -1,0 +1,36 @@
+﻿ANALYSE DES RÉSULTATS
+
+Premièrement, nous constatons que la mesure "bc" n'est pas d'une grande utilité pour évaluer les paquets. Plus un paquet grandit, plus sa mesure de WMP augmente.  Celle-ci n'est normalisé d'aucune façon, donc éventuellement elle prend le contrôle et l'expression paquet_dc/WMP tend vers 0 lorsque le paquet augmente en taille, peut importe le nombre de lignes de commentaires.  Donc dans les faits, la mesure bc est simplement corrélée avec l'inverse de WMP, sans donner
+beaucoup de place à paquet_dc.
+
+Pour les classes, une combinaison des mesures WMC et dc sont intéressantes par contre.  La densité de commentaire mesure l'effort deployé pour commenter le code et WMC mesure à quel point le code est complexe.  En comparant les deux on peut voir si un effort supplémentaire a été déployé pour commenter les classes les plus complexes.
+
+Ce dossier contient des graphes générés à partir de nos csv.  On peut voir qu'il n'existe pas de corrélation linéaire directe entre dc et WMC, ce qui indique que l'effort de commenter les classes ne dépend pas fortement du WMC.  En fait on a presque une sorte de courbe normale centrée à 0.5 dc, avec des extrêmes de part et d'autre.  Les classes intéressantes à analyser vont se retrouver à gauche du centre.
+
+Avant d'aller plus loin, notons qu’en général, le code est très bien commenté.  Il y a du javadoc partout et des commentaires pertinents dans toutes les fonctions.  Donc nos suggestions sont vraiment pour faire du peaufinage.
+
+Lignes de CSV des classes moins bien commentées:
+jfreechart/src/main/java/module-info.java	module-info.java	43	3	0.069767445	1	0.069767445
+jfreechart/src/test/java/org/jfree/data/general/DatasetUtilsTest.java	 DatasetUtilsTest.java	1341	297	0.22147651	65	0.003407331
+jfreechart/src/test/java/org/jfree/chart/plot/XYPlotTest.java	 XYPlotTest.java 1252	261	0.20846646	47	0.0044354564
+
+Nous avons choisi trois classes à gauche du graphique, en priorisant celles avec les plus hautes valeurs de WMC.
+
+La classe module-info.java expose les modules à exporter.  Il n’y a qu’une maigre entête de trois lignes.  Pourtant, cette classe pourrait être un endroit intéressant pour ajouter des informations sur les liens entre les sous-paquets, indiquer des dépendances, etc.  Cette information peut aussi se retrouver ailleurs dans le dépôt, reste qu’un endroit qui liste tous les paquets à exporter semble un endroit logique pour inclure un peu plus d’information sur les relations entre eux.
+
+Les deux autres classes à améliorer sont des classes de test.  Ce n’est pas surprenant; les tests sont souvent moins bien commentés que le reste du code.  Pour les deux classes, la plupart des tests ont une ligne de commentaire au début, mais ce n’est pas toujours le cas.  Notamment, dans la classe XYPlotTest, il y a une séquence de asserts débutant à la ligne 347 qui ne sont pas commentés.  Il faut prendre un peu plus de temps pour comprendre le sens de ces tests.
+
+En plus de systématiquement commenter les tests, il pourrait être pertinent de commenter brièvement sur les choix des valeurs, unités, etc.  Il y a des tests qui contiennent de multiples asserts remplis de valeurs différentes, sans que la logique derrière le choix de ces valeurs soit expliquée.  On voit cet effet notamment dans les tests débutant à la ligne 121 de DatasetUtilsTest.
+
+Rappelons qu’on est dans le pointilleux ici, rajouter beaucoup plus de commentaires pourrait sérieusement alourdir ces classes.  Mais il y a place à en ajouter quelques-uns de plus.
+
+Paquets les moins commentés :
+jfreechart/src/test/java/org/jfree/chart/plot/flow,org.jfree.chart.plot.flow,242,62,0.25619835,15,0.01707989
+jfreechart/src/test/java/org/jfree/chart/plot/pie    org.jfree.chart.plot.pie 875    241    0.27542856    26    0.010593406
+jfreechart/src/test/java/org/jfree/chart/plot    org.jfree.chart.plot    6376 1878    0.29454204    335    8.79E-04                                                                    
+
+Nous avons choisi trois paquets avec un haut WMP parmis le petit groupe de paquet dans les environ de 0.2 dc.  La forme générale de la relation WMP vs paquet_dc est la même que pour les classes.
+
+On voit le même patron ici et les mêmes commentaires vont s’appliquer : les paquets de tests sont moins bien commentés que le reste du code, puisqu’il y  a beaucoup d’asserts pur lequel le choix des valeurs n’est pas expliqué, et même plusieurs tests sans aucun commentaire (voir la classe FlowplotTest, descendante du paquet plot, à partir de la ligne 70).
+
+En même temps il faut nuancer ici : notre mesure de paquet_dc ne prend en compte que les classes du paquet, alors que la mesure de wmp prend en compte les descendants.  Les deux valeurs ne mesurent donc pas tout à fait les mêmes objets.  On pourrait utiliser LOC et CLOC pour détecter les paquets moins biens commentés, mais dans les fait on ne ferait que mesurer la taille des paquets sans vraiment la lier à leur complexité.  Il faudrait une meilleure mesure de la complexité des paquets pour la comparer à le masure de paquet_dc.
