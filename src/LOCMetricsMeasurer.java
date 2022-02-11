@@ -62,7 +62,7 @@ class LOCMetricsMeasurer{
                 //if (line.isEmpty() || line == null){
                 if (line.isEmpty()){
                     continue;
-                } if (matcher.find()){
+                } if (matcher.find() && !line.contains("class") && !line.contains("inteface")){
                     nb_methods++;
                     //System.out.println("method:" + line);
                 } else if (insideBlockComment){
@@ -78,6 +78,7 @@ class LOCMetricsMeasurer{
                     if (line.contains(inlineCommentStart)){
                         cloc++;
                     } else if ((line.startsWith("if") || line.startsWith("while") || line.startsWith("for") || line.startsWith("switch"))
+                         || line.contains("esle if")
                         && !insideBlockComment){
                             nb_predicates++;
                             //System.out.println("predicate:" + line);
@@ -92,9 +93,8 @@ class LOCMetricsMeasurer{
             * Donc dans les faits, on peut juste faire sum(nb_predicates) + nb_methods
             * et on obtient le WMC.  Donc on compte les predicats sans se soucier
             * dans quelle méthode ils sont.
-            * Le -1 est parce que notre regex trouve aussi la ligne de définition de classe.
             */
-            wmc = nb_methods + nb_predicates - 1;
+            wmc = nb_methods + nb_predicates;
             scanner.close();
         } catch(IOException e){ 
             e.printStackTrace();
