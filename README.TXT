@@ -1,4 +1,5 @@
 Eric Blais, 1067982
+Celia Ait Ouazzou, 20105239
 
 
 https://github.com/erbla/qualite_tp1
