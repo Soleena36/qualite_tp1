@@ -28,26 +28,6 @@ class LOCMetricsMeasurer{
         this.inlineCommentStart = inlineCommentStart;
     }
 
-    // public String readFile(String path){
-    //     String content = "";
-    //     try {
-    //         BufferedReader filein = new BufferedReader(new FileReader(new File(path)));
-    //         FileReader fileIn = new FileReader(path);
-
-    //         while ((content = filein.readLine()) != null){
-    //             content += filein.readLine();
-
-    //         }
-    //         System.out.println(content);
-
-    //     } catch (FileNotFoundException e) {
-    //         e.printStackTrace();
-    //     } catch (IOException e) {
-    //         e.printStackTrace();
-    //     }
-    //     return content;
-    // }
-
     /**
      * Opère sur un fichier source de classe java pour mesurer ses métriques de taille
      * @param classFileName nom de la classe (pas le path)
@@ -57,7 +37,7 @@ class LOCMetricsMeasurer{
         //TODO: change so this throws an exception and caller has to handle file error
         int loc = 0;
         int cloc = 0;
-        float wmc = 1;
+        int wmc = 1;
 
         try{
             File classFile = new File(classFileName);
@@ -77,39 +57,46 @@ class LOCMetricsMeasurer{
             Matcher matcher;
 
             while (scanner.hasNextLine()){ 
-                String line = scanner.nextLine().trim(); // please remember TODO: remember what?
+                String line = scanner.nextLine().trim();
                 matcher = method_def.matcher(line);
                 //if (line.isEmpty() || line == null){
                 if (line.isEmpty()){
                     continue;
-                } if (matcher.find()){
+                } if (matcher.find() && !line.contains("class") && !line.contains("inteface")){
                     nb_methods++;
+                    //System.out.println("method:" + line);
                 } else if (insideBlockComment){
                     loc++;
                     cloc++;
                     if (line.endsWith(blockCommentEnd)) insideBlockComment = false;
-                } else if (line.contains(inlineCommentStart)){
-                    loc++;
-                    cloc++;
                 } else if (line.startsWith(blockCommentStart)){
                     insideBlockComment = true;
                     loc++;
                     cloc++;
                 } else {
+                    //this line is not part of a block comment
+                    if (line.contains(inlineCommentStart)){
+                        cloc++;
+                    } else if ((line.startsWith("if") || line.startsWith("while") || line.startsWith("for") || line.startsWith("switch"))
+                         || line.contains("esle if")
+                        && !insideBlockComment){
+                            nb_predicates++;
+                            //System.out.println("predicate:" + line);
+                    }
                     loc++;
                 }
-
-                if (line.contains("if") ||
-                        line.contains("else") ||
-                        line.contains("while") ||
-                        line.contains("for")){
-                    nb_predicates++;
-                }
             }
-            wmc = (nb_methods + nb_predicates)/ (float)nb_methods;
+
+            /*On peut obtenir WMC en obtenant la somme des complexités de chaque méthode.
+            * Ce qui est just nb predicates + 1 pour chacune.
+            * Mais on n'a pas à fournir la complexité de chaque méthode, juste le WMC
+            * Donc dans les faits, on peut juste faire sum(nb_predicates) + nb_methods
+            * et on obtient le WMC.  Donc on compte les predicats sans se soucier
+            * dans quelle méthode ils sont.
+            */
+            wmc = nb_methods + nb_predicates;
             scanner.close();
-        } catch(FileNotFoundException e){ //TODO: should have other file IO errors in there too
-            System.out.println("Error reading class file.");
+        } catch(IOException e){ 
             e.printStackTrace();
         }
 
@@ -126,7 +113,7 @@ class LOCMetricsMeasurer{
     public static LOCMetrics computePackageLOCMetrics(String dirName, ArrayList<LOCMetrics> childrenMetrics){
         int tot_loc = 0;
         int tot_cloc = 0;
-        float tot_wmc = 0;
+        int tot_wmc = 0;
 
         for (LOCMetrics childMetric : childrenMetrics){
             if (!childMetric.getIsPackage()){//on n'additionne pas les LOC, CLOC des paquets enfants
@@ -137,5 +124,9 @@ class LOCMetricsMeasurer{
         }
 
         return new LOCMetrics(dirName, true, tot_loc, tot_cloc, tot_wmc);
+    }
+public static void main(String args[]){ //TODO: enlever
+        LOCMetricsMeasurer measurer = new LOCMetricsMeasurer("/*", "*/", "//");
+        System.out.println(measurer.measureClassLOCMetrics("DomainOrderTest.java"));
     }
 }

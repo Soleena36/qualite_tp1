@@ -5,24 +5,24 @@
  * calculées de la même façon à une exception près.
  */
 class LOCMetrics{
-    private String name; //nom de la classe/du paquet
+    private String path; //chemin vers la classe/du paquet
     private boolean is_package; //vrai si un paquet
     private int loc; //nb de lignes de codes
     private int cloc; //nb de lignes de commentaires
     private float dc; //densité de commentaires cloc/loc
-    private float wmc; //weighted methods per class
+    private int wmc; //weighted methods per class
     private float bc; // hautsi bien commenté : dc/wmc
 
     /**
      * Seul constructeur de la classe.
-     * @param name le nom de l'entitée mesurée (pas un chemin)
+     * @param path le chemin vers l'entitée mesurée
      * @param is_package vrai si l'entité est un paquet, faux si une classe
      * @param loc lignes de code de l'entité
      * @param cloc lignes de comentaires de l'entité
      * @param wmc wighted methods per class, avec complexité de McCabe
      */
-    public LOCMetrics(String name, boolean is_package, int loc, int cloc, float wmc){
-        this.name = name;
+    public LOCMetrics(String path, boolean is_package, int loc, int cloc, int wmc){
+        this.path = path;
         this.is_package = is_package;
         this.loc = loc;
         this.cloc = cloc;
@@ -31,17 +31,34 @@ class LOCMetrics{
         this.bc = dc/wmc;
     }
 
+    // @Override
+    // public String toString(){
+    //     String res = "";
+    //     res += "Name: " + name + '\n'
+    //         + "Is a package: " + is_package  + '\n'
+    //         + "Lines of comments: " + cloc + '\n'
+    //         + "Comment density: " + dc + '\n'
+    //         + "Weighted Methods per Entity: " + wmc + '\n'
+    //         + "Comment score: " + bc;
+
+    //     return res;
+    // }
+
     @Override
     public String toString(){
-        String res = "";
-        res += "Name: " + name + '\n'
-            + "Is a package: " + is_package  + '\n'
-            + "Lines of comments: " + cloc + '\n'
-            + "Comment density: " + dc + '\n'
-            + "Weighted Methods per Class: " + wmc + '\n'
-            + "Comment score: " + bc;
+        String name;
+        if (is_package){
+            name = path.replace("/", ".");
+            if (name.contains("org"))
+                name = name.substring(name.indexOf("org"));
+            else if (name.contains("com"))
+                name = name.substring(name.indexOf("com"));
+            //on choisit de pas tronquer si on reconnait les noms usuels
+        } else{
+            name = path.substring(path.lastIndexOf("/") + 1);
+        }
 
-        return res;
+        return  path + "," + name + "," + loc + "," + cloc + "," + dc + "," + wmc + "," + bc + "\n";
     }
 
     public float getDc() {
@@ -56,8 +73,12 @@ class LOCMetrics{
         return loc;
     }
 
-    public float getWmc(){
+    public int getWmc(){
         return wmc;
+    }
+
+    public float getBc(){
+        return bc;
     }
 
     public boolean getIsPackage(){
