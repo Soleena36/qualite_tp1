@@ -49,6 +49,11 @@ class LOCMetrics{
         String name;
         if (is_package){
             name = path.replace("/", ".");
+            if (name.contains("org"))
+                name = name.substring(name.indexOf("org"));
+            else if (name.contains("com"))
+                name = name.substring(name.indexOf("com"));
+            //on choisit de pas tronquer si on reconnait les noms usuels
         } else{
             name = path.substring(path.lastIndexOf("/") + 1);
         }
