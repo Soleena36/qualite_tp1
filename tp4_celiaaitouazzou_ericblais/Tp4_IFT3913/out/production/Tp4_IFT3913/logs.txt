@@ -1,0 +1,4154 @@
+666738a0 Clean up renderer attribute maps.
+0a41d7de Fix serialization issue from last commit.
+23f22666 Delete PaintList class (replace with Map<Integer, Paint>)
+8f80ac68 Delete StrokeList class (replace with Map<Integer, Stroke>)
+6432327e Move ArrayUtils to internal package.
+43f966b1 Move PaintUtils and ShapeUtils to internal package.
+1e3c4df9 Move PaintUtils and ShapeUtils to internal package.
+3a4712f3 Delete ShapeList class and replace with Map<Integer, Shape>
+7fc59df4 Move pie chart classes into separate package.
+e9de835c Remove override attributes and rename 'base' to 'default'
+a456583c Move CompassPlotTest class to correct package.
+99d99939 Remove @since tags.
+b2b7f901 Create separate package for CompassPlot and related classes.
+6e51b1bc Replace PaintMap class with regular Map.
+93078512 Replace StrokeMap class with regular Map.
+b869a3fe Remove @since tags.
+eea4d41e Javadoc fixes
+89aa728e Fix references to ChartPanel class in Javadocs.
+d08af678 Use package-info.java instead of package.html
+8b0e0184 Use Args for null checks.
+cb36cf4d Renamed methods for calculation category label dimensions.
+1c37e68e Remove @since tags.
+8e1cbdf1 Replace Align class with RectangleAlignment enum.
+c6785e43 Move HashUtilsTest to new package.
+49b5b130 Minor cleanup.
+3362c44e Align pom with v1.5.x changes
+cc519871 Fix imports
+f054137b Remove ResourceBundleWrapper class, applets no longer used.
+cff81a99 Move formatting classes into org.jfree.chart.text.format package.
+a0123648 Move Size2D class to org.jfree.chart.block package.
+a905655f Add package info.
+8c8af50f Move LengthAdjustmentType to org.jfree.chart.api package.
+94737b50 Remove @since tags.
+da9420a5 Remove @since tags.
+47e40e5d Move GradientPaintTransformer and related code to org.jfree.chart.util package.
+3c41759a Remove org.jfree.chart.resources package.
+d6790500 Merge branch 'master' of https://github.com/jfree/jfreechart
+dc5a6426 Remove @since tags
+3d8c3c7b Merge pull request #218 from DrBAXA/master
+62becf4f Add FlowPlot and related classes.
+afbd7f5e Extracted SelectionZoomStrategy as an interface from DefaultSelectionZoomStrategy
+6f099179 Merge pull request #120 from DrBAXA/master
+4cb61f26 Fixed merge conflicts
+495135f8 Merge remote-tracking branch 'jfree/master'
+5811f946 Move list classes to internal package.
+781f79f8 Move classes from ui to text package.
+70ca615b Move TextAnchor from ui to text package.
+def98531 Fix for argument check (bug #216)
+6333e12c Move TableOrder to api package.
+27779d00 Move SortOrder to api package.
+b3481d24 Fix compile error.
+c620b792 Move CloneUtils to internal package.
+62213367 Move Rotation to api package.
+b8d249f5 Move ui classes to swing package.
+00b6cbf7 Move ui classes to swing package.
+3934db73 Move legend classes to legend package.
+bcd3d533 Move legend classes to legend package.
+013a63dd Move LineUtils to internal package.
+2f4b3321 Refactor legend classes to separate package.
+53d28520 Refactor legend classes to separate package.
+ac5ff834 Refactor classes to internal package
+ea5ae91e Create api package for some enums.
+b0b1e350 Create api package for some enums.
+49fc8ef2 Move org.jfree.chart.editor package to org.jfree.chart.swing.editor.
+33cd3af2 Create package for internal-only classes.
+0c9f4503 Create package for internal-only classes.
+25137e32 Move Drawable to main chart package.
+fc665dbd More refactoring of Swing related classes.
+e67c5af0 Add new swing package to exports.
+b87b526e Move Swing-related classes to separate package (maybe even a module later).
+bd29bf26 Move UnitType and XYCoordinateType to main chart package (don't belong in utils).
+c38f65a7 Check old and new package names for JFreeSVG (bug #207)
+fd4f5eab Add package to module-info.java (bug #214)
+9c6d5a3d Fix for bug #212
+d44af698 Fix for bug #212
+75b07be4 Fix failing CI
+fc4ddeed Merge pull request #211 from zgh-public/code-cleanup-pr
+7ec310c9 Some fields made final
+23f019e0 Removed redundant public modifiers in interface methods
+02c2a9ab Minor Java 11 language level updates
+23d85926 Minor generics fixes
+265658c8 Class creation warning fixed
+31581525 ChartPanel.getListeners contract fixed to accommodate template aware base method spec.
+67d2be0f ChartPanel: a situation when original exception of saving to SVG is hidden in a finally block was fixed by adding it as a suppressed exception.
+d4d2b7ca Little modernization of ChartPanel
+ae40fd74 Fix bug #205 (throw IllegalArgumentException rather than NullPointerException).
+2557ccdb Update Maven resources plugin version.
+27769115 Fix bug #205 (throw IllegalArgumentException rather than NullPointerException).
+e746961d Update Java versions for CI
+51e3683d Update Java versions for CI
+440fd219 Create module.
+c3ff8178 Javadoc fixes.
+7eefca20 Javadoc fixes.
+1a94c296 Remove JDBC classes.
+4d1e290f Javadoc updates.
+8d880866 Add imports for Javadocs.
+053687d8 Add imports for Javadocs.
+ff1452f4 Rearrange image files for Javadocs
+34455042 Add SVG files for Javadocs.
+70815ab8 Align with 1.5.x branch.
+e34eadd8 Javadoc updates.
+461625fd Observe axis visibility flag in PeriodAxis (bug#198)
+c1a6c135 Add flags for min and max outliers as suggested in #79.
+b42f388d Update README
+c9f92141 Update README
+08062384 Merge pull request #171 from stachenov/default-calendar
+b14df368 Update README
+42261eaa Merge pull request #89 from hchriste/clusteredbar-visible-series
+ec312844 Update README
+089b9a35 Handle null or empty crosshair labels #194
+33f2b58a Fix compile error.
+a732f331 Merge branch 'master' of https://github.com/jfree/jfreechart
+274ae8dc See #138
+756c2ac9 See #130
+c3e74d85 Merge pull request #191 from ebourg/no3d
+b6aa471b Merge pull request #192 from ebourg/patch-5
+0d122f81 Ignore IntelliJ project files
+93e9352c Remove the remaining references to the 3D charts
+b7241722 Reference #189
+275e0b5f Fix deprecation warnings.
+7597c502 Merge branch 'master' of https://github.com/jfree/jfreechart
+529291c3 Merge pull request #189 from ebourg/patch-4
+ea218e42 Fix deprecation warnings.
+fbc85fbb Use generics internally
+e47b784f Fix deprecation warnings.
+e0a00b9e Remove deprecated method from ChartPanel.
+40e9bb50 Fix deprecation warnings.
+b660bb54 Merge branch 'master' of https://github.com/jfree/jfreechart
+da8b9aee Merge pull request #190 from ebourg/crosshair-label-offset
+508eed9f Apply the offset to the crosshair labels
+88ef1990 Do not draw the disabled outline of horizontal crosshair's labels
+4eca8fbd Fix deprecation warnings.
+6a23157c Remove alpha channel from copy-to-clipboard - fix for #182
+2a85da38 Apply rendering hints to overlay drawing - fixes bug #187
+4522d956 Update README.md
+ac838c3e Merge pull request #172 from stachenov/zoom-pan-modifiers
+c3cb77b6 Update localisations for "Save_as" key - see #184.
+5e998eba Update README
+191e1a29 Merge pull request #186 from ebourg/patch-3
+b158dde8 French translation update
+ed36547c Allow to change modifiers for panning and zooming
+24d76ded Add tests for RegularTimePeriod.previous() methods
+2aa60dd8 Allow to use thread-local calendars and prototype
+c0ed57e7 Fix deprecation warnings
+28114bcb Fix failing unit test.
+f12599b5 Remove redundant if statement as suggested in bug #123
+6dc65fcb Fix for bug #64, exception on extreme zoom on NumberAxis
+78817413 Small amendment to fix from bug #170
+bbd2c290 Mention fix for high DPI devices #170
+e8b19b2d Merge pull request #179 from DrBAXA/Hi-DPI
+1851c600 Better rendering on HiDPI monitors with enabled buffering
+b729af60 Fixed test
+864b1af1 Merge remote-tracking branch 'upstream/master'
+e98a8fdd Merge pull request #117 from cpesch/master
+59c35cf4 Fix broken build.
+7e73c95b Merge pull request #173 from phl/master
+61f3b48e Merge pull request #178 from simon04/for-loop
+9d7887f0 Replace while loop with enhanced for loop
+ac5baa65 Migrate tests to JUnit 5
+2a8ded9d Check that graphics environment is not headless before running test.
+4eff8cf6 Merge pull request #177 from HanSolo/master
+7b542834 Removed .DS_Store file
+a942e6c9 GitHub Action for automating the testing of jfreechart
+9a531945 Removed spurious import
+d2cc3fc8 Fix compiler warnings in test classes.
+974c482a Fix compiler warnings in test classes.
+babef0c1 Fix compiler warnings in test classes.
+a5eb10af Fix compiler warnings in test classes.
+2e158edc Fix compiler warnings in test classes.
+822040b4 Fix Javadoc typo.
+a1b49441 Fix compiler warnings in test classes.
+3aa69381 Update generics.
+36b37741 Fix compiler warnings in test classes.
+465b616c Fix compiler warnings in test classes.
+78d3cf8b Modify generics
+eb5baffb Fix compiler warnings in test classes.
+a93da7ea Fix compiler warnings in test classes.
+58cfa0ef Fix compiler warnings in test classes.
+3387c7c8 Update Javadocs.
+02caf06d Fix compiler warnings in test classes.
+fe976178 Add generics and fix compiler warnings.
+1a71ff54 Fix compiler warnings.
+32b53c6a Fix compiler warnings.
+51ecd9dd Update Javadocs
+952ecfb7 Update Javadocs
+b49e103f Update Javadocs
+a8f28453 Fix compiler warnings.
+f5d4e7e5 Fix compiler warnings.
+2d8de79e Fix Javadoc errors.
+7e1ae6d8 List fix for LayeredBarRenderer bug #175
+3e3e79c7 Fix for LayeredBarRenderer bug #175 setBase() should be respected
+43c1d076 List fix for LayeredBarRenderer bug #169
+9af9d087 Fix for LayeredBarRenderer bug#169
+7334482c Add step-wise version of DeviationRenderer
+4e0a53eb Added missing hashCode
+e8ec7697 Removed PiePlot3D
+731b3f1c Update README.md
+9e12b811 Merge pull request #162 from simon04/rm-URLUtilities
+1955cc38 Merge pull request #163 from simon04/use-Objects
+6318f70b Remove unused ObjectUtils
+4756e5b1 Use CloneUtils.cloneList
+c63e1cde Use CloneUtils.clone
+cffa8104 Use Objects.equals
+9b93aa38 Use Objects.hashCode
+e1de5493 Remove unused URLUtilities
+a7f0e549 Added missing hashCode, fixed a couple compiler warnings
+9b24cf94 Added types to Lists, removed redundant casting
+146c4713 Add generics and fix compiler warnings.
+2c7b2d58 Change if to switch - see issue#149 at GitHub.
+b2727580 Fix compiler warnings.
+3de16b9b Add some generics, fix compiler warnings.
+826de566 Merge pull request #154 from jfree/MissingHashcodeFixes
+4fc0c38b Added javadock to DefaultSelectionZoomStrategy
+6174da45 Merge remote-tracking branch 'upstream/master'
+96ed2ec0 Generated missing hashCode
+101f5225 Fix compiler warnings.
+de82cc1d Add generics and fix compiler warnings.
+e23eafd9 Add generics and fix compiler warnings.
+d541789a Suppress warnings
+ed972ca3 Fix compiler warnings.
+e21c4225 Add generics and fix compiler warnings.
+8f3e6aa7 Suppress warnings
+d42cfcfb Fix compiler warnings.
+e8e8f47e Fix Netbeans warnings.
+906d5892 Fix Netbeans warnings.
+768ee10e Add generics and fix compiler warnings.
+cb3ca647 Add generics and fix compiler warnings.
+6612fa9b Fix compiler warnings.
+86abdc8e Fix compiler warnings.
+e7114ef4 Fix compiler warnings.
+2ef7cd0a Merge branch 'master' of https://github.com/jfree/jfreechart
+ef7a97bb Merge pull request #145 from shoul10/fixedBuildErrors144
+02333632 Fixed Build errors #144
+a203a3ed Fix compiler warnings.
+6b831970 Fix compiler warnings.
+65e1b052 Add generics and fix compiler warnings.
+cb65254c Add generics and fix compiler warnings.
+f7ded380 Add generics and fix compiler warnings.
+ac710c9a Add generics.
+03131749 Fix compiler warnings.
+b60dbc36 Fix compiler warnings.
+68e337a4 Fix compiler warnings.
+8b7b0fe7 Fix compiler warnings.
+10391a10 Update headers.
+1142d282 Add generics.
+e0496954 Fix compiler warnings.
+773f6f82 Add generics.
+8078b274 Add generics.
+0964e1a7 Fix compiler warnings.
+2e7f3c40 Fix compiler warnings.
+f30e406b Fix compiler warnings.
+880bda6c Fix compiler warnings.
+ab2d10fb Source formatting.
+78934f59 Fix compiler warnings.
+b31740fd Fix compiler warnings.
+9ea09ccf Fix compiler warnings.
+ffd1e8f7 Fix compiler warnings.
+bcc5b993 Fix compiler warnings.
+eb812431 Add generics.
+d9ff717a Add generics.
+9a050ecd Fix compiler warnings.
+d13f8d95 Fix compiler warnings.
+3b5799f7 Fix compiler warnings.
+1023bf57 Fix compiler warnings.
+e0b34730 Fix compiler warnings.
+d09d2ba0 Fix compiler warnings.
+0cfd8706 Fix compiler warnings.
+7baf56e0 Fix compiler warnings.
+11bdc56a Fix compiler warnings.
+3b49d5ab Fix compiler warnings.
+5fa94e7d Fix compiler warnings.
+b91af7a7 Fix compiler warnings.
+3aca96e0 Fix compiler warnings.
+b859bd33 Fix compiler warnings.
+291359ca Fix NetBeans warnings.
+e3fd072f Update headers.
+dda2a568 Use generics.
+8453a43d Update headers.
+bb2834a0 Fix bug in requireInRange() method.
+8a7e9afd Add generics
+9971b356 Fix NetBeans warnings.
+5253d075 Update headers / Javadocs / Fix NetBeans warnings
+04ef6799 Add Javadocs.
+b42d52bd Correct Javadoc comments.
+b986d4e4 Add Javadocs, use switch.
+7da4e59c Add Javadoc entry
+32b3933e Add Javadoc entry
+3e058a39 add reference for bug
+9a1fe397 Update headers / Javadocs
+da262a5b Use enumeration instead of integer constants.
+78763de3 Formatting
+c4c129a0 Add null argument checks and Javadocs.
+a6bb4821 Add generics.
+229b749e Fix NetBeans warnings
+a25ef8cd Fix NetBeans warnings
+4a129c2a Update headers
+8033f8b1 Fix NetBeans warnings
+57a427ec Add Javadocs / fix NetBeans warnings
+686f0b84 Fix NetBeans warnings.
+71169ae8 Add generics.
+6c28bfcc Fix NetBeans warnings.
+d4df77cb Fix NetBeans warnings.
+3e13a50e Fix NetBeans warnings.
+5e051834 Add generics.
+122c01f9 Add generics.
+5849a243 Add Javadocs
+f46d60d7 Add generics.
+7f626f2e Add javadocs.
+3530ac43 Add javadocs.
+f90598ff Fix NetBeans warnings.
+a30cdf04 Fix NetBeans warnings.
+1e44b548 Fix NetBeans warnings.
+03b27c55 Fix NetBeans warnings.
+b8ee6fb4 Fix NetBeans warnings.
+94f42549 Fix NetBeans warnings.
+dfe3dadd Fix NetBeans warnings.
+717a966d Fix NetBeans warning.
+c0dd1933 Fix NetBeans warning.
+d0f9d7ff Fix NetBeans warning.
+366cc410 Fix NetBeans warning.
+6a4bc112 Fix NetBeans warning.
+28e7a550 Fix NetBeans warning.
+7b721dd9 Use for-loop
+516e68ff Generics / warning fixes.
+d9bc0258 Generics / warning fixes.
+6027bd34 Add @Override
+2d4c3e57 Add @Override
+ab314992 Add @Override
+a480a496 Make class public
+7f8761f0 Fix NetBeans warning.
+43cab32b Fix NetBeans warning
+fe3eebf3 Fix NetBeans warning
+a8c2d498 Fix NetBeans warning
+19eb8124 Header updates
+e31573af Add missing Javadoc
+fe4d1d4a Fix warnings
+8313b9d0 Fix warnings
+3fe74af7 Fix warnings
+b4d53c0d Fix warnings
+ed74ddb3 Fix missing imports
+5836f606 Generics / warning fixes.
+7997d52f Fix warnings.
+c6ce4555 Fix warnings.
+f8aa9889 Fix warnings.
+04c61043 Add @Override
+c680cdc8 Add @Override
+b6bf7cdd Generics / warning fixes.
+c107fcac Generics / warning fixes.
+fee55db5 Generics / warning fixes.
+14f6ae88 Generics / warning fixes.
+156d2f01 Generics / warning fixes.
+3116ab0f Fix warnings.
+d19d81f0 Fix failing test.
+8372b9e4 Fix failing tests.
+e2787e5c Fix warnings.
+c7921a8d Add generics.
+856a00f8 Fix NetBeans warning.
+2187046f Fix Javadoc reference.
+1cd1f9d9 Fix deprecation warning.
+39957fb6 Add some generics.
+fbd53703 Uppercase SNAPSHOT
+abb5a631 Remove changelog.
+6fc1fa21 Remove changelog.
+42e54c70 Remove changelog.
+15fcb7b9 Use standard case for color constants.
+0ef26bf0 Add generics and fix compiler warnings.
+a19097b9 Add generics and fix compiler warnings.
+92b483ea Add generics and fix compiler warnings.
+9f9b6098 Fix deprecations and compiler warnings.
+d6f2f90c Add generics and fix compiler warnings.
+c5b83c77 Add generics and fix compiler warnings.
+0d01f165 Add generics and fix compiler warnings.
+97ea9f7d Add generics and fix compiler warnings.
+91b134aa Add generics and fix compiler warnings.
+17080179 Add generics and fix compiler warnings.
+442a5fad Fix compiler warnings.
+3238a8ac Add generics and fix compiler warnings.
+cb2ae46a Fix deprecations and compiler warnings.
+232691fc Fix deprecations and compiler warnings.
+ac35d446 Fix deprecations and compiler warnings.
+829ac156 Fix deprecations and compiler warnings.
+ddbab004 Use uppercase Color constants for consistency
+285c0a10 Fix Javadoc typo.
+64fbc7ae Fix Javadoc typo.
+fc43f0bd Fix deprecations and compiler warnings.
+c5b1c6cd Merge pull request #118 from Diffblue-benchmarks/new-unit-tests
+4280d382 Merge pull request #121 from henryju/patch-1
+b9d3b1dd Merge pull request #142 from tracylynne99/save_png_cleanup_TLH
+d13ed69e Reapplied minor cleanup
+6caf076d Merge master into save_png_cleanup_TLH
+d2d2db28 Restore the doSave() method removed in pull request #139, added Javadocs
+2597b72a Use existing constants
+9f7efde3 Minor cleanup of changes for saving PNG with specific size, use existing constant for action command.
+f247c80c Merge pull request #139 from rgwood-github2018dec31/add_save_png_hi_res
+97d99554 Merge pull request #137 from hashtagviv/patch2
+952e96e8 Add test for bug 134
+8fce3c9e Reversed deprecation of nullNotPermitted() method, IllegalArgumentException is preferable to NullPointerException.
+8bc4967c Reverse out pull request #78 and update Javadocs.
+6597144e Add test case and fix for bug #141
+781ef851 Serialization test
+c0c3e432 Merge remote-tracking branch 'origin/master'
+aa0dd6fc Selection zoom strategy implemented to allow changing zooming behavior
+e9686b8b Merge pull request #78 from kelloggm/defaultkv2dRowIndex
+87218521 Merge branch 'simon04-enum'
+46d93e43 Merged branch 'enum' of https://github.com/simon04/jfreechart into simon04-enum
+01c8afe9 Committing after canceling a merge that I started.  Too many conflicts so I gave up!
+9ec8fb9c Merge pull request #45 from adrianmsmith/fix-RingChart-setSectionDepth-documentation
+30c184e7 Merge pull request #49 from frothga/master
+3b75f318 Fix compiler warnings.
+5da94a14 Merge branch 'master' of https://github.com/jfree/jfreechart
+c31c3761 Fix compiler warnings.
+b73b768f Merge branch 'master' of https://github.com/jfree/jfreechart
+68d40afc Fix compiler warnings.
+eebcf415 Fix compiler warnings.
+29bd50ff Fix compiler warnings.
+9ebc650f Remove Cobertura, not supported with latest JDK versions.
+b8078029 Merge pr/115
+30073798 Replace deprecated method calls with alternative.
+074c717f Fix compiler warnings.
+3f43a549 Fix compiler warnings.
+4711dc6e Show compiler warnings.
+1f182b8d Deprecate null check method in Args class.
+d7aaffdd Update animal-sniffer plugin to v1.18 and check against JDK8 API.
+5d2e7d00 Update Maven Resources plugin to v3.1.0
+cdfcef20 Update Maven Surefire plugin to v3.0.0-M4
+e766a63b Update to JUnit v4.13
+0119b03c Update Maven Jar Plugin to v3.2.0
+d5bf41a3 Update required JDK to 1.8
+06831013 * added save to png at screen res
+dc6b0cfe patch issue 134
+0d80370c patch
+f574e3d9 Use generics for marker storage, added missing hashCode, fixed equals to check for datasets.
+466a1ae9 Fix XYAreaRenderer to use SeriesFillPaint when not a Gradient
+ab20140c Selection zoom strategy implemented to allow changing zooming behavior
+de79505a Add tests for org.jfree.chart.imagemap.ImageMapUtils
+b6c9190d add Catalan translation for JFreeChart 1.0.14
+df888966 Merge master-upstream
+81c37578 Revert "Pass type to Comparator/Comparable"
+190291a3 Revert "Converted to enum"
+d03e68ac Clarify Javadocs.
+69ded92b Deprecate clone() method.
+816597cb Modify to use CloneUtils.
+7ad01227 Clean up
+43bd624e Add Javadocs.
+086b3a93 Add Javadocs.
+d80fd787 Implement PublicCloneable.
+cef94e89 Add general cloning method.
+adfca273 Convert to enum
+52daf08c Converted to enum
+56439716 Pass type to Comparator/Comparable
+f848083c Merge upstream/master
+b4d7489e Added missing hashCode for several classes
+a362a41d Merge pull request #104 from tracylynne99/master
+9025e988 Converted several more classes to enums
+e41734ff Merge pull request #91 from bambo1543/master
+daf34010 Merge pull request #85 from simon04/enum-name
+c1effea7 Merge pull request #83 from simon04/roll-unit-docs
+6d5c3096 Merge pull request #93 from tracylynne99/master
+248f0ef0 Update README.md
+40b92f7f Fix the locale for the date format object that is used for parsing.  See issue raised in pull request #103
+c1ffa4c0 Add automatic module name.
+b5affeab Update configuration of SAXParser.
+d51bf321 Merge branch 'master' into master
+6b000ea5 Converted several classes to enums
+fe383cd5 Merge pull request #1 from jfree/master
+be0ead54 fixed SamplingXYLineRenderer to draw seriesPath from s.closeY instead of from last drawn y
+e0720acc Fix up XYClusteredBarRenderer changes
+59aa1b4b Update ClusteredXYBarRenderer to account for visiblility of series
+520a4be6 Don't use buffering in ChartPanel.
+9fc9287e Remove name fields from enum
+ebe12b0d KeyedValueComparatorType as enum
+8ff41a6c XYCoordinateType as enum
+98eef9c8 VerticalAlignment as enum
+ef4de331 TimePeriodAnchor as enum
+e396bccc TextBlockAnchor as enum
+29513ad8 TextAnchor as enum
+e01c021f SeriesRenderingOrder as enum
+2a14706d RectangleEdge as enum
+7cb530ec RangeType as enum
+26b8d18b PolarAxisLocation as enum
+c0dcef5c PlotOrientation as enum
+74464235 PieLabelLinkStyle as enum
+f1611924 LengthConstraintType as enum
+aef90f40 LengthAdjustmentType as enum
+52185db3 LegendRenderingOrder as enum
+b9db2cbc ItemLabelAnchor as enum
+73f5d6a6 HorizontalAlignment as enum
+223e1818 HistogramType as enum
+19e8df4c GradientPaintTransformType as enum
+43145fb4 DomainOrder as enum
+2142d3a3 DialShape as enum
+e2c1dd1d DateTickUnitType as enum
+d8ee5106 DateTickMarkPosition as enum
+9515c749 DatasetRenderingOrder as enum
+aab850c8 ChartChangeEventType as enum
+13526fe5 CategoryLabelWidthType as enum
+ab91008d CategoryAnchor as enum
+c0637a88 AxisLocation as enum
+fc4978b1 AreaRendererEndType as enum
+17667240 AxisLabelLocation as enum
+43d5af58 TickType as enum
+9e004ed8 DateTickUnit: add documentation for rollUnit
+893f9b15 Add generics for subtitles list.
+4752f0dc Update Javadocs for overlays.
+6eaddd4f Fix for bug #75 - add same outline options as XYLineAndShapeRenderer.
+f19cea1e Fix test that fails in different timezones.
+58d3777a Removed traceline code, use overlays for this.
+6031c6f9 Remove obsolete exclude (for test classes) from pom.xml
+86521ed9 Remove servlet utilities, these can be provided externally.
+989f7be6 Move JFreeSVG and OrsonPDF detection to ChartUtils.
+8cd4f630 Make crosshair lists protected rather than private.
+a4dcd4e9 Add some generics and clean up.
+d44aea16 fix typo
+62ca8973 fix incorrect return value in getRowIndex
+d98a34cc Merge pull request #76 from kelloggm/row-checks
+1e844059 Merge branch 'master' of https://github.com/jfree/jfreechart
+91e8f89d Generate Javadocs with sources.
+552283c9 remove older version of test
+07229f28 test that fails for existing version of jfreechart, but passes on this branch
+7c79dda1 test for value that would crash badly
+895480a3 check row keys for -1 before dispatching in sliding datasets
+39dfee3c Merge pull request #56 from SGbo/feature/xyplot-constructor-fix
+18a51459 Merge pull request #70 from kelloggm/negative-index-fix
+6a5e7c65 add error handling code to SerialDate#addMonths and SerialDate#addYears
+0d4a30d0 Update README.md
+4baa36a4 Add migration hints.
+fd72df7c Prepare for 1.5.0 release.
+513bebe5 Merge pull request #58 from pacbeckh/master
+9c9bf607 Add link to demo projects.
+76305928 Update reference to JFreeChart-FX extensions
+1f6a91f1 Move demos to separate project at GitHub.
+d515ff88 Updated readme.
+ce9fd0d1 Drop Ant build support, update JUnit version.
+0c86a5ce Added missing @Test annotation #57
+607fbdb8 add dataset, renderer domainaxis and rangeaxis only to map, when not null
+f75ae0f2 Merge branch 'master' of https://github.com/jfree/jfreechart
+a68c857d Apply similar fix for #33 as Kamys
+dd926605 Update README.md
+e57784be Merge pull request #51 from AlexElin/badge
+4261fd5e add badge for maven central
+8249eccd Merge branch 'master' into master
+72ada486 add badge for maven central
+a7156d45 Formatting updates.
+3c2a32af Rename old readme file
+02ce7844 Fix exception for explode percent.
+9ad3d9b1 Increase default size, generics for overlay list, update color constants, reformat sources.
+a2825c5a Add John Matthews to contributor credits.
+05dd9949 Add John Matthews to contributor credits.
+348db525 Add generics for lists.
+fae6fba5 Observe the crosshair labelFont and isLabelVisible attributes.
+724aeef0 Add support for item labels.
+7674b090 Make RectangleAnchor an enumeration.
+3ffb749e Remove reference to 3D effect
+42d7e71a Remove reference to 3D effect
+09c0d387 Remove reference to 3D effect
+6d0f9f5e Make renderer's drawDomainLine() method more consistent.
+fede9520 Convert to enum
+d56fb702 Convert to enum
+22701c9e Rename ParamChecks --> Args.
+cb0c8669 Convert to enum
+a0238d17 Convert to enum
+9a7765fa Add drawRangeLine() method to interface.
+4544ff3a Remove final keywords.
+4beeff34 Remove final keywords.
+9f10ca8f Remove final keywords.
+3768e1ea Remove final keywords.
+dea0da7c Remove final keywords.
+29374778 Javadoc tags.
+16b12d30 Remove final keywords.
+9ff98e0c Remove final keywords.
+98697abd Remove final keywords.
+0b3f22b2 Javadoc tags.
+f3dbb4d1 Remove final keywords.
+3fccd59d Remove final keywords.
+0e699e07 Javadoc tags.
+6f209c14 Remove final keywords.
+40a282cd Remove final keywords.
+d98dc00d Remove final keywords.
+639d184b Javadoc tags.
+7d8df811 Remove final keywords.
+40a5649a Javadoc tags.
+b6f33bc4 Remove unused methods.
+edfb719a Remove final keywords and unused methods.
+ec9a45d8 Remove final keywords.
+c97cb0c1 Remove final keywords.
+ead09ba7 Remove final keywords.
+5a162d4c Remove final keywords.
+85da1aa1 Remove final keywords.
+97722423 Javadoc tags.
+e50d7b1f Remove final keywords.
+8b778bff Javadoc tags.
+999ec272 Javadoc tags.
+dda92444 Javadoc tags.
+8581e48e Javadoc tags.
+e8f3e13e Remove final keywords.
+0a358578 Remove final keywords.
+d672424a Javadoc tags.
+1e6ff3df Javadoc tags.
+eb65e89f Javadoc tags.
+41bdd4ff Javadoc tags.
+42e56fa5 Javadoc tags.
+fcdf4f80 Javadoc tags.
+1df75d5c Javadoc tags.
+0c1adfb9 Javadoc tags.
+d3b24256 Javadoc tags.
+b0e64b8f Javadoc tags.
+e0348666 Javadoc tags.
+b72a4ee8 Javadoc tags.
+f87224ed Javadoc tags.
+c2221694 Javadoc tags.
+fe434ea5 Cleanup
+64ef28fc Javadoc tags.
+7f897556 Javadoc tags.
+b1bf47ec Javadoc tags.
+6ba0d5f1 Javadoc tags.
+ef1158c0 Javadoc tags.
+77ff842e Cleanup
+f4ec521b Use @code tags.
+2b34d471 Fix Javadocs
+b82de84a Remove final keywords.
+9ed6b067 Remove final keywords.
+290c69e9 Remove final keywords.
+ac988cc7 Cleanup
+8f42a164 Remove final keywords.
+94609185 Fix Javadocs
+e5222720 Cleanup
+ef719b2b Javadoc updates.
+c658f781 Javadoc updates.
+93d5b4f5 Remove unused file.
+506e79fa Move utility method into ShapeUtils.
+a9fdd930 Cleanup
+7b90718f Rename HeatMapUtilities -> HeatMapUtils
+f53cb86f Cleanup
+b19a328a Rename RendererUtilities --> RendererUtils.
+ff45162a Rename TestUtilities --> TestUtils.
+87149027 Rename DataUtilities --> DataUtils.
+434bac1e Rename DatasetUtilities --> DatasetUtils.
+70baccf7 Rename test
+0e91d343 Rename LineUtilities --> LineUtils.
+c7d2cb0b Rename ImageMapUtilities --> ImageMapUtils.
+0763be8e Rename ChartUtilities --> ChartUtils.
+3c26b680 Rename test file.
+3094ae80 Rename HashUtilities -> HashUtils.
+430950e7 Fix sort order bug.
+20617d5b Update constants.
+748dc86f Update constants.
+e3daa080 Update constants.
+e4478abf Update constants.
+fb840c52 Update constants.
+00fe15cd Fix compilation error
+ea1b09db Rename TextUtilities -> TextUtils.
+3107e2fc Update constants.
+ede9ee51 Cleanup
+075427ba Cleanup
+263d395f Update constants.
+7be80350 Update constants.
+5525b134 Remove Javascript preview
+cc8ff6f2 Update constants.
+43ebb69c Update constants.
+1fb27b20 Update constants.
+06e881c2 Update constants.
+af88b376 Update constants.
+51b7af13 Fix NetBeans warnings
+32359991 Fix NetBeans warnings
+96c1b27c Update constants.
+14ffc8ca Update constants.
+50be4a14 Update constants.
+37c7a169 Update constants.
+a07579ed Update constants.
+1368feb1 Update constants.
+7748f28f Update constants.
+1d9fc701 Update constants.
+b1a63081 Update constants.
+0ff05bc9 Update constants.
+f0ed1864 Update constants.
+05102ab0 Update constants.
+cdd282cb Update constants.
+9e29abf6 Update constants.
+497b4042 Update constants.
+52fd1fae Update constants.
+d2b9a452 Update constants.
+a84a05c4 Update constants.
+dbeffefa Changed ChartPanel private members to protected. This allows one to create a usable subclass in client code.
+88e51719 Add missing localisation files.
+6ca7bda0 Fix for bug#48 (tooltips in HORIZONTAL orientation)
+5bbd9424 Update for API changes.
+6e4344fc Fix Javadoc warnings.
+0e0b1aaa Fix Javadoc warnings.
+9bc22aea Fix Javadoc warnings.
+c929b7b6 Fix Javadoc warnings.
+2b586d21 Use consistent method names.
+00087119 Fix Javadoc warnings.
+da3cccc8 Fix Javadoc warnings.
+758d3673 Fix Javadoc warnings.
+bc530ea7 Fix Javadoc warnings.
+0df9cf6e Remove reference to maven directory, it was deleted.
+af59c01d Add missing methods.
+056ce2c0 Update Javadocs.
+824e64f1 Remove references to SegmentedTimeline
+a296de80 Remove gorilla.jpg
+8ae16201 Remove image file
+defa1876 Rename methods in LineAndShapeRenderer
+f0112ce3 Correct documentation in RingPlot: proportion vs percent
+7a5eb4da Remove 3D effects (use Orson Charts for 3D).
+6a67a202 Change 'base' to 'default' for renderer attributes.
+03ab22d1 Fix failing unit tests.
+79679c05 Remove deprecated code
+1be317c6 Remove deprecated code
+293b2021 Remove deprecated code
+61220d6f Remove deprecated code
+4076fe1d Remove deprecated classes.
+07059fb9 Remove deprecated classes.
+9473d89f Remove deprecated field.
+9f3e8bb2 Rename method in interface.
+d5f91879 More cleanup for removal of JavaFX code
+0e12bb63 More cleanup for removal of JavaFX code
+2ecca13c Remove unused jar files.
+e4e04e10 Remove deprecated code and update tests.
+a6696e78 Remove JavaFX classes, they are now in a separate project.
+949365da Incorporate required JCommon classes directly.
+9f02d1c1 Merge pull request #6 from tomas-pluskal/master
+f68f7248 Merge pull request #44 from SubliminalTitan/master
+071d2473 Fix for multiple axes in which one or more is inverted results in incorrect pan direction on remaining axes.
+4e196e9b Add code to update crosshairs - one last update.
+da3f416b Add code to update crosshairs - fix the fix
+22d354a5 Add code to update crosshairs - fix typo
+29e0c085 Add code to update crosshairs.
+e4068bed Update README
+53fefd3f Update pom files.
+1e35e5cb Rename build-fx.xml -> build.xml
+5698e6d9 Move build.xml to build-1.6.xml
+50fedc19 Update Ant build script.
+2c6c0e8c Update README.
+467121cc Update pom.xml for release.
+1380a7bb Add latest JCommon jar file.
+669dbd64 Removed unused CSS file.
+dba06bc3 Fix for bug #36
+34fae0b3 Minor source edit
+528da74c Change ChartViewer from Control to Region
+3404531c Ignore javadocs directory
+ca0c6900 Fix URL in Javadocs.
+88efd120 Add new tests while investigating bug report.
+e03dc035 Normalize all line endings
+de2120e0 Add .gitattributes file
+33fd5503 Merge pull request #37 from bug-bulletin-forks/improve-gitignore
+322ffeb9 Fix for bug #38
+52994296 Improve .gitignore rules
+54eeb32a Add sample chart image
+1f8f9407 Formatting updates.
+021f0fbc Formatting updates.
+e6c66bb2 Formatting updates.
+c0be6c99 Remove NEWS file.
+e2f4d84e Fix Javadoc warnings.
+d2c5a790 Remove NEWS file, everything is in README.md now.
+af5ab328 Fix Javadoc warnings.
+c05daa00 Use rendering hint in FXGraphics2D to improve JavaFX font measurements.
+67e7a3e8 Update ant scripts for new dependency versions.
+ab4e5180 Update FXGraphics2D and JFreeSVG dependencies.
+820773a5 Merge origin/master
+3341bf74 Fix for bug #25.
+aac278d7 Add JUnit tests for bug #25
+b2145a66 Merge pull request #24 from CorneliaXaos/master
+eb21a0fb Fixed issues with ant build.
+0a2861d9 Whitespace
+7dbc984c Update header
+c527db4d Merge pull request #19 from hylkevds/defaultTimeZone
+726f7c4a Fix rendering issue for horizontal orientation.
+bef61a26 * Ensure SegmentedTimeline is initalised with an unchanged default timeZone.
+cbf5a307 Rename dev pom file.
+bfc1ce61 Fix failing test.
+8841a7e2 Update test for cloning failure.
+b66a3217 Fix cloning test failure.
+86129e00 Update clone test and capitalise Color constants.
+02aebc2e Add simplified method to create histogram charts.
+3ee5e7ec Set up file extensions correctly.
+2aec9357 Updates to README.
+bba927aa Updates to README.
+81304f43 Updates to README.
+3b4a792e Updates to README.
+8ecd92dd Performance improvement for CategoryPlot dataset-to-axis mapping - see SourceForge #1147
+06457116 Transfer info from NEWS
+53bf421e Build instructions.
+553ff980 Cleanup
+72af16a8 Transfer info from NEWS
+9a0289f6 Transfer info from NEWS
+81258fae Add contributors.
+77210e97 Transfer info from NEWS
+4a0803b0 Transfer info from NEWS
+70d59595 Transfer info from NEWS
+20dde92d Transfer info from NEWS
+66dca606 Transfer info from NEWS
+05cb67f4 Transfer info from NEWS
+1d5c8ccf Transfer info from NEWS
+5fc5570c Transfer info from NEWS
+19621fa8 Transfer info from NEWS
+0ec909dc Adjust headers.
+7f26c85c Transfer info from NEWS
+9257d621 Transfer info from NEWS
+d3310b9a Transfer info from NEWS
+501f813f Transfer info from NEWS
+1dc6b8b9 Transfer info from NEWS
+b3551575 Cleanup
+9e640e25 Tidy up.
+e935eaa1 Add missing setStroke() for label outline.
+95848616 Merge origin/master
+adfff16b Merge pull request #4 from GitoMat/master
+e8b72b2e Added authorship info
+b168851f Improved mouse handler for zooming only on X axis or only on Y axis
+1565211a Improve XYStepRenderer to only draw visible lines
+f297144f Replace <code> tags
+3b540030 Replace <code> tags
+79b3ccf9 Add README.md
+3ccdcab9 Replace <code> tags
+5fd3d116 Replace <code> tags
+9c885ff0 Not keeping a ChangeLog anymore.
+cce19b7a Revert "Not keeping a ChangeLog anymore."
+a2a007d4 Not keeping a ChangeLog anymore.
+855f188d Replace <code> tags
+9a23c655 Replace <code> tags
+0bed03d2 Replace <code> tags
+9a1c014e Replace <code> tags
+78d7125b Replace <code> tags
+5ba6444f Replace <code> tags
+385dbf5b Replace <code> tags
+f914fb83 Replace <code> tags
+dc38faeb Replace <code> tags
+8a2e412f Replace <code> tags
+a25b8f1c Replace <code> tags
+721ef79b Replace <code> tags
+75ee9e57 Replace <code> tags
+e1161348 Replace <code> tags
+39a542b9 Replace <code> tags
+ae7e765f Replace <code> tags
+ecd72e12 Replace <code> tags
+2067dedb Replace <code> tags
+961614da Implement overlays for the JavaFX ChartCanvas
+f1005baa Check override flags for scrolling
+cdb2cb25 Add flags to allow disabling of domain and/or range zooming
+0c39fbe2 Fetch canvas from skin on demand.
+49fa06c3 Minor formatting fix.
+c40a58bb Javadoc updates.
+4cbfdeca Fix typo in header
+c964ae1f Update build script for moved files.
+e1821cd2 Moved Javadoc image files
+85684e33 Move SWT code to separate projects (on GitHub)
+d90d002f Include jsfreechart demo
+87442a2f Javadoc updates.
+d8f06343 Update developer pom file for new file locations.
+e10f4e26 Remove experimental code from distribution.
+4bf86152 Remove experimental code from distribution.
+194fc478 Clean up Ant build files for Maven file reorg.
+466f86f0 Update build for file reorganisation.
+2a19120d Update default pom for moved source files.
+2228e7e9 Move source files to standard Maven location.
+e9b9eb65 Move property files to standard Maven location
+eed0e264 Remove outdated file.
+4d4aa89a Move Javadoc file to standard Maven location.
+b4aaa5c6 Update POM file.
+9755ff0d Move resource files to standard Maven location.
+1b18adfb Move test files to standard Maven location.
+760a19e5 Update POM info
+de6674f4 Clean up pom
+171763b4 Update for file name change.
+2903c16d Rename file for JavaFX build and change version number to 1.5.0
+ec1ac869 Remove Checkstyle files, not used anymore.
+5cbabccc Remove Checkstyle files, not used anymore.
+1a39cdf3 Remove Checkstyle files, not used anymore.
+93460344 Don't use buffering
+408a8850 Don't use buffering
+e796ba47 Don't use buffering
+cf8e8dc0 2016-02-19  David Gilbert  <david.gilbert@object-refinery.com>
+33cb6542 Javadoc edits.
+88e2dd2a Replace <code> tags.
+a441dfc7 Replace <code> tags.
+6d34b9ca Replace <code> tags.
+76b6b160 Replace <code> tags.
+437ba875 Replace <code> tags.
+1aa911a0 Add a canvas reference to the ChartViewer.
+03199c1e Replace <code> tags.
+1ca446c5 Add .gitignore
+7651afa1 Add README for the pom files.
+bdc5c2f2 Replace <code> tags.
+ac1ccf8b Update copyright year.
+609dbe5f Update copyright year.
+aee82147 Javadoc tags.
+17f42146 Javadoc tags.
+a5e67855 Javadoc tags.
+e8d70b48 Update copyright year.
+520ce038 Replace <code> tags.
+18565c5e Replace <code> tags.
+3d626aae Put Maven poms in directory.
+34eb7a9f Update FXGraphics2D to 1.3
+8d68bba8 Update FXGraphics2D to 1.3
+3d21d1d1 Remove old NetBeans files.
+bb70091c Removed old pom file
+e5482c57 Update dependencies for Maven build with JavaFX support.
+e2e9e299 Update dependencies for Maven build with JavaFX support.
+52c7e007 Allow chart to be null (to support usage from FXML) and use existing context menu.
+29a40408 Allow chart to be null (to support usage from FXML).
+503b7924 Allow chart to be null (to support usage from FXML).
+d2862cb7 Delete FXGraphics2D source files and include jar.
+14bbc6f1 Update OrsonPDF version to 1.7 and include FXGraphics2D 1.2.1
+7227af18 Update OrsonPDF version to 1.7
+b131a96a Fix Javadoc warning.
+95ac1b34 Add FXGraphics2D jar file.
+d0bf3765 Update OrsonPDF dependency
+c0c8d63a Removed FXGraphics2D source files (use lib instead)
+cd153355 Settings for JavaFX build.
+ec3e7406 POM file to build for JDK 1.8 (includes JavaFX support)
+b1c86a7b POM file to build for JDK 1.6 (no JavaFX)
+25cdcab7 Update Javadocs.
+297006bb Fix for auto tick selection when data values are extremely large.
+e160ac93 Fill background for marker labels.
+c012ec48 Fill background for marker labels.
+c475d166 2015-11-23  David Gilbert  <david.gilbert@object-refinery.com>
+6562d441 2015-09-22  David Gilbert  <david.gilbert@object-refinery.com>
+62260f25 2015-09-22  David Gilbert  <david.gilbert@object-refinery.com>
+dc42eeba Update FXGraphics2D to match latest code on GitHub
+6a598751 Update FXGraphics2D to match latest code on GitHub
+43ae5722 2015-09-10  David Gilbert  <david.gilbert@object-refinery.com>
+2a9cd909 2015-09-10  David Gilbert  <david.gilbert@object-refinery.com>
+70410ecc 2015-09-10  David Gilbert  <david.gilbert@object-refinery.com>
+15043150 Update JFreeSVG to 3.0
+03aeb9bc Update JFreeSVG to 3.0
+44a36f43 Update JFreeSVG to 3.0
+a0464b30 Javadoc fix
+069cc43a Javadoc fix
+30d6822f Javadoc fix
+73226839 Javadoc fix
+68b32c1a Javadoc fix
+f87eb81f Javadoc fix
+0d844d9f Javadoc fix
+c84f5e7c 2015-09-09  David Gilbert  <david.gilbert@object-refinery.com>
+327c20bd Javadoc formatting changes.
+c3b3867b 2015-09-06  David Gilbert  <david.gilbert@object-refinery.com>
+dae6a131 2015-09-06  David Gilbert  <david.gilbert@object-refinery.com>
+00d10152 Javadoc updates
+7e61f960 Javadoc updates
+fe7d1445 2014-08-31  David Gilbert  <david.gilbert@object-refinery.com>
+40ffeff6 Add build notes for JavaFX.
+51b6452d maven bundle is redundant
+bb772d91 maven bundle is redundant
+cd7e108f 2014-08-29  David Gilbert  <david.gilbert@object-refinery.com>
+e45ec9af Code formatting and Javadocs.
+91f9d327 2014-08-24  David Gilbert  <david.gilbert@object-refinery.com>
+74a5c5d8 2014-08-24  David Gilbert  <david.gilbert@object-refinery.com>
+d4ae2d45 2014-08-22  David Gilbert  <david.gilbert@object-refinery.com>
+f4b295de Switch off ChartPanel buffer for improved appearance on retina displays.
+3b0bfcba Update build scripts.
+ae661922 Add JavaScript support files for enhanced SVG export (work in progress).
+aa267e78 Update JFreeSVG version.
+bef93bb6 2014-08-04  David Gilbert  <david.gilbert@object-refinery.com>
+06d60831 Javadoc updates.
+2d64c1b6 Merge changes from FXGraphics2D project.
+576ef75b 2014-08-04  David Gilbert  <david.gilbert@object-refinery.com>
+e2551a76 2014-08-04  David Gilbert  <david.gilbert@object-refinery.com>
+793e91eb 2014-08-04  David Gilbert  <david.gilbert@object-refinery.com>
+e722277e Header update.
+449d0666 2014-08-04  David Gilbert  <david.gilbert@object-refinery.com>
+1748aadc 2014-08-04  David Gilbert  <david.gilbert@object-refinery.com>
+b3f5f21b Exclude demo files from Maven build.
+b4da8ae1 Set release version.
+140cc616 Mention JSFreeChart.
+e4f165fa Delete empty folders.
+6e7039b3 Update Ant build scripts for release.
+551cea1d Update JCommon and JFreeSVG versions.
+d7910ff9 Preview of JSFreeChart.
+f81f5ca2 Preview of JSFreeChart.
+358926fb Updates for 1.0.19 release
+9bef3760 Update JCommon to latest.
+80157554 Add rendering hint.
+653a07b4 2014-07-29  David Gilbert  <david.gilbert@object-refinery.com>
+ef539c61 Minor source formatting.
+433cd8db Minor Javadoc update.
+d637ca8b Minor Javadoc update.
+b8be0be5 Remove unused import.
+93f28502 Updated Javadocs.
+21e4ea2f Build source jars as per patch in bug #960
+47121569 Added testBug942().
+6fbd7e78 Remove deps not required.
+a6450e4f Updated pom file.
+dad922c2 2014-07-21  David Gilbert  <david.gilbert@object-refinery.com>
+e09d55e3 2014-07-21  David Gilbert  <david.gilbert@object-refinery.com>
+5663cb59 2014-07-21  David Gilbert  <david.gilbert@object-refinery.com>
+f1dac05f Source formatting.
+84a588b5 2014-07-21  David Gilbert  <david.gilbert@object-refinery.com>
+a9247645 2014-07-21  David Gilbert  <david.gilbert@object-refinery.com>
+3ff3d48e 2014-07-21  David Gilbert  <david.gilbert@object-refinery.com>
+154aa4c5 Updated Javadocs.
+c34f353c 2014-07-19  David Gilbert  <david.gilbert@object-refinery.com>
+170a5c7e Remove unnecessary excludes.
+4c1aa20c Update version number for next release.
+46849b7d Update version number for next release.
+a9b25bfd Include chart-viewer.css in jar file.
+90b382b0 2014-07-04  David Gilbert  <david.gilbert@object-refinery.com>
+71ea6041 2014-07-04  David Gilbert  <david.gilbert@object-refinery.com>
+a7f3d7e5 2014-07-04  David Gilbert  <david.gilbert@object-refinery.com>
+ed6c657b Add JavaFX requirement.
+3582e264 Updates for release.
+1dfd60f1 Fix method name.
+3f6fcb84 Fix broken tests.
+5598c3ba Make axis line thinner.
+043ec21c Include build-fx.xml in the distribution.
+95571f93 Update dependencies.
+977edbf9 Update dependencies.
+c4beab33 Updated build script.
+730d21f3 2014-07-01  David Gilbert  <david.gilbert@object-refinery.com>
+7e2d0c61 Fix iteration over map based attributes.
+5401db8e New tests.
+efdbb1d0 Added requireNonNegative().
+ec2e9c56 New class.
+51f31da5 New class.
+2a69feb2 2014-07-01  David Gilbert  <david.gilbert@object-refinery.com>
+6283cf67 2014-07-01  David Gilbert  <david.gilbert@object-refinery.com>
+eae10c6e Fixed Javadoc warnings.
+fcc5ebdf Fixed Javadoc warnings.
+8cd4707a Fixed Javadoc warnings.
+404c2e2a Fixed Javadoc warnings.
+329c321f Updated for release.
+28cab6f4 Updated NEWS.
+e6a0537c Fix Javadoc warnings.
+42cecabf Fix Javadoc warnings.
+907b0452 Removed URLUtilities.
+018ea377 Fix Javadoc warnings.
+a430f252 Fix Javadoc warnings.
+56f897cb Fix Javadoc warnings.
+b232ed06 Fix SONAR warning.
+5a1f4e1b Fix SONAR warning.
+e7293f37 Remove main().
+3f4c3819 Fix SONAR warning.
+d0f59c3f Remove main().
+6256022e Fix Javadoc warnings.
+e5ab55c4 Fix Javadoc warnings.
+79c5e312 Fix Javadoc warnings.
+059fb78b Fix Javadoc warnings.
+bdc600a2 Fix SONAR warning.
+9f10abda Fix SONAR warning.
+e411e6f4 Fix Javadoc warnings.
+552db751 Fix Javadoc warnings.
+b7f741b3 Fix Javadoc warnings.
+b34fc96d Fix Javadoc warnings.
+8c607b33 Fix Javadoc warnings.
+d0f425f1 Fix Javadoc warnings.
+00b3e365 Fix Javadoc warnings.
+d38addca Fix Javadoc warnings.
+a079d568 Fix Javadoc warnings.
+e6d215db Fix Javadoc warnings.
+ceaf8bc9 Fix Javadoc warnings.
+1c61a9c1 Fix Javadoc warnings.
+a7191efc Fix Javadoc warnings.
+1d4e548f Fix Javadoc warnings.
+171ccc01 Fix Javadoc warnings.
+d65d3447 Fix Javadoc warnings.
+ee8b41b2 Fix Javadoc warnings.
+4c8788c1 Fix Javadoc warnings.
+1c1d531e Check setOutlineStroke() arg.
+acf5c761 Add setLineStroke() method.
+b58bede8 Update demo to use real data.
+7f23927a Fix Javadoc warnings.
+f69aa489 Fix Javadoc warnings.
+e9e27fdf No tabs allowed.
+83844520 Fix Javadoc warnings.
+c547a0af Fix Javadoc warnings.
+cea2db53 Fix Javadoc warnings.
+de6593af Fix Javadoc warnings.
+3e4acdd6 Fix Javadoc warnings.
+2892576a Fix Javadoc warnings.
+a64406e0 Fix Javadoc warnings.
+57d3b7cb Fix Javadoc warnings.
+2c411882 Fix Javadoc warnings.
+783e3295 Fix Javadoc warnings.
+bc28e79e Fix Javadoc warnings.
+8dbf59e0 Fix Javadoc warnings.
+f5ca561b Fix Javadoc warnings.
+fcc58b6b Fix Javadoc warnings.
+cecb836e Fix Javadoc warnings.
+0379134b Fix Javadoc warnings.
+ed8bb2b1 Fix Javadoc warnings.
+1f24fba4 Fix Javadoc warnings.
+8c36528a Fix Javadoc warnings.
+598bba30 Fix SONAR warning.
+248279a9 Fix Javadoc warnings.
+8f9a5607 Fix Javadoc warnings.
+affcb927 2014-07-01  David Gilbert  <david.gilbert@object-refinery.com>
+6a472ddc 2014-07-01  David Gilbert  <david.gilbert@object-refinery.com>
+84e8c13e Fix Javadoc warnings.
+ba3ccd63 Fix Javadoc warnings.
+6354964c Fix Javadoc warnings.
+c2e3a60b Fix Javadoc warnings.
+8c673c91 Fix Javadoc warnings.
+ca62edbe Fix Javadoc warnings.
+135f5b17 Fix Javadoc warnings.
+57f6c789 Fix Javadoc warnings.
+5fa1d553 Fix Javadoc warnings.
+11400c9d Fix Javadoc warnings.
+8515253f Fix Javadoc warnings.
+d736ed33 Fix Javadoc warnings.
+117a957b Fix Javadoc warnings.
+89e81bc6 Fix Javadoc warnings.
+b720aece Don't print stacktraces.
+6739aadc Fix Javadoc warnings.
+58037785 Fix Javadoc warnings.
+559160d6 Fix Javadoc warnings.
+08269df2 Fix Javadoc warnings.
+e83f9d9a Fix Javadoc warnings.
+dbbf8b43 Fix Javadoc warnings.
+0b3b6c0d Fix Javadoc warnings.
+11bde5e6 Latest updates.
+fcd51e14 Ignore new JavaFX packages for standard build.
+4b4989fb Build script that includes JavaFX support.
+d78eb5e5 2014-06-27  David Gilbert  <david.gilbert@object-refinery.com>
+5790679b Fix typo.
+50f69e0f Update overview.
+9aad684c Fix typo.
+775daa0b 2014-06-25  David Gilbert  <david.gilbert@object-refinery.com>
+8e169e64 2014-06-25  David Gilbert  <david.gilbert@object-refinery.com>
+ca48af14 2014-06-21  David Gilbert  <david.gilbert@object-refinery.com>
+d6d46b13 Update README for release.
+e133601f Update NEWS for release.
+9156d176 Update JCommon to 1.0.22
+6c3a7730 2013-04-07  David Gilbert  <david.gilbert@object-refinery.com>
+fbaf3356 2013-04-09  David Gilbert  <david.gilbert@object-refinery.com>
+5d92dce1 Test updates.
+50c6bc00 2013-04-07  David Gilbert  <david.gilbert@object-refinery.com>
+95e796dc Added tests for cloning.
+eea73db1 2013-03-19  David Gilbert  <david.gilbert@object-refinery.com>
+3115de63 2013-03-19  David Gilbert  <david.gilbert@object-refinery.com>
+be9fd084 2013-03-18  David Gilbert  <david.gilbert@object-refinery.com>
+6c7d3797 Minor Javadoc updates.
+2be7fd3d Minor Javadoc correction.
+26d65583 Minor Javadoc edit.
+daee354a Minor Javadoc edit.
+0fb12c07 Minor Javadoc edit.
+5ff4b828 Clean up.
+0df1bb7c Update
+36f929e6 2014-03-10  David Gilbert  <david.gilbert@object-refinery.com>
+4cdb2ffe Update equals() test.
+ab6ee466 2014-03-10  David Gilbert  <david.gilbert@object-refinery.com>
+720d0949 2014-03-10  David Gilbert  <david.gilbert@object-refinery.com>
+592da658 Added setRange() check for issue #1121.
+47915f66 Added setRange() check for issue #1121.
+12aa0d43 Updated Javadocs for issue #1123.
+e79eaa97 Fix Javadoc warnings.
+28289290 Move extendLine() method to LineUtilities.
+ba51a678 2014-02-28  David Gilbert  <david.gilbert@object-refinery.com>
+e4adc02d 2014-02-28  David Gilbert  <david.gilbert@object-refinery.com>
+12f5542c Update version numbers.
+8d9788cf Update version numbers.
+26fedeae Update OrsonPDF to version 1.4
+5bab2a5a Update JFreeSVG to version 1.7.
+f8f88807 Update JFreeSVG to version 1.7.
+0ea4dd75 Update Changelog.
+5de61f81 Added CenterTextMode enum.
+6915548e 2014-02-28  David Gilbert  <david.gilbert@object-refinery.com>
+5b5c6358 2014-02-28  David Gilbert  <david.gilbert@object-refinery.com>
+fb24db24 2014-02-28  David Gilbert  <david.gilbert@object-refinery.com>
+ae283d19 Remove incorrect Javadoc.
+2b193813 Updated tests.
+346f7493 Remove System.out lines.
+1e766bf4 New tests.
+7357624c 2014-02-23  David Gilbert  <david.gilbert@object-refinery.com>
+bc846651 2014-02-23  David Gilbert  <david.gilbert@object-refinery.com>
+4d3b8f01 Added test.
+9ce3a38a 2014-02-23  David Gilbert  <david.gilbert@object-refinery.com>
+ec84d2a8 2014-02-23  David Gilbert  <david.gilbert@object-refinery.com>
+a8a18585 2014-02-23  David Gilbert  <david.gilbert@object-refinery.com>
+8a25f311 2014-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+b088ebb2 2014-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+9bd89e8c Fix Javadoc typo.
+cef1dfd2 2014-01-11  David Gilbert  <david.gilbert@object-refinery.com>
+751f2651 2014-01-09  David Gilbert  <david.gilbert@object-refinery.com>
+6a3d99e2 2013-12-05  David Gilbert  <david.gilbert@object-refinery.com>
+f450c31c 2013-12-05  David Gilbert  <david.gilbert@object-refinery.com>
+41b15a67 2013-12-05  David Gilbert  <david.gilbert@object-refinery.com>
+093547df 2013-11-27  David Gilbert  <david.gilbert@object-refinery.com>
+f54fbc69 2013-11-27  David Gilbert  <david.gilbert@object-refinery.com>
+792e31d2 Update version number so I don't forget for the next release.
+7a1e73ec Include orsoncharts-1.0-eval.jar for the demo.
+405172ab Include orsoncharts-1.0-eval.jar for the demo.
+e8b1bb21 Fix Javadoc warning.
+7a5eaed7 Updates for release.
+48c7fc0f Update version number.
+d1b4d6cf Fix NB warnings.
+4da78837 Fix NB warnings.
+f8703ab2 Fix NB warnings.
+b9c277d0 Fix NB warnings.
+380386ed Fix NB warnings.
+4947fed5 Fix NB warnings.
+d8233e0b Fix NB warnings.
+c962ab0c Fix NB warnings.
+65923660 Fix NB warnings.
+f75289b1 Fix NB warnings.
+425bb267 Fix NB warnings.
+e2f04deb Ignore just one test.
+b5c7db27 Fix NB warnings.
+37bcb7c4 2013-11-23  David Gilbert  <david.gilbert@object-refinery.com>
+7b8c995f 2013-11-23  David Gilbert  <david.gilbert@object-refinery.com>
+bc988276 2013-11-23  David Gilbert  <david.gilbert@object-refinery.com>
+f080ea13 Fixed NB warnings.
+f1395e2d Fixed NB warnings.
+bdb31762 Fixed NB warnings.
+4da1a5bd Fixed NB warnings.
+8837d8ae Fixed NB warnings.
+666bee3f Fixed NB warnings.
+63d68b84 Fixed NB warnings.
+2e904ee1 Fixed NB warnings.
+20d935f4 Fixed NB warnings.
+569b8252 Fixed NB warnings.
+d37f5d81 Fixed NB warnings.
+3f4722a2 Fixed NB warnings.
+bd836daa Fixed NB warnings.
+7d292c3a Fixed NB warnings.
+bf156bc4 Fixed NB warnings.
+b2ca9b3f Fixed NB warnings.
+347a37b1 Fixed NB warnings.
+8ab38a82 Fixed NB warnings.
+db17f714 Fixed NB warnings.
+a96c5f63 Fixed NB warnings.
+bbd5e0f2 Fixed NB warnings.
+47051e81 Fixed NB warnings.
+435b5e09 Fixed NB warnings.
+12b2ff69 Fixed NB warnings.
+d659f1b1 Fixed NB warnings.
+0526b2c9 Fixed NB warnings.
+2a113911 Fixed NB warnings.
+e44d098c Fixed NB warnings.
+c3187b7d Fixed NB warnings.
+5590dc59 Fixed NB warnings.
+adef8a98 Fixed NB warnings.
+85bf4178 Fixed NB warnings.
+293efc2c Fixed NB warnings.
+f9af4048 Fixed NB warnings.
+accbbc50 Fixed NB warnings.
+baa6e616 Fixed NB warnings.
+1fa19f7c Fixed NB warnings.
+6388229d Fixed NB warnings.
+0a0502ba Fixed NB warnings.
+39f06d43 Fixed NB warnings.
+ea08b38c Fixed NB warnings.
+98a6de17 Fixed NB warnings.
+53c0d879 Fixed NB warnings.
+078a4f9b Fixed NB warnings.
+e650a0a1 Fixed NB warnings.
+0aa1dd10 Fixed NB warnings.
+f1862cb4 Fixed NB warnings.
+d5ae94ee Fixed NB warnings.
+2a214545 Fixed NB warnings.
+455e6efd Fixed NB warnings.
+217bf85d Fixed NB warnings.
+291ab6d6 Fixed NB warnings.
+9623db65 Fixed NB warnings.
+c2848abd Fixed NB warnings.
+8521b71a Fixed NB warnings.
+f2e9d31f 2013-11-22  David Gilbert  <david.gilbert@object-refinery.com>
+f1435e6b 2013-11-22  David Gilbert  <david.gilbert@object-refinery.com>
+1ed449a2 Added default constructor.
+9d7f285c Javadoc updates.
+73b49524 Javadoc updates.
+8e858b3c Update Ant build script.
+66e0d926 Update Ant build script.
+8dd35b2d Update README.txt file for release.
+58a7410f Update NEWS file for release.
+44505f79 Fix compiler warnings.
+da5acd19 Fix compiler warnings.
+0a36b278 Fix compiler warnings.
+8901114d Fix compiler warnings.
+2644f250 Fix compiler warnings.
+79487115 Fix compiler warnings.
+4eda8f02 Fix compiler warnings.
+caf8507b Added @Override tags.
+d0396944 Added @Override tags.
+1c6d2687 Added @Override tags.
+71bcf58b 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+06e88794 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+f4e78a90 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+4d18ae43 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+88d35384 Added @Override tags.
+c9eea4ef 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+848237a7 Added @Override tags.
+fc342380 Updated to OrsonPDF 1.3-eval.
+20ef28ef Updated to JFreeSVG 1.4
+23222acc Updated JCommon to 1.0.21.
+145ca78c New test.
+37e72fd7 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+1ab7a410 Extend test to cover removeSeries(int).
+4a9fc0c1 Added @override tags.
+b6f04125 New test.
+0eb70e80 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+f1e86f0d 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+327209ad New test.
+35e85dfa Add @override tags.
+702f2282 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+153c9f04 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+dcb0cb37 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+23c22c86 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+b42e40a7 Add @override tags.
+cd59027b 2013-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+e00ddb33 New class.
+cbd0d5ea Add @override tags.
+c8c8e13b Rename test.
+c6dad5c6 New tests.
+21371053 2013-11-20  David Gilbert  <david.gilbert@object-refinery.com>
+4a7a970c Initialise the series path in the State constructor.
+a25d1e5b Minor cleanup.
+bc3629cb Fixed some compiler warnings including those mentioned in bug #1115.
+477e555d Added some asserts to suppress compiler warnings as suggested in bug #1115.
+92dc17bf Fix failing test.
+f0fd3501 Update test include
+812c1006 Added Hamcrest dependency.
+439af7e0 Update JUnit to 4.11
+df02096e Update source and target levels.
+cb132c75 Update animal sniffer plugin to check for Java 1.6 compliance.
+20d4b1db Update version number and remove iText dependency.
+4efa0dfb Set version for next release.
+22550b6d Remove unused JDK1.7 import.
+06173124 Fix Javadoc error.
+33888b3d Add override tags.
+150a7453 Add override tags.
+64559833 2013-09-17  David Gilbert  <david.gilbert@object-refinery.com>
+78a52776 2013-09-17  David Gilbert  <david.gilbert@object-refinery.com>
+67a0b243 Update README.txt
+d624c0fa Add override tags.
+7c482678 Add override tags.
+b5b491c8 Update for JFreeChart 1.0.16
+faaeefed Correct copy-across of OrsonPDF and JFreeSVG, update src version to 1.6.
+3fde810d Make generateSVG() method private.
+96168a8f Add orson-1.2-eval.jar
+8a23852e Fix Javadoc warning.
+ebff35ac Updates for the 1.0.16 release.
+28e9cc1e Add jfreesvg-1.2.jar.
+89ac4ba5 2013-09-12  David Gilbert  <david.gilbert@object-refinery.com>
+62ed67bf Update to use real data and a new style.
+dba2daba Clean-up.
+c3919315 2013-09-12  David Gilbert  <david.gilbert@object-refinery.com>
+0e52420e 2013-09-12  David Gilbert  <david.gilbert@object-refinery.com>
+d0e52716 Minor correction in Javadocs.
+dc395342 Update JCommon to 1.0.20.
+4f421f20 Update JCommon to 1.0.20.
+7829e8fa Update JCommon to 1.0.19.
+e0c9028f Update JCommon to 1.0.19.
+c4973987 Ignore interior gap in horizontal direction.
+d5ae2599 Remove commented code.
+cc885f14 Updated ChangeLog and NEWS.
+5031f172 Set the stroke and paint for lines if they are drawn.
+a8b5df46 Deleted iText-2.1.5.jar
+e735840f Update JFreeChart version, remove iText reference from Ant build script.
+d698cc35 Delete junit.jar.
+1d2ffd27 2013-08-16  David Gilbert  <david.gilbert@object-refinery.com>
+2872ed50 Add note about JDK version.
+011e5959 2013-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+cc95f719 2013-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+91da55b4 2013-08-10  David Gilbert  <david.gilbert@object-refinery.com>
+40c23a45 2013-08-10  David Gilbert  <david.gilbert@object-refinery.com>
+fb6af04c 2013-08-10  David Gilbert  <david.gilbert@object-refinery.com>
+fff26614 Fix typo.
+28e7b854 Fix maxY for series that doesn't allow duplicates (JUnit test added as well).
+190e1e76 Fix maxY for series that doesn't allow duplicates (JUnit test added as well).
+69ecd682 Convert to JUnit 4.11
+46cef257 Replace odd character.
+ad07cd54 Updates to run JUnit tests.
+100556c9 Fix defect in new method, picked up by JUnit tests.
+78f3a4c1 Convert to JUnit 4.11
+c28320ba Convert to JUnit 4.11
+a5c72f4e JUnit dependencies.
+c34bc79f Update Ant script.
+320dd585 Convert to JUnit 4.11
+a3626066 Convert to JUnit 4.11
+04657915 Convert to JUnit 4.11
+ebd088c7 Convert to JUnit 4.11
+a59fee24 Convert to JUnit 4.11
+b3d552c3 Convert to JUnit 4.11
+2ca26688 Convert to JUnit 4.11
+f0943eb1 Convert to JUnit 4.11
+5ec0a5bf Convert to JUnit 4.11
+34624fcc Convert to JUnit 4.11
+4922065c Remove unnecessary parameter.
+0c83ba7f Updated for JUnit 4.
+5c0c6d2a Updated header.
+72eaffc8 Update for JUnit 4 and add testSerialization.
+df7c0db9 Make copies of the AttributedString for the axis label.
+993cad5a Fixed comments.
+cbdd7960 Remove System.out.println.
+d1abb38c Remove whitespace.
+8481f78e Conversion to JUnit 4.
+c18bf3b3 To fix JUnit test.
+cca3f9b2 Clean up test code.
+956156ce Simplify code with TestUtilities.serialized() method.
+effb3daf Simplify code with TestUtilities.serialized() method.
+211615e0 Simplify code with TestUtilities.serialized() method.
+168550e7 Simplify code with TestUtilities.serialized() method.
+8607fa25 Simplify code with TestUtilities.serialized() method.
+f25c5514 Simplify code with TestUtilities.serialized() method.
+10cf6b37 Simplify code with TestUtilities.serialized() method.
+18e80c1b Simplify code with TestUtilities.serialized() method.
+f1abca19 Simplify code with TestUtilities.serialized() method.
+fbd986d5 Simplify code with TestUtilities.serialized() method.
+e449b12c Simplify code with TestUtilities.serialized() method.
+f7fa8350 Simplify code with TestUtilities.serialized() method.
+fd350335 Simplify code with TestUtilities.serialized() method.
+d3e44835 Simplify code with TestUtilities.serialized() method.
+474c91fb Simplify code with TestUtilities.serialized() method.
+756d9351 Simplify code with TestUtilities.serialized() method.
+dccbffe3 Simplify code with TestUtilities.serialized() method.
+37d25b95 Simplify code with TestUtilities.serialized() method.
+c5c3f78f Clean-up.
+246fdd89 Simplify code with TestUtilities.serialized() method.
+bcfe82d5 Simplify code with TestUtilities.serialized() method.
+7a4e1f96 Simplify code with TestUtilities.serialized() method.
+e6440189 2013-08-04  David Gilbert  <david.gilbert@object-refinery.com>
+709c6f24 2013-08-04  David Gilbert  <david.gilbert@object-refinery.com>
+7011ae37 Simplify code with TestUtilities.serialized() method.
+12d21c0a Simplify code with TestUtilities.serialized() method.
+b3a9efc8 Simplify code with TestUtilities.serialized() method.
+300858f9 Simplify code with TestUtilities.serialized() method.
+6cd06e5b Simplify code with TestUtilities.serialized() method.
+260f85ca Simplify code with TestUtilities.serialized() method.
+f09f1d5b Update tests to JUnit 4.
+e9a84f72 Added serialised() method to serialise and deserialise an object.
+faf54131 Test classes renamed.
+16a304ac Refactor test packages.
+7e359d4f Remove printStackTrace().
+77718e78 Remove printStackTrace().
+f1fb0935 Remove printStackTrace().
+af16dabe Remove printStackTrace().
+0b4d8511 Remove printStackTrace().
+a3056bac Remove printStackTrace().
+b2be18cf Remove printStackTrace().
+259af834 Remove printStackTrace().
+f1f8b0b0 Don't catch exceptions.
+6e181539 Remove printStackTrace().
+fb7c2823 Remove printStackTrace().
+a4f7c8f7 Remove printStackTrace().
+230aa006 Remove printStackTrace().
+1cf2aee0 Remove printStackTrace().
+c509ac46 Remove printStackTrace().
+fbdcf516 Javadocs (bug #1117).
+8c76e888 Use fail().
+07ac515c Don't use annotations yet.
+6566078f Remove System.err.println.
+40d08e1e Remove System.err.println.
+9dc7a22a Remove System.err.println.
+5cc784d4 Remove System.err.println.
+97cc1f4c Remove System.err.println.
+a7d9cd79 Remove System.err.println.
+032b2e97 Remove System.err.println.
+b600e7f0 Remove System.err.println.
+20a10938 Remove System.err.println.
+62233a77 Remove System.err.println.
+811a1c1b Remove System.err.println.
+54876073 Remove System.err.println.
+28d0dc6a Remove System.err.println.
+6a0fe063 Remove System.err.println.
+c59ea3a4 Remove System.err.println.
+18cce740 Remove System.err.println.
+a8fb869a Remove System.err.println.
+8c255c5e Fix SONAR warning.
+f512fc2f 2013-08-01  David Gilbert  <david.gilbert@object-refinery.com>
+c7e8c721 2013-08-01  David Gilbert  <david.gilbert@object-refinery.com>
+0225cddf Fix Sonar warnings.
+15350ffe Implement hashCode.
+27f1e245 2013-08-01  David Gilbert  <david.gilbert@object-refinery.com>
+f2bbb5cf Updates for change to SWTGraphics2D.
+9bf54ee4 Various updates to improve consistency with other Graphics2D implementations.
+062cd0dc Use fireChangeEvent() method to improve code readability.
+0505198f Use fireChangeEvent() method to improve code readability.
+03ab7a1d Use fireChangeEvent() method to improve code readability.
+3232e4f1 Some updates for the next release.
+c4e9408c Fix memory leak in SWT ChartComposite.
+5966a505 2013-07-25  David Gilbert <david.gilbert@object-refinery.com>
+0f58b25e Fix typo.
+ba964dc6 2013-07-25  David Gilbert <david.gilbert@object-refinery.com>
+f23de278 2013-07-25  David Gilbert <david.gilbert@object-refinery.com>
+8161f794 2013-07-25  David Gilbert <david.gilbert@object-refinery.com>
+2fffb4ea 2013-07-25  David Gilbert <david.gilbert@object-refinery.com>
+a46a0df4 2013-07-25  David Gilbert <david.gilbert@object-refinery.com>
+b6ae932b 2013-07-25  David Gilbert <david.gilbert@object-refinery.com>
+b8418010 Update event notification to call fireChangeEvent() (readability).
+a8604a5a Update event notification to call fireChangeEvent() (readability).
+9d619459 Fix NB warnings.
+1c5a5b6c 2013-07-05  David Gilbert <david.gilbert@object-refinery.com>
+b9acf345 Update Javadocs to note incompatible change in JFreeChart 1.0.14
+04896c0a Remove call to constructor that requires JDK1.5 (we're supporting JDK1.4 for now).
+ad5b0926 Update copyright notice.
+e35d2f5c Update copyright notice.
+8dfb8e3c Update copyright notice.
+8a40b9c7 Update copyright notice.
+b2d227d2 Update copyright notice.
+b53b526a Update copyright notice.
+a01f7f79 Update copyright notice.
+c0d80e85 Update copyright notice.
+5ef9c5e5 Update copyright notice.
+a5ea3df3 Update copyright notice.
+0a565a5a Update copyright notice.
+8a89d9a4 Update copyright notice.
+474c011c Update copyright notice.
+cf63f6c5 Updated release dates.
+a7a15166 Set specification and implementation properties in the JAR manifest.
+54ee37d7 Fix NB warnings.
+bd476443 Whitespace.
+159f4210 2013-07-04  David Gilbert <david.gilbert@object-refinery.com>
+8466d6cd Fix NB warnings.
+b28019c7 Fix NB warnings.
+31657adf Fix NB warnings.
+6e87dee8 Fix NB warnings.
+2f8ee00e Fix NB warnings.
+768f31db Fix NB warnings.
+a37e923a Fix NB warnings.
+bd40e64a Fix NB warnings.
+678ef72b Fix NB warnings.
+9263aeac Add missing Javadocs.
+5512f30a Use ParamChecks class.
+afe3d91d Use ParamChecks class.
+d313234a Use ParamChecks class.
+04e8516d Use ParamChecks class.
+db9591a0 Use ParamChecks class.
+0d75b099 Use ParamChecks class.
+70a649f4 Use ParamChecks class.
+4bb56ef5 Use ParamChecks class.
+9d7e2d64 Use ParamChecks class.
+3a610192 Use ParamChecks class.
+f873f0ee Use ParamChecks class.
+1d5bf287 Use ParamChecks class.
+ec5897bc Use ParamChecks class.
+cc1c3084 Use ParamChecks class.
+48e257fe Use ParamChecks class.
+ee5d2957 Use ParamChecks class.
+1eeb2734 Use ParamChecks class.
+9b551423 Use ParamChecks class.
+d1b7a546 Use ParamChecks class.
+b2c13167 Use ParamChecks class.
+211f463d Use ParamChecks class.
+5958171e Add missing Javadocs.
+35c1163b Use ParamChecks class.
+bf00cf8e Use ParamChecks class.
+116d4c07 Use ParamChecks class.
+4c8035e3 Use ParamChecks class.
+ea6abed0 Use ParamChecks class.
+9e6f80e1 Use ParamChecks class.
+e64ba5c9 Use ParamChecks class.
+743cd9a2 Use ParamChecks class.
+44cac8cc Use ParamChecks class.
+1f4bcc63 Use ParamChecks class.
+9d88fb5a Use ParamChecks class.
+550a1944 Use ParamChecks class.
+e62f0bbb Use ParamChecks class.
+99699ed2 Use ParamChecks class.
+be6dbd19 Use ParamChecks class.
+295481a8 Use ParamChecks class.
+c293dfa0 Use ParamChecks class.
+041d3894 Use ParamChecks class.
+9d3957f8 Use ParamChecks class.
+d6daa4e1 Use ParamChecks class.
+681403b7 Use ParamChecks class.
+ee24b3cd Use ParamChecks class.
+765272be Use ParamChecks class.
+b64d6ec8 Use ParamChecks class.
+4c21dd50 Use ParamChecks class.
+7dc8527a Use ParamChecks class.
+b2811c48 Use ParamChecks class.
+ae52096d Use ParamChecks class.
+cbde3d88 Use ParamChecks class.
+530e0015 Use ParamChecks class.
+b95fa5c0 Use ParamChecks class.
+46dbb1fb Use ParamChecks class.
+4d7537ee Use ParamChecks class.
+aad7b0a4 Use ParamChecks class.
+aff7dae4 Use ParamChecks class.
+8e782e83 Use ParamChecks class.
+6b8fa5af Use ParamChecks class.
+33d94656 Use ParamChecks class.
+7cf50b90 Use ParamChecks class.
+58c1c850 Use ParamChecks class.
+b28f1689 Use ParamChecks class.
+c06d6e73 Use ParamChecks class.
+5098bc8b Use ParamChecks class.
+7cc51b41 Use ParamChecks class.
+11bb8dbe Use ParamChecks class.
+14e18890 Use ParamChecks class.
+57506382 Use ParamChecks class.
+4804ed15 Use ParamChecks class.
+3c966318 Use ParamChecks class.
+2a85b053 Use ParamChecks class.
+6c1304b8 Use ParamChecks class.
+6bf5a07e Use ParamChecks class.
+fa0b13e6 Use ParamChecks class.
+e85dca93 Use ParamChecks class.
+0ec906d1 Use ParamChecks class.
+41b6cb4d Use ParamChecks class.
+4a15ad37 Use ParamChecks class.
+a3006283 Use ParamChecks class.
+077c070e Use ParamChecks class.
+d8e0bf17 Use ParamChecks class.
+a86dab6d Use ParamChecks class.
+fc354399 Use ParamChecks class.
+2341dd68 Use ParamChecks class.
+28498d52 Use ParamChecks class.
+52a49acb Use ParamChecks class.
+9298fdfa Use ParamChecks class.
+845aaf2e Use ParamChecks class.
+cbce8941 Use ParamChecks class.
+e3e15f65 Use ParamChecks class.
+14f618d3 Use ParamChecks class.
+db82362a Use ParamChecks class.
+d275c8aa Use ParamChecks class.
+2c4b1404 Use ParamChecks class.
+afacfebf Use ParamChecks class.
+2880b1b9 Use ParamChecks class.
+6d137aee Use ParamChecks class.
+4861c20c Use ParamChecks class.
+57f2db5f Fix NB warnings.
+4f4c217a Fix NB warnings.
+df7701fa Fix NB warnings.
+9ca5c24a Add missing Javadocs.
+bb6d0e6f Add missing Javadocs.
+2e88e016 Add missing Javadocs.
+feca8150 Add missing Javadocs.
+1c2a78f9 Use ParamChecks class.
+8a85c34b Use ParamChecks class.
+714249a3 Use ParamChecks class.
+acc52e1d Use ParamChecks class.
+8aa143b3 Use ParamChecks class.
+3a86a11c Use ParamChecks class.
+453ca150 Use ParamChecks class.
+00dc424e Use ParamChecks class.
+f44f48a3 Use ParamChecks class.
+b7bedc50 Use ParamChecks class.
+1ea899d9 Use ParamChecks class.
+847a04b7 Use ParamChecks class.
+3109ac7a Use ParamChecks class.
+abcff98b Use ParamChecks class.
+d7c14e54 Use ParamChecks class.
+248f6ca1 Use ParamChecks class.
+87bdaa32 Use ParamChecks class.
+5487a429 Use ParamChecks class.
+d8c1eb74 Use ParamChecks class.
+dfd0e559 Use ParamChecks class.
+f04f3355 Use ParamChecks class.
+e56d6a35 Use ParamChecks class.
+bf5beb1e Use ParamChecks class.
+6ee4e433 Use ParamChecks class.
+0c51a8dc Use ParamChecks class.
+94a563f8 Use ParamChecks class.
+3054e740 Use ParamChecks class.
+727bc97e Use ParamChecks class.
+0f47566b Use ParamChecks class.
+de0071b8 Use ParamChecks class.
+c19b5ae8 Use ParamChecks class.
+19271360 Use ParamChecks class.
+2ec58e3b Use ParamChecks class.
+5d4a48e2 Use ParamChecks class.
+0aa1fbe8 Use ParamChecks class.
+a818d578 Use ParamChecks class.
+bcb087ae Use ParamChecks class.
+46f2e4b5 Use ParamChecks class.
+dbd913fe Use ParamChecks class.
+287e8b1a Use ParamChecks class.
+fe576ef3 Use ParamChecks class.
+6137512b Use ParamChecks class.
+325af41d Fix NB warnings.
+bab682a7 Use ParamChecks class.
+00c4dd90 Use ParamChecks class.
+2af559bc Use ParamChecks class.
+e1f866d3 Use ParamChecks class.
+daa5b96f Use ParamChecks class.
+fe88a150 Use ParamChecks class.
+abc8eeba Use ParamChecks class.
+54fdae42 Use ParamChecks class.
+609bd231 Use ParamChecks class.
+c0ad0920 Use ParamChecks class.
+626c83d4 Use ParamChecks class.
+fd780bfb Use ParamChecks class.
+5bd355ee Use ParamChecks class.
+01b91b64 Use ParamChecks class.
+dfed66f0 Use ParamChecks class.
+7fa00106 Use ParamChecks class.
+be39e76e Use ParamChecks class.
+34c72aaf Use ParamChecks class.
+52736a9e Use ParamChecks class.
+753f31e1 Use ParamChecks class.
+18578c82 Use ParamChecks class.
+d84430eb Use ParamChecks class.
+93496680 Use ParamChecks class.
+f0cc7930 Use ParamChecks class.
+5f9807dd Use ParamChecks class.
+dffcdf42 Use ParamChecks class.
+4d3b307a Fix NB warnings.
+05df4abb Fix NB warnings.
+979065c6 Use ParamChecks class.
+f0046919 Use ParamChecks class.
+1a9e3bc8 Use ParamChecks class.
+075c2f45 Use ParamChecks class.
+e7f07c45 Use ParamChecks class.
+44ce015f Use ParamChecks class.
+d940e676 Use ParamChecks class.
+7ed9b1a2 Use ParamChecks class.
+3cc61b94 Use ParamChecks class.
+ce4179c1 Use ParamChecks class.
+0788902c Use ParamChecks class.
+2800918d Use ParamChecks class.
+8cf31e70 Use ParamChecks class.
+df9bad72 Use ParamChecks class.
+83fb234a Use ParamChecks class.
+655c0c5d Use ParamChecks class.
+f9bddb88 Use ParamChecks class.
+e0c5cedd Use ParamChecks class.
+a8ffedd7 Use ParamChecks class.
+fd65fbc2 Use ParamChecks class.
+6985d683 Use ParamChecks class.
+960c8986 Use ParamChecks class.
+08425667 Use ParamChecks class.
+72566fc7 Use ParamChecks class.
+ace127c2 Use ParamChecks class.
+c59669de Use ParamChecks class.
+22e09214 Use ParamChecks class.
+d76e1c57 Use ParamChecks class.
+105b2478 Use ParamChecks class.
+1dd16915 Use ParamChecks class.
+4e73ea3d Use ParamChecks class, add Javadocs.
+6e31d0d5 Use ParamChecks class.
+b71a6b13 Fire annotation change event in setText() method.
+58c6de82 Use ParamChecks class.
+6d186194 2013-07-01  David Gilbert <david.gilbert@object-refinery.com>
+7d284d4d Use reflection in PaintAlpha to allow compilation in JDK 1.4 (from Dave Law)
+d846dd6a Add defensive NPE check - see bug 3016544.
+e04568cd Fix FindBugs warnings.
+8443ee8b Fix typos.
+90c10cfc 
+ec6fc9d7 Remove tabs.
+079cb8c1 Remove tabs.
+961d060c Remove tabs.
+1439d9e1 Incorporated JCommon 1.0.18.
+2fb5649b Fix some minor FindBugs warnings.
+7a973cb3 Fix some minor FindBugs warnings.
+69bc7cf9 Fix some minor FindBugs warnings.
+c1876f0e Fix some minor FindBugs warnings.
+b6dc03a0 Fix some minor FindBugs warnings.
+f8b9e673 Fix some minor FindBugs warnings.
+f2a0f83c Fix some minor FindBugs warnings.
+525a02cf Fix some minor FindBugs warnings.
+882b365d Fix some minor FindBugs warnings.
+8ef26e94 Fix some minor FindBugs warnings.
+621028ce 3482106 : Missing text in SWTGraphics2D (by Kevin Xu);
+8c112741 3482106 : Missing text in SWTGraphics2D (by Kevin Xu);
+6579d24c 2012-09-18  David Gilbert <david.gilbert@object-refinery.com>
+6732151b 2012-09-18  David Gilbert <david.gilbert@object-refinery.com>
+a9252eed 2012-09-15  David Gilbert <david.gilbert@object-refinery.com>
+0339d80c Fix failing units tests.
+d7b19b27 Remove incorrect calls to setFixedDimension.
+0fc2a5bd Minor comment correction (no functional change)
+099beaa3 Minor Javadoc update.
+1f40a88b Remove unnecessary import.
+9d2ed8d3 2012-09-04  David Gilbert <david.gilbert@object-refinery.com>
+253757b0 2012-08-23  David Gilbert <david.gilbert@object-refinery.com>
+88127346 Minor Javadoc updates.
+a96eb8b9 2012-07-28  David Gilbert <david.gilbert@object-refinery.com>
+bf8b45cd 2012-07-17  David Gilbert <david.gilbert@object-refinery.com>
+09565ed8 2012-07-17  David Gilbert <david.gilbert@object-refinery.com>
+8920d286 2012-07-17  David Gilbert <david.gilbert@object-refinery.com>
+808beb4e 2012-07-12  David Gilbert <david.gilbert@object-refinery.com>
+4df2a1b6 2012-07-05  David Gilbert <david.gilbert@object-refinery.com>
+20859b48 2012-07-05  David Gilbert <david.gilbert@object-refinery.com>
+0b622b27 Restore resetting of mouseWheelHandler to null.
+e04249d8 2012-07-05  David Gilbert <david.gilbert@object-refinery.com>
+0c3db846 Fix for bug 2963199 by Jonas Rüttimann.
+1d09bdc4 Fix for bug 2963199 by Jonas Rüttimann.
+6aece1aa Fix for bug 3514487.
+47f2fac2 Fix for bug 3514487.
+c0986c2c Update NEWS and README.txt for latest changes.
+b6f57f2a Update README.txt to reflect minimum requirement of JDK/JRE 1.4.2 (was 1.3.1 for the previous release).
+188903aa Remove gnujaxp.jar (only for JDK1.3) and update ant build script for upcoming 1.0.15 release.
+6b908a09 2012-07-02  David Gilbert <david.gilbert@object-refinery.com>
+32cb7f2a Minor source formatting change.
+fdf9391d Replace code that doesn't compile with JDK1.4
+8038b696 2012-07-01  David Gilbert <david.gilbert@object-refinery.com>
+aa02a86d 2012-07-01  David Gilbert <david.gilbert@object-refinery.com>
+7b1f5087 2012-06-11  David Gilbert <david.gilbert@object-refinery.com>
+0aa12287 2012-05-10  David Gilbert <david.gilbert@object-refinery.com>
+1e7f9192 Patch 3500621 by Simon Kaczor     * org/jfree/chart/title/LegendTitle     (sortOrder): New field,     (getSortOrder): New method,     (setSortOrder): Likewise,     (fetchLgendItems): Updated to support new sort order,     (equals): Likewise.     * tests/org/jfree/chart/title/LegendTitle     (testEquals): Adapted for new field.
+c1a32008 Bug 3425881/Patch 3450234 by Patrick Schlott/Christoph Schroeder, reviewed by Richard West     * org/jfree/chart/rendered/xy/XYDifferenceRenderer     (drawItemPass0): Fix problems with identical x-values.
+ed0a1a9b Bug 3484403:     * org/jfree/chart/axis/DateAxis     (refreshTicksHorizontal): Fix endless loop,     (refreshTicksVertical): Likewise;
+4b7a7220 Bug 3484408     * ant/build.xml: fixed maven-bundle task.
+035e17c7 2012-01-08  David Gilbert <david.gilbert@object-refinery.com>
+3b1283db 2012-01-08  David Gilbert <david.gilbert@object-refinery.com>
+f210e33d 2012-01-08  David Gilbert <david.gilbert@object-refinery.com>
+d8de41b6 Added testCombine().
+67e3f58c Added a test for bug 3445507 (not fixed yet).
+a5e24498 Small fix for new test method.
+6d7ff8ba New test method.
+a823883c Minor formatting changes.
+27372915 2012-01-08  David Gilbert <david.gilbert@object-refinery.com>
+6bcd1517  Patch 3447161 by Ulrich Voigt/Martin Hoeller:     * org/jfree/chart/plot/CombinedDomainXYPlot.java:     (panRangeAxes): new method;     * org/jfree/chart/plot/CombinedRangeXYPlot.java     (panDomainAxes): new method;
+9d8f72be Fixed some Eclipse warnings.
+7c7fd3c3 Re-arrange source for readability.
+44955d82 New test.
+18350ca6 Updated testEquals().
+cc9e6bf7 Minor formatting changes.
+769dcb82 2011-12-16  Martin Hoeller <martin.hoeller@xss.co.at>
+01df0ccd update version information
+1707a94a 2011-11-12  Martin Hoeller <martin.hoeller@xss.co.at>
+f8945c08 Update for next release (1.0.15).
+81a5634e Use ParamChecks class to check for null arguments.
+1e7a617d Fix date typo in header.
+110ed42e 2011-12-03  David Gilbert <david.gilbert@object-refinery.com>
+01569f3c 2011-12-03  David Gilbert <david.gilbert@object-refinery.com>
+df5e46f3 Updates for 1.0.14 release.
+f21c3103 Minor update to build-swt ant script.
+7a215800 Fix Javadoc tag typos.
+aeb0802a Fix Javadoc tag typo.
+f9cd6a43 Fix Javadoc tag typo.
+6a0fc3f9 Fix Javadoc tag typos.
+e18a29f8 Fix Javadoc tag typo.
+8535ffdf Fix Javadoc tag typo.
+03b4287b Fix Javadoc warning - take 2.
+080e7284 Fix Javadoc warning.
+636218d8 2011-11-20  David Gilbert <david.gilbert@object-refinery.com>
+f579d368 2011-11-13  David Gilbert <david.gilbert@object-refinery.com>
+f0c62a4a 2011-11-12  Martin Hoeller <martin.hoeller@xss.co.at>
+9e955204 added czech localization provided by Petr Kopac
+8b3378a8 Bug 3433405:     * org/jfree/chart/renderer/category/LineRenderer3D.java     (drawItem): Fixed eventually wrong item label position;
+c1fd58e0 2011-11-01  David Gilbert <david.gilbert@object-refinery.com>
+7e50a322 Check for null argument.
+5b8fa58a Remove final modifier.
+75ef375a Update headers for Oracle trademark notice.
+8626c0df Replace tabs with spaces.
+fa81dca9 Replace tabs with spaces.
+79796546 Replace tabs with spaces.
+bfedfad3 Replace tabs with spaces.
+59afcab7 Update headers for Oracle trademarks.
+b7f1703d Update headers for Oracle trademarks.
+14bb077f Update headers for Oracle trademarks.
+da06834e Update headers for Oracle trademarks.
+d9945e65 Update headers for Oracle trademarks.
+9a2696ea Update headers for Oracle trademarks.
+03c08ae8 Update headers for Oracle trademarks.
+61661c06 Update headers for Oracle trademarks.
+29899cc1 Update headers for Oracle trademarks.
+764e6451 Update headers for Oracle trademarks.
+56b625a9 Update headers for Oracle trademarks.
+2827333c Update headers for Oracle trademarks.
+88d4a95f Update headers for Oracle trademarks.
+6e18600d Update headers for Oracle trademarks.
+d3099870 Update headers for Oracle trademarks.
+9cda595c Update headers for Oracle trademarks.
+a4706660 Update headers for Oracle trademarks.
+b1f0aa1d Update headers for Oracle trademarks.
+3c3e84aa Update headers for Oracle trademarks.
+93926a1a Update headers for Oracle trademarks.
+4808e4c3 Update headers for Oracle trademarks.
+da041deb Update headers for Oracle trademarks.
+f9ad6caf Update headers for Oracle trademarks.
+d6021069 Update headers for Oracle trademarks.
+8327cc03 Update headers for Oracle trademarks.
+150c6691 Update headers for Oracle trademarks.
+2d123f74 Update headers for Oracle trademarks.
+97487ae2 Update headers for Oracle trademarks.
+d72431be Update headers for Oracle trademarks.
+db831c8a Update headers for Oracle trademarks.
+73cdaa2d Update headers for Oracle trademarks.
+2b9ff964 Update headers for Oracle trademarks.
+7e09348d Update headers for Oracle trademarks.
+53962f7b Update headers for Oracle trademarks.
+c18cdf11 Update headers for Oracle trademarks.
+bd097a1e Update headers for Oracle trademarks.
+f368ee1c Update headers for Oracle trademarks.
+a51ddfbc Update headers for Oracle trademarks.
+09586921 Update headers for Oracle trademarks.
+f1532cf8 Update headers for Oracle trademarks.
+82bd5fad Update headers for Oracle trademarks.
+8ae7307e Update headers for Oracle trademarks.
+3f970832 Update headers for Oracle trademarks.
+55916a26 Update headers for Oracle trademarks.
+d0bfb057 Update headers for Oracle trademarks.
+656248bb Update headers for Oracle trademarks.
+11bafd8f Update headers for Oracle trademarks.
+5fd33a08 Update headers for Oracle trademarks.
+cc2a7dbc Update headers for Oracle trademarks.
+941032dc Update headers for Oracle trademarks.
+d011cb60 Update headers for Oracle trademarks.
+c4fb69ad Update headers for Oracle trademarks.
+9603d149 Update headers for Oracle trademarks.
+d461ca5e Update headers for Oracle trademarks.
+41058acd Update headers for Oracle trademarks.
+e5ae0c6e Update headers for Oracle trademarks.
+c15e6890 Update headers for Oracle trademarks.
+b1a9005c Update headers for Oracle trademarks.
+12519ae3 Update headers for Oracle trademarks.
+50fe9876 Update headers for Oracle trademarks.
+cbc7271d Update headers for Oracle trademarks.
+6cfffd8a Update headers for Oracle trademarks.
+7dca6850 Update headers for Oracle trademarks.
+9cd813e2 Update headers for Oracle trademarks.
+62697084 2011-10-30  David Gilbert <david.gilbert@object-refinery.com>
+c67a17ed 2011-10-30  David Gilbert <david.gilbert@object-refinery.com>
+957a08ea Updated EOL property.
+0b3b0ccc Updated README for possible release today.
+5729d5ea Updated news.
+998e40f1 Bug reference corrections.
+7036e001 Fixed Eclipse warnings.
+fda4d1ec Fixed Eclipse warnings.
+cc4eedbc Fixed Eclipse warnings.
+e0e0abcd Fixed Eclipse warnings.
+eeae9797 Bug 3428870:     * org/jfree/chart/renderer/category/StatisticalBarRenderer.java     (drawHorizontalItem): Fixed offset problem with maximalBarWidth,     (drawVerticalItem): Likewise;
+584167e1 Bug 3429707:     * org/jfree/chart/annotations/TextAnnotation.java     (setRotationAnchor): Added missing argument check, Bug #3428870
+51aa6e75 2011-10-28  Martin Hoeller <martin.hoeller@xss.co.at>
+119c4ef0 Added JUnit tests.
+8380c976 2011-10-19  David Gilbert <david.gilbert@object-refinery.com>
+95c73602 2011-10-19  David Gilbert <david.gilbert@object-refinery.com>
+9a3a95af added animal-sniffer plugin
+8afa3208 Updated EOL property.
+93d3246b 2011-10-18  David Gilbert <david.gilbert@object-refinery.com>
+fc6b0125 Fix tooltip offset when using shadow generator.
+e13dfee8 Remove JDK1.5 usage.
+5a67d2f4 applied patch suggested by mkrauskopf for NetBeans IDE support
+d98e834e removed @Override annotation
+da6354ec Fixed Javadoc tags.
+cf8c6a4d adapted maven POM file for OSSRH
+9041858a 2011-10-16  David Gilbert <david.gilbert@object-refinery.com>
+09a9d224 Updated EOL property, removed TABS.
+ad61fe25 Updated EOL property, removed TABS.
+8a7ad12f Updated EOL property, removed TABS.
+f5187278 Remove tabs.
+ce2f2cc1 2011-10-16  David Gilbert <david.gilbert@object-refinery.com>
+52300b40 2011-10-16  Martin Hoeller <martin.hoeller@xss.co.at>
+e5c064f2 Updated EOL property.
+79b72cb3 Update JCommon to version 1.0.17
+b1cf005c ChangeLog update.
+f37f4aae 2011-10-15  David Gilbert <david.gilbert@object-refinery.com>
+45f9a2bd added a maven POM file
+721b5468 Fixed JDK1.4 compilation issue.
+d372277b Updated EOL property.
+15e57c69 Fixed JDK1.4 compilation issue.
+13df3651 Updated EOL property.
+cbbde0e2 2011-10-11  David Gilbert  <david.gilbert@object-refinery.com>
+20a64a80 set svn:ignore properties
+b5ce0b60 Updated EOL property
+43035874 Patch 3421088: * org/jfree/chart/renderer/category/BoxAndWhiskerRenderer.java (drawVerticalItem): bugfix for misaligned whiskers.
+49f61125 Updated EOL property.
+14d8f7cc Updated EOL property.
+6111a668 Updated README
+171f655b 2011-10-11  David Gilbert  <david.gilbert@object-refinery.com>
+79f137ec Fixed line endings (from Windows to Unix)
+f4acc570 Fixed line endings (from Windows to Unix)
+10783a0b Fixed line endings (from Windows to Unix)
+d3d80f10 Fixed Javadoc warnings.
+00ebc196 Bug #3165708: localization fix
+125a7559 Fixed line endings (from Windows to Unix)
+205d09f6 Fixed line endings (from Windows to Unix)
+bb8004bf Fixed Javadoc warnings.
+aa2068f5 Fixed Javadoc warnings.
+cf908cf8 Fixed line endings (from Windows to Unix)
+0a58495f Bug 3353913:     * org/jfree/chart/plot/CompassPlot.java: localization fix     * org/jfree/chart/plot/PiePlot3D.java: localization fix     * org/jfree/chart/plot/LocalizationBundle_de.properties: addition     * org/jfree/chart/plot/LocalizationBundle_ru.properties: addition     * org/jfree/chart/plot/LocalizationBundle_nl.properties: addition     * org/jfree/chart/plot/LocalizationBundle_pl.properties: addition     * org/jfree/chart/plot/LocalizationBundle_zh_CN.properties: addition     * org/jfree/chart/plot/LocalizationBundle_es.properties: addition     * org/jfree/chart/plot/LocalizationBundle_pt_PT.properties: addition     * org/jfree/chart/plot/LocalizationBundle_fr.properties: addition     * org/jfree/chart/plot/LocalizationBundle.properties: addition     * org/jfree/chart/ChartPanel.java: localization fix     * org/jfree/chart/LocalizationBundle_de.properties: addition     * org/jfree/chart/LocalizationBundle_zh_TW.properties: addition     * org/jfree/chart/LocalizationBundle_zh_CN.properties: addition     * org/jfree/chart/LocalizationBundle_pt_BR.properties: addition     * org/jfree/chart/LocalizationBundle_es.properties: addition     * org/jfree/chart/LocalizationBundle_ru.properties: addition     * org/jfree/chart/LocalizationBundle_pt_PT.properties: addition     * org/jfree/chart/LocalizationBundle_fr.properties: addition     * org/jfree/chart/LocalizationBundle_nl.properties: addition     * org/jfree/chart/LocalizationBundle_pl.properties: addition     * org/jfree/chart/LocalizationBundle_it.properties: addition     * org/jfree/chart/LocalizationBundle.properties: addition
+e300cbe3 Fixed line endings (from Windows to Unix)
+1ffb729b Fixed Javadoc warnings.
+147df46e Fixed Javadoc typo.
+3f253734 Fixed Javadoc warnings.
+8a977415 Fixed Javadoc warnings.
+4aa422db Fixed Javadoc typo and Eclipse warnings.
+ded0ace7 Fixed Javadoc typo.
+b1f43c67 Fixed Javadoc typo.
+29cd1c54 Fixed Javadoc typo.
+9313ea8d Bug 3035289/Patch 3035325: * source/org/jfree/chart/renderer/xy/StackedXYBarRenderer.java   (drawItem): check if series and item are visible
+3aae11e4 new features for the PolarCharts:     * source/org/jfree/chart/renderer/PolarItemRenderer.java       (useFillPaint): New field,       (legendLine): Likewise;       (connectFirstAndLastPoint): New method,       (toolTipGeneratorList): Likewise,       (baseToolTipGenerator): Likewise,       (urlGenerator): Likewise,       (legendItemToolTipGenerator): Likewise,       (legendItemURLGenerator): Likewise,       (getConnectFirstAndLastPoint): Likewise,       (setConnectFirstAndLastPoint): Likewise,       (getUseFillPaint): Likewise,       (setUseFillPaint): Likewise,       (getLegendLine): Likewise,       (setLegendLine): Likewise,       (getToolTipGenerator): Likewise,       (getSeriesToolTipGenerator): Likewise,       (setSeriesToolTipGenerator): Likewise,       (getBaseToolTipGenerator): Likewise,       (setBaseToolTipGenerator): Likewise,       (getURLGenerator): Likewise,       (setURLGenerator): Likewise,       (getLegendItemToolTipGenerator): Likewise,       (setLegendItemToolTipGenerator): Likewise,       (getLegendItemURLGenerator): Likewise,       (setLegendItemURLGenerator): Likewise.     * source/org/jfree/chart/renderer/DefaultPolarItemRenderer.java       (getToolTipGenerator): New method,       (getSeriesToolTipGenerator): Likewise,       (setSeriesToolTipGenerator): Likewise,       (getBaseToolTipGenerator): Likewise,       (setBaseToolTipGenerator): Likewise,       (getURLGenerator): Likewise,       (setURLGenerator): Likewise.     * source/org/jfree/chart/plot/PolarPlot.java       (angleOffset): New field,       (counterClockwise): Likewise;       (getAxisCount): New method,       (getDatasetCount): Likewise,       (getAngleOffset): Likewise,       (setAngleOffset): Likewise,       (isCounterClockwise): Likewise,       (setCounterClockwise): Likewise,       (getAxisIndex): Likewise,
+204a6d51 Fix Javadoc comment and line delimiters.
+a394f3ec Fixed line endings (from Windows to Unix)
+7c02059a Fixed line endings (from Windows to Unix)
+44270982 2011-10-06  David Gilbert  <david.gilbert@object-refinery.com>
+a5b97ae1 Fixed bug 3418287
+da34d611 Fixed bug 3418287
+42a0b868 Fixed line endings (from Windows to Linux)
+77d91b46 Fix test target in Ant build script (thanks to Martin Krauskopf)
+28ade2ee Fix Annotation import.
+4498f04a Both XY-Area renderer used Polygons as shapes and thus were limited to integer-precision. That is not fun when trying to implement tooltips on large zoom levels.
+9cc59ea5 2010-03-30  David Gilbert  <david.gilbert@object-refinery.com>
+58340531 2010-03-30  David Gilbert  <david.gilbert@object-refinery.com>
+f0f0d8ba Synchronise with 1.0.x branch.
+f06875c4 2010-02-16  David Gilbert  <david.gilbert@object-refinery.com>
+7ce1d56e 2010-02-09  David Gilbert  <david.gilbert@object-refinery.com>
+b9b14314 2010-02-09  David Gilbert  <david.gilbert@object-refinery.com>
+02044cd6 2010-02-09  David Gilbert  <david.gilbert@object-refinery.com>
+19998781 2010-02-09  David Gilbert  <david.gilbert@object-refinery.com>
+a1b908b5 Fixed constructor.
+125a1275 Fixed constructor.
+1e689e6a Fixed dates.
+daf94331 2009-08-12  David Gilbert  <david.gilbert@object-refinery.com>
+56ea6592 Updated Javadocs
+0a0fff13 2009-08-12  David Gilbert  <david.gilbert@object-refinery.com>
+ecdaf0cd New contributor.
+fc3978e9 New file.
+b27e11eb New file.
+83d4b84c 2009-11-27  David Gilbert  <david.gilbert@object-refinery.com>
+721c0bd8 Synchronised with 1.0.x branch.
+4d64a98b 2009-11-04  David Gilbert  <david.gilbert@object-refinery.com>
+561989ef New test.
+7d5118e5 New test.
+78110c9b 2009-11-03  David Gilbert  <david.gilbert@object-refinery.com>
+8a4807bc 2009-11-03  David Gilbert  <david.gilbert@object-refinery.com>
+5e2f22dd 2009-11-02  David Gilbert  <david.gilbert@object-refinery.com>
+ff0b4f4f 2009-09-28  David Gilbert  <david.gilbert@object-refinery.com>
+d2d9df6b 2009-09-28  David Gilbert  <david.gilbert@object-refinery.com>
+6da82546 2009-09-28  David Gilbert  <david.gilbert@object-refinery.com>
+92788d90 2009-09-28  David Gilbert  <david.gilbert@object-refinery.com>
+91a0bcab Added some docs to clarify the encoding for maxBarWidth.
+3b8c58cd 2009-09-10  David Gilbert  <david.gilbert@object-refinery.com>
+57627144 2009-09-10  David Gilbert  <david.gilbert@object-refinery.com>
+44c42fc8 Clarifications to API docs.
+2462fdeb Clarifications to API docs.
+7bd7382c 2009-09-10  David Gilbert  <david.gilbert@object-refinery.com>
+f2b713eb Partial fix for bug 2849731 (covers IntervalCategoryDataset).
+42909f51 New tests for bug 2849731.
+88fe6940 Updated Javadocs.
+e148622c 2009-09-10  David Gilbert  <david.gilbert@object-refinery.com>
+457543fc 2009-09-10  David Gilbert  <david.gilbert@object-refinery.com>
+e730e4f3 2009-09-04  David Gilbert  <david.gilbert@object-refinery.com>
+16391465 2009-09-03  David Gilbert  <david.gilbert@object-refinery.com>
+f320abda Synchronised with 1.0.x branch.
+c943faf0 2009-09-01  David Gilbert  <david.gilbert@object-refinery.com>
+e596c7b7 2009-09-01  David Gilbert  <david.gilbert@object-refinery.com>
+d2facf14 2009-08-31  David Gilbert  <david.gilbert@object-refinery.com>
+00ebcc58 2009-08-31  David Gilbert  <david.gilbert@object-refinery.com>
+cf48acfb 2009-08-31  David Gilbert  <david.gilbert@object-refinery.com>
+fed80ba0 2009-08-31  David Gilbert  <david.gilbert@object-refinery.com>
+de61f722 Fixed typo in Javadocs.
+b3bee687 Fixed typo in Javadocs.
+48fc83a7 Synchronised with 1.0.x branch.
+6b3376ae Fixed typo - see bug 2826819.
+9e5f5b66 Fixed typo - see bug 2826819.
+73d0e952 Fix potential NPE if chart is null.
+cfe0ec78 Synchronised with 1.0.x branch.
+909d0601 Whitespace.
+5a72ec36 Synchronised with 1.0.X branch.
+0f096481 Synchronised with 1.0.X branch.
+2b17e769 Synchronised with 1.0.X branch.
+f2c9ea4f Synchronised with 1.0.X branch.
+40bb6123 Removed whitespace.
+7d7465f6 Added shadow generator field.
+4fec77af Updated.
+a76da007 2009-07-13  David Gilbert  <david.gilbert@object-refinery.com>
+9c3e8595 2009-07-13  David Gilbert  <david.gilbert@object-refinery.com>
+fdcdb1ba 2009-07-13  David Gilbert  <david.gilbert@object-refinery.com>
+78062738 Synchronised with 1.0.x branch.
+29fce8a3 2009-07-08  David Gilbert  <david.gilbert@object-refinery.com>
+df89c53f Synchronised with 1.0.x branch.
+10d0b63a 2009-07-07  David Gilbert  <david.gilbert@object-refinery.com>
+8c019df4 Various updates.
+c0e5864f Various updates.
+66fe2b77 Various updates.
+6b2a9b4e 2009-07-06  David Gilbert  <david.gilbert@object-refinery.com>
+66d43183 Clear off screen buffer to fully transparent.
+aebc66b8 2009-07-06  David Gilbert  <david.gilbert@object-refinery.com>
+69790b9a Selection state updates.
+10e37b78 Selection state updates.
+711b9b3f Selection state updates.
+9faef47d Fixed failing test.
+f83cee09 Tidy up.
+6a9af0b8 Updated
+81c2c586 Updated
+b6281483 Updated news
+acf2fa84 Updated API docs.
+3e329e38 More selection updates.
+a10dd821 Renamed some parameters.
+04e6ea34 Item selection update.
+d3cd6161 Check for null renderer.
+b67c51b0 Added getAnnotations() to XYItemRenderer.
+8cde80eb Moved PaintMap and StrokeMap from org.jfree.chart.* to org.jfree.chart.util.*.
+fe96fb95 Don't need to support JDK 1.3.1 anymore.
+e937d9c9 Synchronised with 1.0.X branch.
+68793efd 2009-06-29  David Gilbert  <david.gilbert@object-refinery.com>
+7b3cccee Synchronised with 1.0.X branch.
+912348ea 2009-06-29  David Gilbert  <david.gilbert@object-refinery.com>
+15db97f3 Removed Java 6 API calls.
+1ced5d58 Removed tracelines - use new Overlay mechanism instead.
+6558d00a Implemented selection mechanism for XYPlots (other plot types later).
+dfa33450 Source formatting.
+44a78730 2009-06-26  David Gilbert  <david.gilbert@object-refinery.com>
+949189ff Updated cloning.
+a289d92a Synchronised with 1.0.x branch.
+7ac0b725 2009-06-26  David Gilbert  <david.gilbert@object-refinery.com>
+4e63f402 Added removeSeries() methods.
+07abfb8e Added selection parameter to rendering.
+9c960e5f Added selection parameter to rendering.
+c471509a Fixed iText jar file name.
+8db7c64d Update iText version number.
+30a64d10 Fix build error.
+70d6f5e4 Don't fail if swtgraphics2d.jar isn't there.
+f6b9f5e7 Fixed deprecation warnings.
+2886e935 Synchronised with 1.0.x branch.
+ba39e00a Synchronised with 1.0.x branch.
+4c2a050e 2009-06-24  David Gilbert  <david.gilbert@object-refinery.com>
+f14f7716 Synchronised with 1.0.x branch.
+67ae7421 Added new constructor.
+829aac60 Whitespace.
+079057d2 Fix for failing JUnit test.
+02c0a507 Synchronised with 1.0.x branch.
+c040f2c0 Synchronised with 1.0.x branch.
+f9cfd08e Synchronised with 1.0.x branch.
+1ff23423 Synchronised with 1.0.x branch.
+dbe69f03 Synchronised with 1.0.x branch.
+1357aa89 Synchronised with 1.0.x branch.
+01e93e36 Synchronised with 1.0.x branch.
+ecddbd96 Synchronised with 1.0.x branch.
+a9649e59 Synchronised with 1.0.x branch.
+3ab575ab Synchronised with 1.0.x branch.
+705f5825 Synchronised with 1.0.x branch.
+83473a33 Synchronised with 1.0.x branch.
+01f1bfe9 Synchronised with 1.0.x branch.
+80eaff78 Synchronised with 1.0.x branch.
+937fa8b1 Synchronised with 1.0.x branch.
+f2e0c5d7 Added missing tests.
+ec850699 Synchronised with 1.0.x branch.
+a0f95643 Synchronised with 1.0.x branch.
+d42607d7 Synchronised with 1.0.x branch.
+59edfe2d Synchronised with 1.0.x branch.
+4f9b998f Synchronised with 1.0.x branch.
+13fd3dda Synchronised with 1.0.x branch.
+1af69a4a Synchronised with 1.0.x branch.
+0be533c8 Synchronised with 1.0.x branch.
+8a9da3ac Synchronised with 1.0.x branch.
+593ef413 Synchronised with 1.0.x branch.
+26779e45 Synchronised with 1.0.x branch.
+6936f444 Synchronised with 1.0.x branch.
+144e972b Synchronised with 1.0.x branch.
+371dd139 Synchronised with 1.0.x branch.
+8e6f1965 Synchronised with 1.0.x branch.
+b1a882b0 Synchronised with 1.0.x branch.
+db127980 Synchronised with 1.0.x branch.
+45c3901e Synchronised with 1.0.x branch.
+71dc86a7 Synchronised with 1.0.x branch.
+2f98a589 Removed unused imports.
+09a338d8 Fixed compile error.
+1d410b02 2009-06-17  David Gilbert  <david.gilbert@object-refinery.com>
+c4ebfda4 Fixed compile error.
+1505271d Fixed compile error.
+d723e359 Fixed Javadoc typo.
+c9c9974c 2009-06-11  David Gilbert  <david.gilbert@object-refinery.com>
+891fbdde 2009-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+6bf077fc 2009-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+6371cdca 2009-06-09  David Gilbert  <david.gilbert@object-refinery.com>
+d169ced8 2009-06-09  David Gilbert  <david.gilbert@object-refinery.com>
+17479386 2009-06-08  David Gilbert  <david.gilbert@object-refinery.com>
+1d81f35e 2009-06-01  David Gilbert  <david.gilbert@object-refinery.com>
+a59f9a59 2009-06-01  David Gilbert  <david.gilbert@object-refinery.com>
+7981bfaf 2009-05-28  David Gilbert  <david.gilbert@object-refinery.com>
+7eb41a1b 2009-05-28  David Gilbert  <david.gilbert@object-refinery.com>
+2d97ab48 Fixed imports.
+fdd9a720 2009-05-28  David Gilbert  <david.gilbert@object-refinery.com>
+32370afa 2009-05-28  David Gilbert  <david.gilbert@object-refinery.com>
+638e37ad 2009-05-29  David Gilbert  <david.gilbert@object-refinery.com>
+74e20e52 Formatting.
+342ba292 Updated news file.
+0365d676 2009-05-27  David Gilbert  <david.gilbert@object-refinery.com>
+45516069 Formatting change in drawItem() method.
+3a99b7a3 2009-05-26  David Gilbert  <david.gilbert@object-refinery.com>
+a350a000 2009-05-26  David Gilbert  <david.gilbert@object-refinery.com>
+5df353b2 Implemented hashCode().
+53f918d6 Test hashCode().
+b3f3ec4b Implemented hashCode().
+7b1cfbf9 2009-05-19  David Gilbert  <david.gilbert@object-refinery.com>
+5c140904 2009-05-26  David Gilbert  <david.gilbert@object-refinery.com>
+84799a2d 2009-05-19  David Gilbert  <david.gilbert@object-refinery.com>
+10f47a6a Fixed FindBugs warnings.
+a2772373 Fixed FindBugs warnings.
+5280da1e Fixed FindBugs warnings.
+5e763297 Fixed FindBugs warnings.
+5aaea5b8 Fixed FindBugs warnings.
+b1609ead Fixed FindBugs warnings.
+a02076b1 Fixed FindBugs warnings.
+45ae58ab Fixed FindBugs warnings.
+9366ded4 Fixed FindBugs warnings.
+55dbd915 Fixed FindBugs warnings.
+4684fcf1 Fixed FindBugs warnings.
+f75f057c Fixed FindBugs warnings.
+70af75ce Fixed FindBugs warnings.
+69b63ab8 Fixed FindBugs warnings.
+03dc7e62 Fixed FindBugs warnings.
+ec439da3 Fixed FindBugs warnings.
+2ef0ca77 2009-05-18  David Gilbert  <david.gilbert@object-refinery.com>
+a1cd4fed Fixed some checkstyle warnings.
+4eee2036 2009-05-18  David Gilbert  <david.gilbert@object-refinery.com>
+e25bacdd 2009-05-16  David Gilbert  <david.gilbert@object-refinery.com>
+18553a4c Fixed last commit.
+0f1d0faa Added testIterateToFindRangeBounds_MultiValueCategoryDataset().
+4bdbf4b5 Added series visibility check in testFindRangeBounds().
+aafb614b Added testFindRangeBounds().
+ee4382fc Added testFindRangeBounds().
+f498c82a Source formatting.
+15591132 Added testFindRangeBounds().
+0b56cb36 Added testFindRangeBounds().
+c263683c Added testFindRangeBounds().
+0594a663 2009-05-12  David Gilbert  <david.gilbert@object-refinery.com>
+f42f72ce Fixed Checkstyle warnings.
+1c3c6943 Fixed Checkstyle warnings.
+c7c88978 Fixed Checkstyle warnings.
+d5e83966 Fixed Checkstyle warnings.
+1dd134d6 Fixed Checkstyle warnings.
+4647f857 Fixed Checkstyle warnings.
+bc035a11 Fixed Checkstyle warnings.
+0db564a6 Fixed Checkstyle warnings.
+113ceacf Fixed Checkstyle warnings.
+a540d53f Fixed Checkstyle warnings.
+a9220c9a Fixed Checkstyle warnings.
+322165d5 Fixed Checkstyle warnings.
+689b99d0 Fixed Checkstyle warnings.
+d1be074a Fixed Checkstyle warnings.
+aff60e0c Fixed Checkstyle warnings.
+9c15ef71 Fixed Checkstyle warnings.
+b1dd0846 Fixed Checkstyle warnings.
+5197fb97 Fixed Checkstyle warnings.
+d4a0bf8c Fixed Checkstyle warnings.
+d5e51298 Fixed Checkstyle warnings.
+fed50a92 Fixed Checkstyle warnings.
+cc7b46c4 Fixed Checkstyle warnings.
+1b11d543 Fixed Checkstyle warnings.
+eef90c78 Fixed Checkstyle warnings.
+5591c724 Fixed Checkstyle warnings.
+5f2a6b04 Fixed Checkstyle warnings.
+bb36fc5b Fixed Checkstyle warnings.
+5584b312 Fixed Checkstyle warnings.
+ffc86e26 Fixed Checkstyle warning.
+ac7da0d4 Minor source formatting change.
+51ca4b9f 2009-05-10  David Gilbert  <david.gilbert@object-refinery.com>
+146d2078 Added minor check.
+7ec1deae Minor Javadoc update.
+3849f0c1 Formatting.
+3b2d673d Line wrapping.
+a54ebe5c 2009-05-05  David Gilbert  <david.gilbert@object-refinery.com>
+eb54a90c 2009-04-28  David Gilbert  <david.gilbert@object-refinery.com>
+930dfe88 2009-04-28  David Gilbert  <david.gilbert@object-refinery.com>
+a58f5bfd Trivial header fix.
+b1c361a6 Trivial API doc fix.
+84dd8df4 2009-04-27  David Gilbert  <david.gilbert@object-refinery.com>
+563e1dc0 2009-04-27  David Gilbert  <david.gilbert@object-refinery.com>
+b888fe5c Updated API docs.
+f10f45b2 Updated API docs.
+7a4813e3 2009-04-27  David Gilbert  <david.gilbert@object-refinery.com>
+3b88bce4 Small fix.
+62101191 2009-04-20  David Gilbert  <david.gilbert@object-refinery.com>
+4b523ebd Added findRangeBounds() override.
+dd1f756c Added Javadoc entry.
+6786d9e7 Updated release date.
+c29ea047 New file for Javadocs.
+53c5b4cf Updates for release.
+faa95798 Updates for release.
+5e0174de Fixed deprecation warnings.
+565fe56d Updated test.
+dd464143 Updated.
+aabfd8b7 Updated version.
+a4eabff4 Changed default for strip outline visibility.
+99b38406 2009-04-16  David Gilbert  <david.gilbert@object-refinery.com>
+92ef0d25 2009-04-16  David Gilbert  <david.gilbert@object-refinery.com>
+25e4e9f2 2009-04-16  David Gilbert  <david.gilbert@object-refinery.com>
+a3594898 2009-04-16  David Gilbert  <david.gilbert@object-refinery.com>
+aa499a76 Updated release date.
+ef8b834c Updated release date.
+8d9aeea6 Removed redundant javadoc tag.
+5be85a38 2009-04-10  David Gilbert  <david.gilbert@object-refinery.com>
+b683a037 Updated iText.
+034f1f84 Updated JCommon.
+f31653d1 Fixed Javadoc warning.
+1fd4c395 Fixed failing test.
+5244c67a New tests.
+c56fa905 Fixed Javadoc errors.
+b44353c2 Fix method arguments.
+50d51a48 Updated.
+7667eefc Updated.
+131e8ad2 Deleted.
+816e26c3 More NEWS.
+78bf9906 Added a FIXME.
+de763416 Fixed typo.
+16e37a36 Updates.
+c09948b9 2009-04-09  David Gilbert  <david.gilbert@object-refinery.com>
+e481972c 2009-04-09  David Gilbert  <david.gilbert@object-refinery.com>
+a4835415 Formatting.
+9fb72aaa 2009-04-08  David Gilbert  <david.gilbert@object-refinery.com>
+bd8185c6 Header change matching trunk.
+fcab542a Fixed deprecation warning.
+7ef43143 Synchronised with 1.0.x.
+ef2a821c Synchronised with 1.0.x.
+1923f263 New files.
+388d2a36 New files.
+1f6f8c46 Added XYTitleAnnotation plus tests.
+856cd3fc Synchronised with 1.0.x branch.
+075cc703 New files.
+ffbd8264 Synchronised with 1.0.x branch.
+c582ab77 Synchronised with 1.0.x branch.
+68a1a5f9 Synchronised with 1.0.x branch.
+434a6497 Synchronised with 1.0.x branch.
+92344214 Synchronised with 1.0.x branch.
+8fd6f755 Synchronised with 1.0.x branch.
+a75e6881 Synchronised with 1.0.x branch.
+f466ad3c Synchronised with 1.0.x branch.
+e6e46049 Synchronised with 1.0.x branch.
+69c95b74 Synchronised with 1.0.x branch.
+748bf73a Synchronised with 1.0.x branch.
+b3f6be76 Synchronised with 1.0.x branch.
+7c2639c6 Synchronised with 1.0.x branch.
+b70465f8 Synchronised with 1.0.x branch.
+3b8d8445 Synchronised with 1.0.x branch.
+aa388e45 Synchronised with 1.0.x branch.
+53ef4032 Synchronised with 1.0.x branch.
+490931b0 Synchronised with 1.0.x branch.
+7236f4be Synchronised with 1.0.x branch.
+cd830341 Synchronised with 1.0.x branch.
+4db636fc Synchronised with 1.0.x branch.
+51a21d88 Synchronised with 1.0.x branch.
+61336272 Synchronised with 1.0.x branch.
+ab976c10 Synchronised with 1.0.x branch.
+048fec13 Synchronised with 1.0.x branch.
+06ac2710 Moved deprecated source code to end of file to ease diffs with 1.2.x.
+498cd209 Moved deprecated source code to end of file to ease diffs with 1.2.x.
+6db0bb4e Synchronised with 1.0.x.
+06f8d7da Formatting.
+e417f754 Formatting.
+ae2abc9e Synchronised with 1.0.x branch.
+2a83eb9e Added missing Javadoc comment.
+2801163f Synchronised with 1.0.x branch.
+d5fd1344 New file.
+f2fe33ef New files.
+51c41d9b 2009-04-01  David Gilbert  <david.gilbert@object-refinery.com>
+0c1c1d07 2009-04-01  David Gilbert  <david.gilbert@object-refinery.com>
+3ad15962 2009-04-01  David Gilbert  <david.gilbert@object-refinery.com>
+fd46b592 2009-04-01  David Gilbert  <david.gilbert@object-refinery.com>
+44124e8c 2009-03-30  David Gilbert  <david.gilbert@object-refinery.com>
+f9b283d2 Added comments.
+d62e3551 2009-03-28  David Gilbert  <david.gilbert@object-refinery.com>
+a278452b 2009-03-28  David Gilbert  <david.gilbert@object-refinery.com>
+623a5890 2009-03-27  David Gilbert  <david.gilbert@object-refinery.com>
+23191cb3 Bug fix for earlier commmit.
+3e376ff2 2009-03-27  David Gilbert  <david.gilbert@object-refinery.com>
+a34de6be Added zero baselines to histogram.
+dde33779 2009-03-27  David Gilbert  <david.gilbert@object-refinery.com>
+bb219835 Set panning default to false.
+2ee31f10 2009-03-26  David Gilbert  <david.gilbert@object-refinery.com>
+7b74015e Minor formatting changes.
+4c602512 2009-03-26  David Gilbert  <david.gilbert@object-refinery.com>
+c5617911 2009-03-26  David Gilbert  <david.gilbert@object-refinery.com>
+01d77ff0 2009-03-26  David Gilbert  <david.gilbert@object-refinery.com>
+823ecfc6 2009-03-26  David Gilbert  <david.gilbert@object-refinery.com>
+192943c1 2009-03-25  David Gilbert  <david.gilbert@object-refinery.com>
+04e874f9 Fix for getRangeUpperBound() method.
+d1a3baaf Added missing test suite.
+7602b3da Fixed Eclipse warning.
+9909e3b0 2009-03-19  David Gilbert  <david.gilbert@object-refinery.com>
+d42ace76 2009-03-19  David Gilbert  <david.gilbert@object-refinery.com>
+39075eaa 2009-03-19  David Gilbert  <david.gilbert@object-refinery.com>
+fe02877f 2009-03-19  David Gilbert  <david.gilbert@object-refinery.com>
+af960a8f API doc update.
+d06f8234 2009-03-18  David Gilbert  <david.gilbert@object-refinery.com>
+80a5c860 Fixed Eclipse warnings.
+1fe6ec7f Added missing API doc comment.
+bda9f8d4 Added missing parameter docs.
+26037f38 Added API docs.
+1e11f848 Fixed imports.
+7af4a9bc Formatting.
+2b7ba3cb Fixed Eclipse warnings.
+a746a601 Added API doc entry.
+50bf2ff0 Fixed Eclipse warning.
+a086a9d6 Fixed Eclipse warning.
+ef389ce9 Fixed Eclipse warning.
+1829b31a 2009-03-15  David Gilbert  <david.gilbert@object-refinery.com>
+e6466108 2009-03-10  David Gilbert  <david.gilbert@object-refinery.com>
+c9862850 Fixed deprecation warnings.
+25a66392 Fixed deprecation warnings.
+c333ec74 Fixed NPE.
+35b4994a Added casts to compile with < JDK1.6
+e79915ef 2009-03-06  David Gilbert  <david.gilbert@object-refinery.com>
+707888c9 2009-03-06  David Gilbert  <david.gilbert@object-refinery.com>
+a9f433f4 2009-03-06  David Gilbert  <david.gilbert@object-refinery.com>
+cad53ad5 Fixed Checkstyle warnings.
+774f5971 Fixed Checkstyle warnings.
+2d37d23c Fixed Checkstyle warnings.
+1ffa5160 Fixed Checkstyle warnings.
+75942d7e Updated API docs.
+2ed126f0 Fixed deprecation warning.
+cda18916 2009-03-02  David Gilbert  <david.gilbert@object-refinery.com>
+38611f1c Interim update.
+9e219251 Whitespace.
+10528094 2009-03-02  David Gilbert  <david.gilbert@object-refinery.com>
+3e729369 2009-02-27  David Gilbert  <david.gilbert@object-refinery.com>
+da671235 2009-02-27  David Gilbert  <david.gilbert@object-refinery.com>
+9428101b 2009-02-27  David Gilbert  <david.gilbert@object-refinery.com>
+efb9aa3d 2009-02-27  David Gilbert  <david.gilbert@object-refinery.com>
+365ee024 Reformatting.
+01433421 2009-02-27  David Gilbert  <david.gilbert@object-refinery.com>
+a33a1161 Updated year in header.
+f0f2f1a7 2009-02-27  David Gilbert  <david.gilbert@object-refinery.com>
+ee086b93 Fix previous entry.
+2f7ce489 2009-02-12  David Gilbert  <david.gilbert@object-refinery.com>
+273a6a79 Minor edit.
+19e274d8 Updated build to include jxlayer and related code only for JDK 1.5+
+68ef9a7e Updated project properties.
+2b438f1d Fixed error in drawItem.
+be273b44 Delete - file committed by mistake.
+38fbd191 2009-02-13  David Gilbert  <david.gilbert@object-refinery.com>
+3c594d4c 2009-02-12  David Gilbert  <david.gilbert@object-refinery.com>
+540e191b 2009-02-12  David Gilbert  <david.gilbert@object-refinery.com>
+efdf6d39 Fixed locale sensitive tests.
+2feb39bd Fixed locale sensitive test.
+e011be98 Added Wikipedia reference.
+4b78bdc9 2009-02-12  David Gilbert  <david.gilbert@object-refinery.com>
+ad9b1048 2009-02-10  David Gilbert  <david.gilbert@object-refinery.com>
+a067125e 2009-02-05  David Gilbert  <david.gilbert@object-refinery.com>
+f54f46e7 2009-02-05  David Gilbert  <david.gilbert@object-refinery.com>
+68706ec4 Added new tests.
+0f12953a 2009-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+6c47538d 2009-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+70feff98 2009-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+09e9bcac 2009-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+e0cc44fc 2009-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+24d08393 2009-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+b8f918fb 2009-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+f4c60dca 2009-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+37deba89 Added missed contributor.
+25e89b00 2009-02-04  David Gilbert  <david.gilbert@object-refinery.com>
+65009b41 2009-02-03  David Gilbert  <david.gilbert@object-refinery.com>
+321a7b9b 2009-02-03  David Gilbert  <david.gilbert@object-refinery.com>
+a79ba8f9 Updated version number for next release (hopefully before the end of Feb).
+8284d4f1 Synchronised with 1.0.x branch.
+ce7dfb60 Synchronised with 1.0.x branch.
+72849257 Synchronised with 1.0.x branch.
+a75b9e19 2009-02-02  David Gilbert  <david.gilbert@object-refinery.com>
+9d03e640 Added new test for equals() method.
+fe9a0c02 Fixed deprecation warnings.
+d5bbbffd Simplified equal() method.
+4904c70b Minor formatting changes.
+d6ee8782 2009-01-28  David Gilbert  <david.gilbert@object-refinery.com>
+609896de 2009-01-28  David Gilbert  <david.gilbert@object-refinery.com>
+412b27c8 Synchronised with 1.0.x branch.
+4af6d1c8 Changes to domain and range grid line drawing methods in CategoryItemRenderer.
+0e286120 2009-01-28  David Gilbert  <david.gilbert@object-refinery.com>
+fd82b616 2009-01-28  David Gilbert  <david.gilbert@object-refinery.com>
+a769a644 Synchronised with 1.0.x branch.
+3d53a8b4 2009-01-23  David Gilbert  <david.gilbert@object-refinery.com>
+a6516afb Updated API docs.
+bf96b497 Updated API docs.
+197ad47b 2009-01-23  David Gilbert  <david.gilbert@object-refinery.com>
+1a410b96 2009-01-23  David Gilbert  <david.gilbert@object-refinery.com>
+db77cd1e 2009-01-23  David Gilbert  <david.gilbert@object-refinery.com>
+282d00fe Synchronised with 1.0.x branch.
+e14dd3eb 2009-01-21  David Gilbert  <david.gilbert@object-refinery.com>
+a5a35044 Synchronised with 1.0.x branch.
+a1edaddd 2009-01-21  David Gilbert  <david.gilbert@object-refinery.com>
+d88aaf8c Updated for preview release.
+8574abf2 Updated iText version.
+6bf6d5b1 Synchronised with 1.0.x branch.
+aaad2810 2009-01-16  David Gilbert  <david.gilbert@object-refinery.com>
+3e08c4c2 Netbeans project files (test).
+3a41b15a Synchronised with 1.0.x branch.
+ac310136 Fixed style warnings.
+89b52f69 Synchronised with 1.0.x branch.
+b21c68b6 Updated NEWS info.
+519b7a47 Minor demo updates.
+9e3251c3 2009-01-16  David Gilbert  <david.gilbert@object-refinery.com>
+a97b71a5 Removed unnecessary casts.
+1e7c689e Synchronised with 1.0.x branch.
+cf5d9221 Synchronised with 1.0.x branch.
+8c30bddb Added Peter Kolb to contributor list.
+5bd2f138 Removed commented out code.
+f618e90d Added Peter Kolb to contributor list.
+6ea213f7 2009-01-14  David Gilbert  <david.gilbert@object-refinery.com>
+e979bc47 Year in header.
+05ca2f83 Synchronised with 1.0.x branch.
+e5ba6c36 2009-01-14  David Gilbert  <david.gilbert@object-refinery.com>
+611e0ce6 Synchronised with 1.0.x branch.
+7b93acaa 2009-01-13  David Gilbert  <david.gilbert@object-refinery.com>
+bf591126 Synchronised with 1.0.x branch.
+b3b60762 2009-01-13  David Gilbert  <david.gilbert@object-refinery.com>
+2e55bec5 Updated for changes to TimeSeries class.
+d62ea9a1 Updated for changes to TimeSeries class.
+2b24ac84 Synchronised with 1.0.x branch.
+7bf07404 2009-01-13  David Gilbert  <david.gilbert@object-refinery.com>
+feddb757 Synchronised with 1.0.x branch.
+11402ae8 2009-01-09  David Gilbert  <david.gilbert@object-refinery.com>
+5682b68b Removed whitespace.
+29b25b94 Synchronised with 1.0.x branch.
+19074d82 2009-01-09  David Gilbert  <david.gilbert@object-refinery.com>
+83426562 Fixed imports.
+e957224f Updated JFreeChart version number.
+24be4998 Synchronised with 1.0.x branch.
+15bdf0a5 2008-12-31  David Gilbert  <david.gilbert@object-refinery.com>
+a6952105 Updated JCommon version number.
+96a450ac Updated JCommon version number.
+928632a2 Updated JCommon version.
+c8f8bbfc Synchronised with 1.0.x branch.
+c8cad942 2008-12-30  David Gilbert  <david.gilbert@object-refinery.com>
+a5fffcb0 Synchronised with 1.0.x branch.
+71803b95 2008-12-20  David Gilbert  <david.gilbert@object-refinery.com>
+da554cb9 Updated maven dependency
+23983f67 Fixed missing imports.
+6dbd0410 Added new contributor.
+f0564a4b Use ResourceBundleWrapper - see patch 1607918.
+78688dd3 2008-12-18  David Gilbert  <david.gilbert@object-refinery.com>
+cf5d2eb3 Minor Javadoc update.
+b9766e70 Fixed doc error.
+cd7e1737 Reverting previous change.
+9cc80f79 2008-12-17  David Gilbert  <david.gilbert@object-refinery.com>
+58fcc6cc Synchronised with 1.0.x branch.
+d868bc9a New sample images.
+998a8fe4 Removed unnecessary comment.
+3ef72270 Use proper font name.
+4a7adcf8 Whitespace.
+7bc9e821 Update for release.
+eab38713 Updated API docs.
+c9c3ed92 New sample images.
+a06c6eaa Updated version number and task descriptions.
+3b1ebeca Synchronised with 1.0.x branch.
+ce894afc Clean up for grid line drawing methods.
+ee542183 Simplified entity generation.
+6c4cbddf Formatting updates.
+5d81c53d Synchronised with 1.0.x branch.
+74729dc6 Minor API doc update.
+478b3fdf Removed console output.
+406f7297 Missed on previous commit.
+eda260d5 2008-12-03  David Gilbert  <david.gilbert@object-refinery.com>
+b67b9507 Small API doc update.
+4933e5ae Formatting updates.
+cf8077ab Formatting updates.
+fd443d2b Removed System.out.println() calls.
+2bce5853 Removed console output.
+ef8e10c0 Formatting.
+aa7dd546 Synchronised with 1.0.x branch.
+0a1f5ed7 2008-11-25  David Gilbert  <david.gilbert@object-refinery.com>
+d8c2ccae Synchronised with 1.0.x branch.
+f171310e Synchronised with 1.0.x branch.
+c53ba5e8 Synchronised with 1.0.x branch.
+ad8d958d Added missing test reference.
+2754ba69 2008-11-25  David Gilbert  <david.gilbert@object-refinery.com>
+2ce05afc 2008-11-25  David Gilbert  <david.gilbert@object-refinery.com>
+a4927e83 Sample images for API docs.
+052984aa Updated API docs.
+b6830cb6 Updated API docs.
+2f667402 Updated API docs.
+085dac72 Updated API docs.
+2da5c2b7 Updated API docs.
+26fe23a2 Updated API docs.
+bbffb412 Updated API docs.
+f144a436 Updated API docs.
+f5929e88 Added stacktrace output.
+53d97739 Added stacktrace output.
+bff74e70 Updated API docs.
+468be39e Updated API docs.
+60b8ec11 Updated API docs.
+a7b01339 Updated API docs.
+220d66bf Updated API docs.
+3b3472f2 Updated API docs.
+1baf6bbd Updated API docs.
+d81bf97a Updated API docs.
+98b0072d Updated API docs.
+7200b5a5 2008-11-24  David Gilbert  <david.gilbert@object-refinery.com>
+085c6991 Fix for bug 1955483.
+14a2fc5b Updated default font.
+8dae6798 Updated default font.
+7b2d2905 Updated default font.
+c0b22371 Updated default font.
+e62b1dec Updated default font.
+6c9eedc3 Updated default font.
+1c878c6a Updated default font.
+47263901 Updated default font.
+65333463 Removed for JFreeChart 1.2.0.
+3dbd4170 Updated default font.
+c587b7b3 Updated default font.
+7982d15e Synchronised with 1.0.x branch.
+99ea3b8a Formatting.
+3c15b2f4 Synchronised with 1.0.x branch.
+f77d6b08 Added HP as contributor.
+f8bf20b8 2008-11-18  David Gilbert  <david.gilbert@object-refinery.com>
+a79e2b88 Whitespace.
+4dee7806 Formatting.
+866db3f8 2008-11-13  David Gilbert  <david.gilbert@object-refinery.com>
+a1959773 Synchronised with 1.0.x branch.
+58a03ec0 Fixed comments.
+20ed0f14 Whitespace.
+731b8eb7 Synchronised with 1.0.x branch.
+b41554cd 2008-11-05  David Gilbert  <david.gilbert@object-refinery.com>
+e29af3b4 Synchronised with 1.0.x branch.
+b0536c36 2008-10-27  David Gilbert  <david.gilbert@object-refinery.com>
+2a064d3d Synchronised with 1.0.x branch.
+6b9c15d0 2008-10-23  David Gilbert  <david.gilbert@object-refinery.com>
+d214a252 Synchronised with 1.0.x branch.
+ff2019b5 2008-10-15  David Gilbert  <david.gilbert@object-refinery.com>
+2c624ba4 Whitespace.
+9e8082b9 Fixed compile error.
+4287c316 Synchronised with 1.0.x branch.
+bd6b7145 2008-10-08  David Gilbert  <david.gilbert@object-refinery.com>
+5071b17c Updated test.
+9e75ac51 Minor formatting.
+c78e672f Synchronised with 1.0.x branch.
+f108534d Synchronised with 1.0.x branch.
+62f1a887 Synchronised with 1.0.x branch.
+b3ac003f Updated tests.
+f47bcb97 Fixed typo.
+4999a077 2008-10-08  David Gilbert  <david.gilbert@object-refinery.com>
+5f16d143 Synchronised with 1.0.x branch.
+30396050 Synchronised with 1.0.x branch.
+f202fadf Synchronised with 1.0.x branch.
+82522be8 2008-10-02  David Gilbert  <david.gilbert@object-refinery.com>
+f550c9aa 2008-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+e70bb853 2008-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+ce151791 Synchronised with 1.0.x branch.
+3ec1ab4e 2008-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+6c025953 Synchronised with 1.0.x branch.
+50ecfcab Whitespace.
+77708224 Minor formatting change.
+2d361099 2008-09-25  David Gilbert  <david.gilbert@object-refinery.com>
+c84de5cf Synchronised with 1.0.x branch.
+2e22c202 2008-09-25  David Gilbert  <david.gilbert@object-refinery.com>
+194b67ac Synchronised with 1.0.x branch.
+fe7b7adc 2008-09-24  David Gilbert  <david.gilbert@object-refinery.com>
+9d770261 Synchronised with 1.0.x branch.
+0f324287 2008-09-23  David Gilbert  <david.gilbert@object-refinery.com>
+c1c24990 Synchronised with 1.0.x branch.
+5401d2fe 2008-09-23  David Gilbert  <david.gilbert@object-refinery.com>
+867e4859 Update output dir for jars.
+77ca4e3c Added sample images in Javadoc descriptions.
+6a7c999f Whitespace.
+fcfd31e0 Add images in Javadocs.
+36fbb936 Sample files for inclusion in Javadocs.
+eb53d129 Update for release.
+430a3c26 Added Greg Darke as contributor.
+2893273b Synchronised with 1.0.x branch.
+94733513 2008-09-19  David Gilbert  <david.gilbert@object-refinery.com>
+f47d2e13 Synchronised with 1.0.x branch.
+175102e4 2008-09-19  David Gilbert  <david.gilbert@object-refinery.com>
+d49cff29 Synchronised with 1.0.x branch.
+a09a6a2d Synchronised with 1.0.x branch.
+08ab4356 Small typo.
+33e18422 Small typo.
+5432a447 2008-09-19  David Gilbert  <david.gilbert@object-refinery.com>
+8ef119e6 Updates for imminent release.
+f4ce1cca Modified default.
+469f9d5d Fixed imports.
+8bcb5160 Updated iText version.
+cd5ac28e Updated.
+c433931c Updated lib versions.
+0057dcd2 Updated for imminent release.
+2da2e87e Updated.
+a9bc199e 2008-08-18  David Gilbert  <david.gilbert@object-refinery.com>
+aa5f06b9 Fixed typo.
+528a804f Synchronised with 1.0.x branch.
+9e963620 2008-09-18  David Gilbert  <david.gilbert@object-refinery.com>
+10a7542c Synchronised with 1.0.x branch.
+0c52ab99 Synchronised with 1.0.x branch.
+15be2cd6 2008-09-18  David Gilbert  <david.gilbert@object-refinery.com>
+0a8f5690 2008-09-17  David Gilbert  <david.gilbert@object-refinery.com>
+896c44aa Synchronised with 1.0.x branch.
+cef7ebbc 2008-09-17  David Gilbert  <david.gilbert@object-refinery.com>
+93630d44 Synchronised with 1.0.x branch.
+f932d274 2008-09-17  David Gilbert  <david.gilbert@object-refinery.com>
+d0940d60 Updated JCommon to version 1.0.14.
+2c2e6b5e Synchronised with 1.0.x branch.
+7619030c 2008-09-16  David Gilbert  <david.gilbert@object-refinery.com>
+8e43e957 Added readImage()/writeImage() methods.
+6e2cf908 2008-09-10  David Gilbert  <david.gilbert@object-refinery.com>
+88211083 Added some FIXMEs.
+10707f14 Added some FIXMEs.
+08509e28 Whitespace.
+04c82d97 Minor tidy up.
+0efcbc4b Whitespace.
+62268448 Whitespace.
+98425172 Whitespace.
+02701844 Synchronised with 1.0.x branch.
+c30f06d8 Synchronised with 1.0.x branch.
+07ac89eb Synchronised with 1.0.x branch.
+35dc780b Synchronised with 1.0.x branch.
+ece3df6a Whitespace.
+df3c6af2 Synchronised with 1.0.x branch.
+433a71d2 Whitespace.
+efe03ede Synchronised with 1.0.x branch.
+7f9f9612 Synchronised with 1.0.x branch.
+11f45369 Synchronised with 1.0.x branch.
+683f29f7 Synchronised with 1.0.x branch.
+149fb218 Synchronised with 1.0.x branch.
+85af2028 Synchronised with 1.0.x branch.
+798c8835 Synchronised with 1.0.x branch.
+a886acd2 Synchronised with 1.0.x branch.
+8793d64d Synchronised with 1.0.x branch.
+e8099520 Whitespace.
+e9af820b Whitespace.
+24e9e9e5 Whitespace.
+ba084caf Whitespace.
+2129aff4 Synchronised with 1.0.x branch.
+d5aa2895 Whitespace.
+697f2922 Whitespace.
+76708ae0 Synchronised with 1.0.x branch.
+776df824 Whitespace.
+324a1f65 Synchronised with 1.0.x branch.
+6c3f5402 Whitespace.
+59a84d04 Whitespace.
+bc342986 Synchronised with 1.0.x branch.
+69533edf Synchronised with 1.0.x branch.
+d31d4162 Synchronised with 1.0.x branch.
+6cfabe66 Synchronised with 1.0.x branch.
+103fe5d5 Synchronised with 1.0.x branch.
+9385995b Synchronised with 1.0.x branch.
+667d0945 Synchronised with 1.0.x branch.
+a5ae71c0 Synchronised with 1.0.x branch.
+20ca5eb8 Synchronised with 1.0.x branch.
+ad8cf442 Synchronised with 1.0.x branch.
+c4352ca0 Synchronised with 1.0.x branch.
+e0091d9e Synchronised with 1.0.x branch.
+bd8b5050 Synchronised with 1.0.x branch.
+8d4e1745 Synchronised with 1.0.x branch.
+67d39157 Synchronised with 1.0.x branch.
+fde9ed4e Synchronised with 1.0.x branch.
+ee4af267 Synchronised with 1.0.x branch.
+3133c01c Synchronised with 1.0.x branch.
+5aab0b33 Synchronised with 1.0.x branch.
+d6efc226 Whitespace.
+57201981 Synchronised with trunk.
+82e55450 Whitespace.
+cdccbff9 Whitespace.
+adfbe8d5 Updated version number.
+379017c9 Whitespace.
+91d4b3dd Whitespace.
+0c9e7177 Whitespace.
+f254ca93 Whitespace.
+169e8baa Minor formatting fixes.
+7936c418 Whitespace.
+f0773619 Whitespace.
+19cf8c61 Minor formatting fixes.
+8174bffd Whitespace.
+5a42614e Whitespace.
+d60a0c56 Whitespace.
+3b396c91 Whitespace.
+e85e589d Whitespace.
+085c7cf0 Whitespace.
+3d087653 Whitespace.
+3d890275 Whitespace.
+ea28ccd3 Whitespace.
+9fbd97e8 Whitespace.
+7ba76b79 Whitespace.
+ededcb63 Whitespace.
+3f1422db Whitespace.
+8a135f26 Whitespace.
+7832ed89 Whitespace.
+8f8aa545 Minor formatting fixes.
+31a9cb9b Whitespace.
+d79f1a79 Whitespace.
+473ea75d Whitespace.
+d690177a Whitespace.
+41a72505 Whitespace.
+0b7d793e Whitespace.
+aeaced99 Whitespace.
+7fa26161 Whitespace.
+8f2bc97a Whitespace.
+c2639708 Whitespace.
+29c2e0de Whitespace.
+0cab9165 Whitespace.
+62adf388 Whitespace.
+4f1cb537 Whitespace.
+d24f826f Whitespace.
+7b2014e1 New tests.
+afe88bac Whitespace.
+2fd2b74c Whitespace.
+539986e5 Whitespace.
+36243169 Whitespace.
+ff6f7388 Whitespace.
+7d095326 Whitespace.
+e64aa256 Whitespace.
+ca9bfb27 Whitespace.
+373083f0 Whitespace.
+b6c7421d Whitespace.
+a62daecd Whitespace.
+95427095 Whitespace.
+bca281e9 Whitespace.
+e1276365 Whitespace.
+e94698ca Whitespace.
+7ed96650 Whitespace.
+d790e8ab 2008-09-03  David Gilbert  <david.gilbert@object-refinery.com>
+22f76afe Minor formatting.
+f0d4e621 Minor tidy up.
+24263e1f Whitespace.
+42bb8245 Fixed Eclipse warnings.
+ff6382b4 Fixed Eclipse warnings.
+ca03155b Fixed Eclipse warnings.
+86bbbf78 Fixed Eclipse warnings.
+1ed7fb8a Fixed Eclipse warnings.
+5b9464c9 Fixed Eclipse warnings.
+03025e6b Fixed Eclipse warnings.
+d64ea8f4 Fixed Eclipse warnings.
+ea2af1bd Updated version number.
+855a7683 Fixed Eclipse warnings.
+daa7cb95 Fixed Eclipse warnings.
+d21b616b Fixed Eclipse warnings.
+5bb7d2c2 Fixed Eclipse warnings.
+dbbc1451 Fixed Eclipse warnings.
+0418eea7 Fixed Eclipse warnings.
+f2461c0d Fixed Eclipse warnings.
+152fd31f Fixed Eclipse warnings.
+3d2c7702 Synchronised with 1.0.x branch.
+733f8574 Fixed Eclipse warnings.
+35e93941 Fixed Eclipse warnings.
+d267cd0d Fixed Eclipse warnings.
+5b2faf2b Fixed Eclipse warnings.
+a77529f9 Synchronised with 1.0.x branch.
+8b70eb22 Fixed Javadoc warnings.
+fb93e798 Whitespace.
+4eab65aa hashCode() implemented.
+80c0e6a8 Kill some tabs.
+be43b02a Kill some tabs.
+d05431f7 Kill some tabs.
+9e5e1026 Kill some tabs.
+f3c86cb0 Kill some tabs.
+b7ff8de3 Kill some tabs.
+ea426db0 Kill some tabs.
+6f35e7c2 Kill some tabs.
+b462fe64 Kill some tabs.
+a7c48c78 Kill some tabs.
+96ca447b Kill some tabs.
+3cb1a390 Kill some tabs.
+0b834377 Kill some tabs.
+dc1a8b29 Whitespace.
+0fb3768f Kill some tabs.
+58fd0844 Kill some tabs.
+5f2840a2 Kill some tabs.
+ca10d9ae Kill some tabs.
+07ee3e5f Kill some tabs.
+1d2f769c Kill some tabs.
+1dbab847 Kill some tabs.
+efebc42d Kill some tabs.
+3ed55f91 Kill some tabs.
+7a1df006 Kill some tabs.
+ac26cc14 Kill some tabs.
+7f7d9cbc Kill some tabs.
+8d8267b9 Kill some tabs.
+6bd0fa42 Kill some tabs.
+e9e502fe Kill some tabs.
+89c54057 Kill some tabs.
+144f4803 Kill some tabs.
+d40c8017 Kill some tabs.
+624a2da5 Kill some tabs.
+bb33f8f5 Kill some tabs.
+98d322da Kill some tabs.
+a05a26d0 Kill some tabs.
+e937d715 Kill some tabs.
+4e64642f Kill some tabs.
+4dbceaa9 Kill some tabs.
+2384d6b7 Kill some tabs.
+82a999d4 Kill some tabs.
+2674672d Synchronised with 1.0.x branch.
+ce85b227 2008-09-01  David Gilbert  <david.gilbert@object-refinery.com>
+6783b11b Synchronised with 1.0.x branch.
+69aff020 Update NEWS.
+c9fb6dd6 2008-09-01  David Gilbert  <david.gilbert@object-refinery.com>
+1e13b297 Synchronised with 1.0.x branch.
+c196047b Update header.
+7617288e Fixed Eclipse warning.
+f49b6390 Synchronised with 1.0.x branch.
+4275dcaa Updated tests.
+16b7b909 2008-09-01  David Gilbert  <david.gilbert@object-refinery.com>
+e71a7fe8 Updated copyright year.
+8db6fd1a Removed tabs.
+35e072fa Synchronised with 1.0.x branch.
+32815898 Removed tabs.
+d8fbd55b 2008-09-01  David Gilbert  <david.gilbert@object-refinery.com>
+d901ceed Removed tabs.
+0a0932c0 Fixed Javadoc warning.
+1f296d65 Removed tabs.
+26de0a33 Synchronised with 1.0.x branch.
+fef01598 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+03e8ff39 Synchronised with 1.0.x branch.
+c2abb584 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+c64252ba Synchronised with 1.0.x branch.
+804ee902 Whitespace.
+7569cc6e 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+6e2aaf55 Whitespace.
+7a94020f Whitespace.
+9c35c678 Minor updates.
+5551ffe9 Minor updates.
+388c0526 Synchronised with 1.0.x branch.
+0ffae167 New file from 1.0.x branch.
+cd084e11 New tests.
+b1e27333 Synchronised with 1.0.x branch.
+32309182 New files from 1.0.x branch.
+da63bd26 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+0e67dc53 Synchronised with 1.0.x branch.
+5f080538 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+9900798e Synchronised with 1.0.x branch.
+c23e0965 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+aeabeeac Synchronised with 1.0.x branch.
+7cc084e1 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+50cd9220 Whitespace.
+7f10bd95 Synchronised with 1.0.x branch.
+eb1c31c3 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+2593921b Synchronised with 1.0.x branch.
+e954ce24 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+6b07b844 Whitespace.
+183374de Whitespace.
+716b6473 Synchronised with 1.0.x branch.
+e0e21041 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+72f6a92d Synchronised with 1.0.x branch.
+525c252c Synchronised with 1.0.x branch.
+6d24141f 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+b1d3c9b7 Whitespace.
+f3405a3e Whitespace.
+63d65672 2008-08-15  David Gilbert  <david.gilbert@object-refinery.com>
+5020f7fb Whitespace.
+8a1076d1 Minor API doc fix.
+2e1e5f5a Whitespace.
+fb6d00b2 Whitespace.
+2763da00 Synchronised with 1.0.x branch.
+5dc79e1d Whitespace.
+4fe1649e 2008-08-11  David Gilbert  <david.gilbert@object-refinery.com>
+658f3a89 Synchronised with 1.0.x branch.
+d0dc8165 2008-08-11  David Gilbert  <david.gilbert@object-refinery.com>
+c8975dee Synchronised with 1.0.x branch.
+6320696a 2008-07-25  David Gilbert  <david.gilbert@object-refinery.com>
+31c5fdd9 Whitespace.
+0550fdc3 Synchronised with 1.0.x branch.
+69fd345f Whitespace.
+cab3a716 New class from 1.0.x branch.
+58419238 Whitespace.
+beed2705 Whitespace.
+9f8545d5 Whitespace.
+a9af3cfe Whitespace.
+8bd81f90 Synchronised with 1.0.x branch.
+d7602dd9 New class from 1.0.x branch.
+9b78e373 Whitespace.
+27bdb6b8 Synchronised with 1.0.x branch.
+f49ddd14 Whitespace.
+456f2669 Whitespace.
+3b3701ae Synchronised with 1.0.x branch.
+8a4590a4 Minor updates to synchronise with trunk.
+907a0e3b Whitespace.
+64ea5327 Whitespace.
+6f308acb Whitespace.
+70d7438a Whitespace.
+b51903eb Whitespace.
+52ee8aa9 Whitespace.
+11c7e735 Whitespace.
+d769d3f2 Whitespace.
+a0c00f59 Whitespace.
+282cfefc Source formatting.
+a131b9b3 Updated source header.
+4eb80d7c Synchronised with 1.0.x branch.
+8c782a74 Synchronised with 1.0.x branch.
+c668527d Whitespace.
+f8e5854b Whitespace.
+57311e3d Whitespace.
+d062b70e Whitespace.
+df1010c6 Whitespace.
+7d70dfbf Whitespace.
+bc53c86a Whitespace.
+f13a66cc Whitespace.
+d00139cd Whitespace.
+9fbe6465 Whitespace.
+5337f271 Whitespace.
+50cfa688 Whitespace.
+b2e0d32b Whitespace.
+fd0d6941 Whitespace.
+cb68c23c Minor source formatting changes.
+03652ec9 Synchronised with 1.0.x branch.
+62fb4891 Removed trailing whitespace.
+fb748773 2008-07-11  David Gilbert  <david.gilbert@object-refinery.com>
+c6a6b5a3 Trailing whitespace removed.
+cd59dd76 2008-07-11  David Gilbert  <david.gilbert@object-refinery.com>
+f99dd4f4 Missed in prior commit.
+bb8bdb34 Added contributor.
+f8abb196 Synchronised with 1.0.x branch.
+70cbde26 2008-07-10  David Gilbert  <david.gilbert@object-refinery.com>
+588dfa9d Synchronised with changes on 1.0.x branch.
+d8a1cc64 Whitespace.
+5ffb9d1f 2008-07-10  David Gilbert  <david.gilbert@object-refinery.com>
+f2f66afb Whitespace.
+40437a6d Synchronised with changes in 1.0.x branch.
+32b99650 2008-07-09  David Gilbert  <david.gilbert@object-refinery.com>
+2297a148 Synchronised with 1.0.x branch.
+e6e0b0b4 2008-07-09  David Gilbert  <david.gilbert@object-refinery.com>
+f65e064e Updated with changes from 1.0.x branch.
+425c6e3e 2008-07-02  David Gilbert  <david.gilbert@object-refinery.com>
+56896cf6 2008-07-02  David Gilbert  <david.gilbert@object-refinery.com>
+4700fd2b Whitespace.
+ac647755 Whitespace.
+3366e8c0 2008-07-02  David Gilbert  <david.gilbert@object-refinery.com>
+5cf5e13b Whitespace.
+e41858de Whitespace.
+cdbc8ebd Simplify AWT/SWT font style conversions.
+e389c688 Synchronised with 1.0.x branch.
+5b94c4ea Synchronised with 1.0.x branch.
+344354ad Fix for clone() method from 1.0.x branch.
+ce338c67 Added new contributors.
+047dd025 Whitespace.
+ae8b69bf Whitespace.
+7447aa37 Whitespace.
+dd943673 Whitespace.
+d4a0b51b Whitespace.
+c217cfc6 Whitespace.
+c04cde7e Whitespace.
+e436ab36 Whitespace.
+accf9577 Whitespace.
+9083c15b Whitespace.
+ae5dd41c Whitespace.
+a775e806 Whitespace.
+7add9cc7 Whitespace.
+97a084ba Whitespace.
+69256896 Whitespace.
+bbfb4ade Missed from previous commit.
+05daf7b8 Whitespace.
+ef7de471 Whitespace.
+07040a40 Whitespace.
+9970c44c Whitespace.
+e3c42da1 2008-06-26  David Gilbert  <david.gilbert@object-refinery.com>
+849f5cd3 Whitespace.
+03d03b0c Whitespace.
+77a6f3a0 Whitespace.
+a3072903 Whitespace.
+fa4ba04c Whitespace.
+58638e3d Synchronised with 1.0.x branch.
+b9c23465 Whitespace.
+7f480f9d Whitespace.
+38c4257b Synchronised with 1.0.x branch.
+a97eae8b Synchronised with 1.0.x branch.
+6c4a8728 Synchronised with 1.0.x branch.
+0fc52239 Synchronised with 1.0.x branch.
+867a84d8 Synchronised with 1.0.x branch.
+fa3526ff Synchronised with 1.0.x branch.
+d9dc4834 Synchronised with 1.0.x branch.
+0c7d4613 Synchronised with 1.0.x branch.
+243df192 Synchronised with 1.0.x branch.
+55d7973c Synchronised with 1.0.x branch.
+f5af67e4 Whitespace.
+71c66d9e Whitespace.
+8310c5d4 Whitespace
+769c2fc7 Whitespace.
+6de68a28 Simplified entity generation code.
+d11e6994 Whitespace.
+9737ca9f Whitespace.
+cfa90f25 Whitespace.
+c7081fbf 2008-06-24  David Gilbert  <david.gilbert@object-refinery.com>
+e0c82cbe Whitespace.
+55ebc423 Whitespace.
+18cb5aa0 Whitespace.
+5a412db8 Removed redundant 'this'.
+eeba42e9 Removed redundant 'this'.
+22cb0520 Fixed Javadoc warning.
+7a302edb Removed redundant 'this'.
+4e19e8b2 Whitespace.
+5e28d310 2008-06-19  David Gilbert  <david.gilbert@object-refinery.com>
+945504b6 2008-06-19  David Gilbert  <david.gilbert@object-refinery.com>
+0b16fe71 Whitespace.
+6f257d46 Updated for changes in 1.0.x branch.
+5094703a Source formatting.
+c674f7e8 Source formatting.
+cc67fe8c Updated for changes in 1.0.x branch.
+ac246214 Updated for changes in 1.0.x branch.
+9840b67b Updated for changes in 1.0.x branch.
+950c04a5 Updated for changes in 1.0.x branch.
+3984c25b Updated for changes in 1.0.x branch.
+13d05d66 Updated for changes in 1.0.x branch.
+6d576cd4 Updated for changes in 1.0.x branch.
+d06491be Source formatting.
+0c109c5a New test file from 1.0.x branch.
+5f8d619a New class from 1.0.x branch.
+7677d980 Whitespace.
+8e7733b1 2008-06-18  David Gilbert  <david.gilbert@object-refinery.com>
+30a3d4ed Whitespace.
+9932524d Whitespace.
+e4f13a4e 2008-06-18  David Gilbert  <david.gilbert@object-refinery.com>
+f99aa00d Source formatting.
+4f9d68a7 Source formatting.
+765a3b32 Source formatting change only.
+52200809 Fixed typo.
+3a6a4cd5 2008-06-18  David Gilbert  <david.gilbert@object-refinery.com>
+827f3cf7 Minor edit in header.
+8de83808 Whitespace.
+c309813f Whitespace.
+c8824d42 2008-06-17  David Gilbert  <david.gilbert@object-refinery.com>
+e1ed9f2a Whitespace.
+fc3b583c Whitespace.
+7db924b1 Whitespace.
+b292d995 Whitespace.
+1b2c707b Whitespace.
+94b48f46 Whitespace.
+14270b4b Whitespace.
+2bebf692 Whitespace.
+2a2675fc Whitespace.
+f2e63ce3 Whitespace.
+7622d0df Whitespace.
+eca09dd1 2008-06-17  David Gilbert  <david.gilbert@object-refinery.com>
+1c85b21f Missing test file.
+5b0bbd27 2006-06-17  David Gilbert  <david.gilbert@object-refinery.com>
+37ecb8ff Whitespace.
+98a45aa3 Whitespace.
+85290d3d Whitespace.
+7213ce58 Whitespace.
+5ec55ba6 Whitespace.
+f2ab02e4 Implemented PublicCloneable.
+ec38e372 Implemented PublicCloneable.
+0cd31639 2006-06-16  David Gilbert  <david.gilbert@object-refinery.com>
+2f9ab9b8 2006-06-16  David Gilbert  <david.gilbert@object-refinery.com>
+ae4ddff4 Fixed compile error.
+b8701c91 2006-06-16  David Gilbert  <david.gilbert@object-refinery.com>
+4eefb59a 2006-06-16  David Gilbert  <david.gilbert@object-refinery.com>
+15af45c1 2006-06-16  David Gilbert  <david.gilbert@object-refinery.com>
+e713bfb8 Whitespace.
+b9734e17 Added testPublicCloneable.
+f06a0ae6 Added testPublicCloneable.
+2ea82354 Added testPublicCloneable.
+c2aeddac Added testPublicCloneable.
+e6466287 Added testPublicCloneable.
+f5443075 Added testPublicCloneable.
+55042488 Added testPublicCloneable.
+5bd3378d Added testPublicCloneable.
+31230778 Added testPublicCloneable.
+8016a991 2008-06-16  David Gilbert  <david.gilbert@object-refinery.com>
+741322c1 2008-06-16  David Gilbert  <david.gilbert@object-refinery.com>
+1f629bd3 Whitespace.
+77046c0c Whitespace.
+d4c2725a Whitespace.
+7d8b9be1 Whitespace.
+417e4081 Whitespace.
+168a8610 Whitespace.
+bb2ec12a Whitespace.
+1079f70b Whitespace.
+66be6f3f Whitespace.
+d8acd920 Whitespace.
+c5c8bc03 Whitespace.
+60f3b703 Whitespace.
+6efae114 Whitespace.
+5a4507a2 Whitespace.
+fc0d729b Formatting.
+cd854fcf Clean up tests.
+1491a402 Clean up tests.
+c1b9682a Clean up tests.
+b936ab89 Formatting.
+dbedc937 Formatting.
+37cfff43 Whitespace.
+1da0dcb0 Whitespace.
+2b6cc1b4 Formatting.
+5e931cdc Added ModuloAxisTests.java from the 1.0.x branch.
+eb7971aa Whitespace.
+9bd7bf30 Whitespace.
+f6cca709 Whitespace.
+d10881df Implemented PublicCloneable.
+15677357 Whitespace.
+f937b2af Added testPublicCloneable() methods from 1.0.x branch.
+41e0d12f Whitespace.
+21ce99b1 Whitespace.
+ae67fa1b Added testHashCode().
+3d4e9875 Reformatting.
+e8813660 Added testHashCode().
+204ac918 Added testHashCode().
+42f3a557 Reformatting.
+4fa26c07 Some reformatting plus added testHashCode().
+e199fd38 Added testHashCode().
+77bdffc8 2008-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+75a6bbce Added testHashCode().
+1de82aae Corrected failing tests.
+38c67645 Added tests for org.jfree.chart.util.*
+edba7b4e Updated API docs.
+3a896495 Whitespace.
+858d9ff9 2008-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+26b990aa Whitespace.
+cd50f111 Corrected header.
+3ee05881 Whitespace.
+3f8c33ed Whitespace.
+2a0e2a55 Minor header change.
+4d5c5a21 Clean up.
+df168613 2008-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+ec89d2d0 Added toString() method for debugging.
+cc2cd39b 2008-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+ca9d746b 2008-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+9819d776 2008-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+04123bc3 2008-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+9ff7c48a 2008-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+92606257 Added immutability tests from 1.0.x branch.
+1bd07fcf Set locale in tests.
+7e5c23d4 Whitespace.
+a92b8171 Whitespace.
+1754e3cc Updated with new checks from 1.0.x branch.
+c27c02ed Match updates in 1.0.x branch.
+d7834cdb Whitespace.
+ee58c51c Whitespace.
+fd862331 Whitespace.
+a06f7dff Whitespace.
+4dd4825a Whitespace.
+ab0ed1af Whitespace.
+14df0b1d 2008-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+43a82ca9 Removed tabs.
+f5f8e88c Whitespace.
+71a209d1 2008-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+35eebf86 Updated API docs.
+fc973670 Whitespace.
+7ba2536b Updated docs.
+88d360fa Additional tests from 1.0.x branch.
+ab5474e9 Updated release date.
+6d9245e5 2008-06-09  David Gilbert  <david.gilbert@object-refinery.com>
+0986643f Fixed Javadoc typo.
+2ce04604 2008-06-06  David Gilbert  <david.gilbert@object-refinery.com>
+626ab4f2 Whitespace.
+74beb150 Fixed Javadoc warnings.
+bb1491c2 Fixed Javadoc warnings.
+d3262db2 2008-06-06  David Gilbert  <david.gilbert@object-refinery.com>
+8ceb4004 Updated to JCommon 1.0.13.
+7362cd8f Whitespace.
+d4f1d01f Whitespace.
+7842de23 Whitespace.
+47827daf Performance enhancement posted in forum by skunk.
+cc78f83c Whitespace.
+eba8b1ea Removed 1.4+ code in main().
+ba848bde Whitespace.
+7e9728d7 Whitespace.
+f473156f API docs.
+1a7c5b69 Whitespace.
+dea2d6b1 Whitespace.
+5f5bda68 2008-06-02  David Gilbert  <david.gilbert@object-refinery.com>
+8f0606a5 2008-06-02  David Gilbert  <david.gilbert@object-refinery.com>
+0ffd6c79 Whitespace.
+9cc4fdcf Whitespace.
+419f6aa8 2008-06-02  David Gilbert  <david.gilbert@object-refinery.com>
+18ae6c7f 2008-06-02  David Gilbert  <david.gilbert@object-refinery.com>
+3632e7bd 2008-06-02  David Gilbert  <david.gilbert@object-refinery.com>
+6ec58726 Whitespace.
+2213b21b Whitespace.
+15934fac 2008-06-02  David Gilbert  <david.gilbert@object-refinery.com>
+c598ddff Whitespace.
+13adc946 Whitespace.
+0dfe351b 2008-06-02  David Gilbert  <david.gilbert@object-refinery.com>
+27da1c15 2008-06-02  David Gilbert  <david.gilbert@object-refinery.com>
+60178899 Source formatting to clear diffs with 1.0.x branch.
+e4fd73c5 2008-06-02  David Gilbert  <david.gilbert@object-refinery.com>
+73e653e3 Whitespace.
+42fdd36f Whitespace.
+78c3cc88     * source/swt/org/jfree/experimental/chart/swt/ChartComposite.java:     (ChartComposite): removed duplicate code.
+97ecdf7b 2008-05-28  David Gilbert  <david.gilbert@object-refinery.com>
+a1064a67 Whitespace only.
+7f2c9fda Whitespace only.
+f9c387cb Missed from last commit.
+31dc30a0 2008-05-26  David Gilbert  <david.gilbert@object-refinery.com>
+3cd80895 New contributor.
+1311882c Whitespace.
+6a94ebdb many fixes based on user feedback on the forum: leaks for transform objects, dispose the chart buffer image etc...
+6841fc91 fixed constructor where ChartComposite would register twice with chart changes.
+b8b9f06b 2008-05-22  David Gilbert  <david.gilbert@object-refinery.com>
+5e81914d Whitespace.
+0f2f3cd5 Minor clean up.
+328c2215 2008-05-22  David Gilbert  <david.gilbert@object-refinery.com>
+45cd2102 2008-05-14  David Gilbert  <david.gilbert@object-refinery.com>
+e8fd449f Removed trailing whitespace.
+1b7977c0 Replaced deprecated method.
+d9624e8e Removed unused imports.
+7075b5de 2008-05-14  David Gilbert  <david.gilbert@object-refinery.com>
+057e814c Minor tidy-up.
+de705cc3 Whitespace.
+e27fedfc Whitespace.
+34a60aaa Whitespace.
+33ef9731 Whitespace.
+9899318b Whitespace.
+6c9750fb Whitespace.
+4794eea3 Whitespace.
+7da76357 Whitespace.
+aea2347f Whitespace.
+f87289f8 Whitespace.
+8a0846ab Whitespace.
+d138b88b Whitespace.
+62d8c668 Whitespace.
+5b9516e2 Whitespace.
+6a160f34 Whitespace.
+96cc277d Whitespace.
+a8e79eae Whitespace.
+5e1372f4 Some code tidying.
+dab06dfe Removed trailing spaces.
+a71ca0ca Whitespace changes.
+03b81c14 Minor reformat.
+9af35e1b Removed trailing spaces.
+e424c159 2008-05-13  David Gilbert  <david.gilbert@object-refinery.com>
+72e59e90 2008-05-12  David Gilbert  <david.gilbert@object-refinery.com>
+b9337fa9 2008-05-12  David Gilbert  <david.gilbert@object-refinery.com>
+b7923f0d Updated API docs.
+07be8d12 Updated API docs.
+3f82b332 API doc updates.
+312b5864 Removed unnecessary whitespace.
+4cf748b0 Removed unnecessary whitespace.
+1d6ddacc Minor API doc update.
+e4abc19d Minor API doc update.
+0f902978 Added new tests.
+a5dd2e3d Removed tabs.
+1895348a 2008-05-11  David Gilbert  <david.gilbert@object-refinery.com>
+7bf85a3c Removed TODO.
+748398c4 2008-05-09  David Gilbert  <david.gilbert@object-refinery.com>
+02faa826 Minor change for readability.
+03fd6fdf 2008-05-08  David Gilbert  <david.gilbert@object-refinery.com>
+3f522412 2008-05-08  David Gilbert  <david.gilbert@object-refinery.com>
+bf8c98f5 Fixed Checkstyle warnings.
+7b781115 Fixed Checkstyle warnings.
+69729542 Fixed Checkstyle warnings.
+89d7929f Fixed Checkstyle warnings.
+d40ee2be Fixed Checkstyle warnings.
+8b51c07d Fixed Checkstyle warnings.
+69e28149 Fixed Checkstyle warnings.
+ec357e59 Fixed Checkstyle warnings.
+5f86611b Fixed Checkstyle warnings.
+98f0582a Fixed Checkstyle warnings.
+a382b027 Fixed Checkstyle warnings.
+1ad65c28 Fixed Checkstyle warnings.
+35f81387 Fixed Checkstyle warnings.
+39bc9d08 Fixed Checkstyle warnings.
+7f3af030 Fixed Checkstyle warnings.
+6ae4cb2f Fixed Checkstyle warnings.
+6eefbd33 Fixed Checkstyle warnings.
+027d7b39 Fixed Checkstyle warnings.
+dbb9196c Fixed Checkstyle warnings.
+717f6656 Fixed Checkstyle warnings.
+a0069d19 Fixed Checkstyle warnings.
+a13e549f Fixed Checkstyle warnings.
+829c56cc Fixed Checkstyle warnings.
+743cd28b Fixed Checkstyle warnings.
+ab6c2b29 Fixed Checkstyle warnings.
+e4ec4580 Fixed whitespace warnings.
+9e3b277e Removed tabs.
+1c311496 Removed tabs.
+2cd898ff Removed tabs.
+f692c72c Removed tabs.
+800c7be6 Removed tabs.
+af800a65 Fixed whitespace warnings.
+1dbb9cf6 Fixed Checkstyle warnings.
+b1d008ed Removed trailing whitespace.
+8f6c8c52 Removed tabs.
+32ddb14d Removed tabs.
+09ef285c Removed tabs.
+ff6011ec Removed tabs.
+313824ab Fixed whitespace warnings.
+214724e8 Removed tabs.
+be013d03 Removed tabs.
+cabfce15 Removed tabs.
+0d98d355 Removed tabs.
+3fed84bf Removed tabs.
+5e6aeb49 Removed tabs.
+d490328f Removed tabs.
+b457434c Removed tabs.
+169b36ae Removed tabs.
+3f18acd1 Removed tabs.
+8c2c0818 Removed tabs.
+d2acae9d Removed tabs.
+5bdd3314 Removed tabs.
+f2a9cced Removed tabs.
+b4c5d8a3 Removed tabs.
+0463502c Removed tabs.
+f7cc850c Removed tabs.
+66aedabe Removed tabs.
+38598345 Removed tabs.
+36d50172 Fixed whitespace warnings.
+23eeca1c Removed tabs.
+d1ffebc1 Removed tabs.
+9204f2fc Removed tabs.
+6b87de1e Removed tabs.
+926a384b Removed tabs.
+6aeb9f1f Removed tabs.
+3a4d31ec Removed tabs.
+a1298477 Removed tabs.
+2854c657 Removed tabs.
+fc0fef44 Removed tabs.
+f502e8fd Removed tabs.
+fe6cf752 Removed tabs.
+4e0938f6 Removed trailing whitespace.
+6ca1f5ce 2008-05-07  David Gilbert  <david.gilbert@object-refinery.com>
+8f79b8a9 Removed trailing whitespace.
+34892823 Removed trailing whitespace.
+a8bea116 Removed trailing whitespace.
+2def8e1c Fix import error.
+9b3ae428 2008-05-05  David Gilbert  <david.gilbert@object-refinery.com>
+3fcef2bf 2008-05-05  David Gilbert  <david.gilbert@object-refinery.com>
+900ec063 Updated iText to 2.1.1 and JCommon to 1.0.13.
+ad1026f6 Extended testEquals().
+39aa53d6 Minor API doc update.
+1616c66b Removed trailing whitespace.
+e548839d 2008-05-01  David Gilbert  <david.gilbert@object-refinery.com>
+d2d2c292 2008-04-29  David Gilbert  <david.gilbert@object-refinery.com>
+0e64074b 2008-04-28  David Gilbert  <david.gilbert@object-refinery.com>
+58daa46f 2008-04-28  David Gilbert  <david.gilbert@object-refinery.com>
+e1e336ac 2008-04-23  David Gilbert  <david.gilbert@object-refinery.com>
+9598d0c3 2008-04-23  David Gilbert  <david.gilbert@object-refinery.com>
+bf28fffb New PublicCloneable tests.
+d141243c 2008-04-23  David Gilbert  <david.gilbert@object-refinery.com>
+ea13dd7b 2008-04-23  David Gilbert  <david.gilbert@object-refinery.com>
+1cc1fefa Whitespace.
+f4d3c886 2008-04-23  David Gilbert  <david.gilbert@object-refinery.com>
+552b8ce9 New tests for PublicCloneable.
+c88567a7 New tests for PublicCloneable.
+88022d8c New tests for PublicCloneable.
+ce51755e New tests.
+cfd5071e New tests.
+24bc9f2d Removed whitespace.
+01c03629 2008-04-23  David Gilbert  <david.gilbert@object-refinery.com>
+6adc6654 2008-04-22  David Gilbert  <david.gilbert@object-refinery.com>
+43198068 2008-04-22  David Gilbert  <david.gilbert@object-refinery.com>
+536c493d 2008-04-22  David Gilbert  <david.gilbert@object-refinery.com>
+81d78363 2008-04-22  David Gilbert  <david.gilbert@object-refinery.com>
+f7459cc8 2008-04-22  David Gilbert  <david.gilbert@object-refinery.com>
+c0df300c 2008-04-21  David Gilbert  <david.gilbert@object-refinery.com>
+03247d0b Adjusted whitespace.
+7294ffa4 Adjusted whitespace.
+26e2d192 Fixed broken testEquals() method.
+18d29341 2008-04-18  David Gilbert  <david.gilbert@object-refinery.com>
+abd98c7b 2008-04-18  David Gilbert  <david.gilbert@object-refinery.com>
+ce7b0375 Updated JCommon version number.
+9cc3683b Added log entry for last commit.
+da6873ff 2008-04-11  David Gilbert  <david.gilbert@object-refinery.com>
+9024087f Updated JCommon version number to 1.0.13.
+bc021d4b 2008-04-11  David Gilbert  <david.gilbert@object-refinery.com>
+a5d37185 2008-04-11  David Gilbert  <david.gilbert@object-refinery.com>
+3d82d6e4 2008-04-11  David Gilbert  <david.gilbert@object-refinery.com>
+96d55679 2008-04-11  David Gilbert  <david.gilbert@object-refinery.com>
+1a48da85 Removed tabs.
+7229d9af Small update to API docs.
+4f3483d3 Corrected dates.
+bda0f656 2008-04-10  David Gilbert  <david.gilbert@object-refinery.com>
+699e5b47 2008-04-11  David Gilbert  <david.gilbert@object-refinery.com>
+6beb7d20     * source/org/jfree/data/xy/XIntervalSeries.java     (getXLowValue): New method,     (getXHighValue): Likewise.
+ef3644fc 2008-04-11  David Gilbert  <david.gilbert@object-refinery.com>
+fe6c0904 Preparing for release on Friday.
+0a380f88 Small test fix.
+b406df45 Reformatting.
+e340db46 Updated version number to 1.0.10.
+7735bc14 Replaced snippet requiring JDK1.5, and removed trailing white-spaces.
+dcedc87b 2008-04-08  David Gilbert  <david.gilbert@object-refinery.com>
+5330c1c4 Fixed testEquals() and removed trailing whitespace.
+26cbd6a1 Fix API doc reference.
+689f9260 2008-04-08  David Gilbert  <david.gilbert@object-refinery.com>
+ac585483 Removed trailing whitespace.
+c53c1951 2008-04-08  David Gilbert  <david.gilbert@object-refinery.com>
+7d1c7a03 Removed whitespace.
+1f1e6c5e 2008-04-08  David Gilbert  <david.gilbert@object-refinery.com>
+2871a0b9 2008-04-08  David Gilbert  <david.gilbert@object-refinery.com>
+58687a6b Removed some whitespace.
+7d10866f 2008-04-08  David Gilbert  <david.gilbert@object-refinery.com>
+22a16d10 Added missing entry.
+340dd31d Added @since tag.
+980c9d73 2008-04-08  David Gilbert  <david.gilbert@object-refinery.com>
+bb2148ab 2008-04-08  David Gilbert  <david.gilbert@object-refinery.com>
+430a77b9 Updated method name iterateCategoryRangeBounds() --> iterateRangeBounds().
+d70eb309 New test.
+cc32e3b2 New test.
+4582dd66 2008-04-07  David Gilbert  <david.gilbert@object-refinery.com>
+95d2f1ad 2008-04-07  David Gilbert  <david.gilbert@object-refinery.com>
+114ce73a 2008-04-07  David Gilbert  <david.gilbert@object-refinery.com>
+76a5e79e 2008-04-07  David Gilbert  <david.gilbert@object-refinery.com>
+2eace788 2008-04-07  David Gilbert  <david.gilbert@object-refinery.com>
+de69b427 2008-04-07  David Gilbert  <david.gilbert@object-refinery.com>
+ac274593 2008-04-07  David Gilbert  <david.gilbert@object-refinery.com>
+aae1b872 
+275f7091 Updated testEquals().
+c9a4c8b6 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+a35bb1ac Added @since tag.
+528ffdd1 Removed some tabs.
+5626a92d 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+6ea99668 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+054f45e4 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+547b4de8 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+5f4dd8f3 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+5b58bc12 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+00abd9e7 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+fd0cecc0 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+277a83fc 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+65b80a56 2008-03-31  David Gilbert  <david.gilbert@object-refinery.com>
+f6a7a098 Removed unnecessary semi-colons.
+dce02e6c Removed unnecessary 'this'.
+260368b0 Removed some tabs.
+b2893e38 2008-03-28  David Gilbert  <david.gilbert@object-refinery.com>
+a62c54cc 2008-03-28  David Gilbert  <david.gilbert@object-refinery.com>
+b5f17e44 2008-03-28  David Gilbert  <david.gilbert@object-refinery.com>
+c039fda0 2008-03-28  David Gilbert  <david.gilbert@object-refinery.com>
+d33623b0 2008-03-28  David Gilbert  <david.gilbert@object-refinery.com>
+ee335111 2008-03-28  David Gilbert  <david.gilbert@object-refinery.com>
+bef27e4f 2008-03-28  David Gilbert  <david.gilbert@object-refinery.com>
+acf41f65 2008-03-27  David Gilbert  <david.gilbert@object-refinery.com>
+8ee8302e 2008-03-27  David Gilbert  <david.gilbert@object-refinery.com>
+e01ba718 2008-03-27  David Gilbert  <david.gilbert@object-refinery.com>
+7d04096d 2008-03-27  David Gilbert  <david.gilbert@object-refinery.com>
+e82e9086 2008-03-27  David Gilbert  <david.gilbert@object-refinery.com>
+2591b037 Minor indentation fix.
+1aa0090d Extended testEquals().
+c26bfc69 2008-03-27  David Gilbert  <david.gilbert@object-refinery.com>
+1f6e9095 Reformatting and hashCode() tests.
+d222a8ba Some reformatting.
+2dd87473 Some reformatting.
+b7a924ec Some reformatting.
+7c5313c9 Minor fix in header.
+fed0a8b1 Use fireChangeEvent() all over.
+8218b5ea Removed redundant white-space.
+6f938743 Removed repeat semi-colon.
+4d5eb06b Removed unnecessary 'this'.
+f069c49d 2008-03-26  David Gilbert  <david.gilbert@object-refinery.com>
+53504e14 2008-03-26  David Gilbert  <david.gilbert@object-refinery.com>
+7c2ff274 2008-03-25  David Gilbert  <david.gilbert@object-refinery.com>
+88988590 Removed unnecessary semi-colon.
+dc47aa34 2008-03-25  David Gilbert  <david.gilbert@object-refinery.com>
+202f00e2 2008-03-25  David Gilbert  <david.gilbert@object-refinery.com>
+d7adbc30 2008-03-25  David Gilbert  <david.gilbert@object-refinery.com>
+e3bc4b9e 2008-03-25  David Gilbert  <david.gilbert@object-refinery.com>
+33ef6484 2008-03-25  David Gilbert  <david.gilbert@object-refinery.com>
+f45bf2ff 2008-03-25  David Gilbert  <david.gilbert@object-refinery.com>
+324de63f 2008-03-20  David Gilbert  <david.gilbert@object-refinery.com>
+145f0536 2008-03-20  David Gilbert  <david.gilbert@object-refinery.com>
+0252d29a 2008-03-19  David Gilbert  <david.gilbert@object-refinery.com>
+e51a3b96 2008-03-19  David Gilbert  <david.gilbert@object-refinery.com>
+87c4f4f8 2008-03-19  David Gilbert  <david.gilbert@object-refinery.com>
+4a6de239 2008-03-19  David Gilbert  <david.gilbert@object-refinery.com>
+5a34d428 Added testDrawWithNullInfo().
+008ec86f Added testDrawWithNullInfo().
+d47cd498 2008-02-26  David Gilbert  <david.gilbert@object-refinery.com>
+d0728a5f 2008-02-26  David Gilbert  <david.gilbert@object-refinery.com>
+feff5811 2008-02-26  David Gilbert  <david.gilbert@object-refinery.com>
+b6834376 2008-02-26  David Gilbert  <david.gilbert@object-refinery.com>
+93455d35 2008-02-19  David Gilbert  <david.gilbert@object-refinery.com>
+23c04809 2008-02-19  David Gilbert  <david.gilbert@object-refinery.com>
+398c690f 2008-02-18  David Gilbert  <david.gilbert@object-refinery.com>
+b14f3ab8 2008-02-18  David Gilbert  <david.gilbert@object-refinery.com>
+b9ff2ac5 2008-02-18  David Gilbert  <david.gilbert@object-refinery.com>
+fae53d00 2008-02-18  David Gilbert  <david.gilbert@object-refinery.com>
+71a69b1b Added Michael Siemer's full name to source file.
+e8afa0e8 2008-02-15  David Gilbert  <david.gilbert@object-refinery.com>
+c98bb870 Updated API docs.
+a3dc04b3 Added testConstructor().
+2533311f 2008-02-15  David Gilbert  <david.gilbert@object-refinery.com>
+7d22074d 2008-02-15  David Gilbert  <david.gilbert@object-refinery.com>
+f3f56041 2008-02-15  David Gilbert  <david.gilbert@object-refinery.com>
+ca1e9c9a Removed whitespace.
+b78fdc05 New test.
+f8c067b7 2008-02-15  David Gilbert  <david.gilbert@object-refinery.com>
+35fca0af 2008-02-15  David Gilbert  <david.gilbert@object-refinery.com>
+057768fa 2008-02-15  David Gilbert  <david.gilbert@object-refinery.com>
+58de7e23 2008-02-14  David Gilbert  <david.gilbert@object-refinery.com>
+9b30be98 2008-02-14  David Gilbert  <david.gilbert@object-refinery.com>
+11c2b6d6 2008-02-14  David Gilbert  <david.gilbert@object-refinery.com>
+faa3c1d2 2008-02-14  David Gilbert  <david.gilbert@object-refinery.com>
+ab7b9144 Modify version number so we know we're working from SVN.
+bf783e3c Added some missing contributors.
+6547fa9e 2008-02-14  David Gilbert  <david.gilbert@object-refinery.com>
+f14f32ae Changelog entry for previous commit.
+3c3d71c4 Call super-class method to create item entity.
+07777488 2008-02-14  David Gilbert  <david.gilbert@object-refinery.com>
+d9d69a50 2008-02-14  David Gilbert  <david.gilbert@object-refinery.com>
+786dc685 2008-01-28  David Gilbert  <david.gilbert@object-refinery.com>
+2abba62a 2008-01-18  David Gilbert  <david.gilbert@object-refinery.com>
+57ba9018 2008-01-18  David Gilbert  <david.gilbert@object-refinery.com>
+0cb6c3dc 2008-01-15  David Gilbert  <david.gilbert@object-refinery.com>
+5e9c71aa 2008-01-10  David Gilbert  <david.gilbert@object-refinery.com>
+0ca96cca 2008-01-10  David Gilbert  <david.gilbert@object-refinery.com>
+9c866527 Updated version number.
+ab4099dd Updated version numbers.
+7f469b83 Updated for 1.0.9 release.
+878b061e Added testNotification() tests.
+264fabda 2008-01-04  David Gilbert  <david.gilbert@object-refinery.com>
+8e946039 2008-01-03  David Gilbert  <david.gilbert@object-refinery.com>
+4741e83d 2008-01-03  David Gilbert  <david.gilbert@object-refinery.com>
+fa18ea8b Updated API docs.
+b2d39d4b Implement default hashCode().
+16aa8fb3 2007-12-20  David Gilbert  <david.gilbert@object-refinery.com>
+41a086a0 Minor formatting correction.
+bc4eb8c2 Removed unnecessary imports.
+e815adc6 Minor tidy up.
+6cabc1ba 2007-12-20  David Gilbert  <david.gilbert@object-refinery.com>
+6e70e821 2007-12-19  David Gilbert  <david.gilbert@object-refinery.com>
+71afeabd 2007-12-19  David Gilbert  <david.gilbert@object-refinery.com>
+c334750d Minor clean up.
+07590908 Source formatting.
+b93cb488 Source formatting.
+60e2af21 2007-12-18  David Gilbert  <david.gilbert@object-refinery.com>
+ab2d6b02 2007-12-18  David Gilbert  <david.gilbert@object-refinery.com>
+b7a8ae83 Minor doc update.
+de4713bd Updates.
+92dfcd22 Updates.
+a16e7563 Missed in previous commit.
+e6300ed6 Missed on previous commit.
+7c16f61e 2007-12-06  David Gilbert  <david.gilbert@object-refinery.com>
+9127b8f6 Create a branch to apply security fixes.
+1e1d703f 2007-12-05  David Gilbert  <david.gilbert@object-refinery.com>
+d9829561 2007-12-05  David Gilbert  <david.gilbert@object-refinery.com>
+193336c2 2007-12-05  David Gilbert  <david.gilbert@object-refinery.com>
+127c4661 Tabs to spaces.
+fc56c621 2007-12-05  David Gilbert  <david.gilbert@object-refinery.com>
+fd61843a Tabs to spaces.
+3c01d642 2007-12-04  David Gilbert  <david.gilbert@object-refinery.com>
+4ec8d7c2 2007-12-04  David Gilbert  <david.gilbert@object-refinery.com>
+29f04cd6 2007-12-04  David Gilbert  <david.gilbert@object-refinery.com>
+b53fe6d3 2007-12-04  David Gilbert  <david.gilbert@object-refinery.com>
+1fdda2fd Moved HashUtilities.
+8b0b8c10 Moved HashUtilitiesTests.java.
+525375ca Moved HashUtilities.
+5b7343e9 Moved HashUtilities from org.jfree.chart.* to org.jfree.chart.utilities.*.
+868da17d Minor update.
+cb66a8d5 2007-11-27  David Gilbert  <david.gilbert@object-refinery.com>
+ddf87299 2007-12-04  David Gilbert  <david.gilbert@object-refinery.com>
+465447a1 2007-12-04  David Gilbert  <david.gilbert@object-refinery.com>
+9ac4ba25 2007-12-04  David Gilbert  <david.gilbert@object-refinery.com>
+581d1dd4 2007-12-04  David Gilbert  <david.gilbert@object-refinery.com>
+6113e6b4 2007-12-03  David Gilbert  <david.gilbert@object-refinery.com>
+20d71e73 2007-12-03  David Gilbert  <david.gilbert@object-refinery.com>
+47f01e4e 2007-11-30  David Gilbert  <david.gilbert@object-refinery.com>
+7339555d 2007-11-30  David Gilbert  <david.gilbert@object-refinery.com>
+62227e5c 2007-11-30  David Gilbert  <david.gilbert@object-refinery.com>
+dafc54ad 2007-11-30  David Gilbert  <david.gilbert@object-refinery.com>
+d0b0925c 2007-11-29  David Gilbert  <david.gilbert@object-refinery.com>
+b7033a61 2007-11-29  David Gilbert  <david.gilbert@object-refinery.com>
+12f8ff87 2007-11-27  David Gilbert  <david.gilbert@object-refinery.com>
+b8ba6e78 2007-11-27  David Gilbert  <david.gilbert@object-refinery.com>
+ee68dcd9 2007-11-27  David Gilbert  <david.gilbert@object-refinery.com>
+4af80526 2007-11-27  David Gilbert  <david.gilbert@object-refinery.com>
+90779ebe Fixed version number.
+efd88565 2007-11-27  David Gilbert  <david.gilbert@object-refinery.com>
+712cd599 Tagging JFreeChart 1.0.8.
+47b789cc 2007-11-23  David Gilbert  <david.gilbert@object-refinery.com>
+c0cff2ab Added version tags to Javadocs.
+fa0b08ab 2007-11-23  David Gilbert  <david.gilbert@object-refinery.com>
+75b19021 Added @since tags to Javadoc.
+3cd11a50 API doc update.
+7b247dd9 Updated for 1.0.8 release.
+f7acee6e Updated NEWS.
+721b1f2b New test.
+1166442b Missed on prior commit.
+177b1759 Added new method.
+1f02ebc0 Implemented hashCode().
+8fa487a5 Reformatting.
+f4303926 Reformatting.
+36f5854a Reformatting.
+d91157e2 Reformatting.
+ca209443 Implemented clone().
+212e3865 Updated API docs.
+fd05a7b7 Updated API docs.
+09854ec3 2007-11-22  David Gilbert  <david.gilbert@object-refinery.com>
+17c8dcd6 2007-11-22  David Gilbert  <david.gilbert@object-refinery.com>
+fc5e3023 2007-11-22  David Gilbert  <david.gilbert@object-refinery.com>
+9ede48e8 2007-11-22  David Gilbert  <david.gilbert@object-refinery.com>
+b5bd7da9 2007-11-22  David Gilbert  <david.gilbert@object-refinery.com>
+706eefa6 2007-11-22  David Gilbert  <david.gilbert@object-refinery.com>
+82007f3a 2007-11-22  David Gilbert  <david.gilbert@object-refinery.com>
+c6f74e5b 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+757d2c3f 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+5781e44d 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+f3652af8 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+e9b117d2 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+0d3227b0 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+11ed01b7 Fixed FindBugs warning.
+8ac6862a Fixed FindBugs warning.
+308bf40c Fixed FindBugs warning.
+6541a5eb 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+9c1d7a16 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+f212b7bb Committed.
+d3133cdb Committed.
+ea6b89a3 Committed.
+ca46c061 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+47e8258a 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+86ce662c Fixed typo in header.
+1e0d5407 Fixed typo in header.
+5112a3cb 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+6b41f94c 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+a9af1759 Call fireChangeEvent() rather than notifyListeners().
+f17878a3 Use fireChangeEvent() instead of notifyListeners().
+97abbfb2 Removed whitespace.
+0b5e687a 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+7ef7a671 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+5e219422 Removed.
+637e6a97 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+6369d597 Updated version number for next release.
+0e8a92bd 2007-11-21  David Gilbert  <david.gilbert@object-refinery.com>
+61623cbc 2007-11-19  David Gilbert  <david.gilbert@object-refinery.com>
+d86d986d Added a couple of missing items.
+393e72a2 2007-11-19  David Gilbert  <david.gilbert@object-refinery.com>
+d1dd0639 2007-11-14  David Gilbert  <david.gilbert@object-refinery.com>
+d9bc09aa Tagging JFreeChart 1.0.7.
+070f4e0f 2007-11-14  David Gilbert  <david.gilbert@object-refinery.com>
+ac165d93 Updated release date.
+8ca27c96 2007-11-14  David Gilbert  <david.gilbert@object-refinery.com>
+980ba068 2007-11-13  David Gilbert  <david.gilbert@object-refinery.com>
+3a40254a Fixed Eclipse warning.
+6f070ae1 Fixed Eclipse warning.
+d22463af 2007-11-13  David Gilbert  <david.gilbert@object-refinery.com>
+5d2d979c New tests.
+5949eda2 Added hashCode methods.
+fd8760ec 2007-11-13  David Gilbert  <david.gilbert@object-refinery.com>
+5e70777f Updated tests.
+44192ec2 2007-11-13  David Gilbert  <david.gilbert@pobject-refinery.com>
+ecd699c5 Fixed FindBugs warning.
+9868f51b Added serialization id.
+f9ab1d4a Added serialization id.
+ea777886 Added serialization id.
+c73830dd For serialization.
+52d1a17a Added serialization id.
+38841340 Added serialization id.
+6ef139e1 2007-11-13  David Gilbert  <david.gilbert@object-refinery.com>
+2752cb07 Added serialization id.
+102beb75 Added serialization id.
+aedc4204 Added serialization id.
+6d342673 Added serialization id.
+51c00bf5 Added serialization id.
+e99c8ffb Added serialization id.
+81a42fd1 Added serialization id.
+528195c1 Added serialization ID.
+b620f326 Added serialization ID.
+2ba1a5b9 
+784a516d Added serialization ID.
+8aeac2b9 Added serialVersionUID.
+16ad22eb Fixed checkstyle warnings.
+44164e65 Fixed Checkstyle warning.
+dcee0f87 Fixed Checkstyle warnings.
+c4bfd678 Fixed Checkstyle warning.
+f4ddd6cc Fixed checkstyle warnings.
+c178b364 Fixed Checkstyle warning.
+0c775481 Fixed checkstyle warning.
+27a6a493 Fixed checkstyle warnings.
+659fffe0 Fixed checkstyle warnings.
+c2b2f58b Fixed checkstyle warnings.
+b24e9364 Fixed Checkstyle warnings.
+0b4bc12d Fixed Checkstyle warning.
+15f5ef22 Fixed checkstyle warnings.
+a3dc3c51 Fixed Checkstyle warning.
+4dd04e6a Fixed Checkstyle warnings.
+da133ffd Fixed Checkstyle warning.
+f3fdd636 Fixed Checkstyle warnings.
+c8fc19dd Fixed Checkstyle warnings.
+87d5c374 Fixed Checkstyle warnings.
+318745af Fixed Checkstyle warnings.
+86c262fc Fixed Checkstyle warnings.
+9034cf4a Fixed Checkstyle warning.
+7f7253aa Fixed Checkstyle warning.
+86b66561 Fixed Checkstyle warnings.
+5a5fb05c Fixed Checkstyle warnings.
+6e3471b8 Fixed Checkstyle warnings.
+8824cde6 Fixed Checkstyle warnings.
+face0ecc Fixed Checkstyle warnings.
+8377ef1b Fixed Checkstyle warnings.
+f5ea2822 Fixed Checkstyle warnings.
+aaed6155 Fixed Checkstyle warning.
+dde6f2dc Fixed Checkstyle warnings.
+37091ada Fixed Checkstyle warning.
+139c4ef9 Fixed Checkstyle warnings.
+5cf34f38 Fixed checkstyle warnings.
+4d7bbcca Fixed Checkstyle warnings.
+abf35b0d Fixed Checkstyle warnings.
+18a2e04d Fixed Checkstyle warning.
+e8ff3c2d Fixed checkstyle warning.
+6fe9fc3f Fixed Checkstyle warnings.
+ba94ac8a Fixed Checkstyle warning.
+1b038f00 Fixed Checkstyle warning.
+26fbd13b Fixed Checkstyle warnings.
+6b832de0 Fixed Checkstyle warnings.
+62bd67e0 Fixed Checkstyle warning.
+b155ff67 Fixed Checkstyle warnings.
+0eed89fa Fixed Checkstyle warning.
+3949d99c Fixed Checkstyle warning.
+5f867bd8 Fixed Checkstyle warning.
+3e6e54e0 Fixed Checkstyle warning.
+7e6e9e71 Fixed Checkstyle warning.
+36b53ca2 Fixed Checkstyle warnings.
+98661f81 Fixed Checkstyle warnings.
+f3576f21 Fixed Checkstyle warnings.
+e95aec4a Fixed Checkstyle warning.
+d2813c46 Fixed Checkstyle warnings.
+0c807c69 Added release date.
+7f625671 2007-11-12  David Gilbert  <david.gilbert@object-refinery.com>
+d51ed825 2007-11-12  David Gilbert  <david.gilbert@object-refinery.com>
+4a9ac563 2007-11-12  David Gilbert  <david.gilbert@object-refinery.com>
+204e762d Removed useless comments.
+b4216d5d 2007-11-12  David Gilbert  <david.gilbert@object-refinery.com>
+803057f2 Implemented hashCode().
+004db97e Updated credit for Richard West.
+feaf65b4 Updated credits.
+dac05588 Updated credits for Richard West as per request in patch 1827829.
+c01f63a9 2007-11-12  David Gilbert  <david.gilbert@object-refinery.com>
+76dee32c 2007-11-12  David Gilbert  <david.gilbert@object-refinery.com>
+edd9a410 New hashCode() method.
+36262aa9 2007-11-09  David Gilbert  <david.gilbert@object-refinery.com>
+3e9b35f5 2007-11-09  David Gilbert  <david.gilbert@object-refinery.com>
+ddd0e510 2007-11-07  David Gilbert  <david.gilbert@object-refinery.com>
+0bf0e5d6 Updated JCommon version number.
+1a55408a Fixed Eclipse warnings.
+dd4a7a37 Fixed Eclipse warnings.
+acfeae8a Updated JCommon to 1.0.12.
+b49822fa Fixed Eclipse warning.
+a7762597 Fixed Eclipse warning.
+83398083 Fixed Eclipse warnings.
+3935b302 Fixed Eclipse warning.
+aeecfeeb 2007-11-06  David Gilbert  <david.gilbert@object-refinery.com>
+211f904e Fixed Eclipse warnings.
+389a9245 Fixed Eclipse warning.
+d4066b53 Source formatting.
+89d564ed API doc updates.
+a60ae2f4 2007-11-05  David Gilbert  <david.gilbert@object-refinery.com>
+eec09077 2007-11-05  David Gilbert  <david.gilbert@object-refinery.com>
+89eba697 2007-11-05  David Gilbert  <david.gilbert@object-refinery.com>
+1ecc835a Moved a method in the source file.
+c425d345 2007-11-05  David Gilbert  <david.gilbert@object-refinery.com>
+7f32184e 2007-11-05  David Gilbert  <david.gilbert@object-refinery.com>
+a66bcab7 2007-11-05  David Gilbert  <david.gilbert@object-refinery.com>
+cf1c8745 2007-10-31  David Gilbert  <david.gilbert@object-refinery.com>
+5056b5b9 Renamed 'keyToValueMapping' --> 'indexMap' and fixed Eclipse warnings.
+59cf56f9 Don't import from JCommon.
+43fdd25f The old iText 2.0.6 jar was just the HTML document for the download page. This one is better.
+f6c79435 Old jar needs to be removed.
+08646682 Argh, seems we are using org.jfree.chart.util.SortOrder now instead of the JCommon version.
+75cb1607 This patch improves the performance of the DefaultKeyedValues by replacing the single combined key-value-list with separate lists for keys and values and by adding a key-to-index mapping for faster lookups.
+7adae8ab 2007-10-31  David Gilbert  <david.gilbert@object-refinery.com>
+5f62e4e1 2007-10-31  David Gilbert  <david.gilbert@object-refinery.com>
+ca932947 Line wrapping.
+06afb006 For Javadocs.
+e24fceb4 For Javadocs.
+f9e8b775 2007-10-29  David Gilbert  <david.gilbert@object-refinery.com>
+bcfa72fd 2007-10-29  David Gilbert  <david.gilbert@object-refinery.com>
+00c434bd 2007-10-26  David Gilbert  <david.gilbert@object-refinery.com>
+ef7dfc67 Renamed tests.
+6ff46484 2007-10-25  David Gilbert  <david.gilbert@object-refinery.com>
+f22766d1 Added real itext-2.0.6.jar.
+bed0d2c9 Updated itext to version 2.0.6
+d7d05253 Updated version numbers.
+38aca7ff Removed old JCommon jar file.
+774bdfae Added new JCommon jar file.
+991c3102 Added missing whitespace.
+865d6329 Changed drawBarOutline default to match XYBarRenderer.
+5884d20d 2007-10-25  David Gilbert  <david.gilbert@object-refinery.com>
+747b57d5 2007-10-25  David Gilbert  <david.gilbert@object-refinery.com>
+6e32b706 2007-10-25  David Gilbert  <david.gilbert@object-refinery.com>
+d183223d New tests.
+d87b84c2 2007-10-25  David Gilbert  <david.gilbert@object-refinery.com>
+a7acfdb9 Updated NEWS.
+5e86bb3d New tests.
+ef2156f0 Fixed Eclipse warnings.
+b23114af New tests.
+ef6a8161 New tests.
+a98ffcef 2007-10-25  David Gilbert  <david.gilbert@object-refinery.com>
+15718c25 2007-10-25  David Gilbert  <david.gilbert@object-refinery.com>
+be19b7e5 2007-10-25  David Gilbert  <david.gilbert@object-refinery.com>
+ad55ad5d 2007-10-25  David Gilbert  <david.gilbert@object-refinery.com>
+0b4ea308 Moved experimental DialPlot to main.
+544d3f95 Moved experimental DialPlot to main.
+bd9a5955 Renamed StandardDialFrame --> ArcDialFrame.
+dacb9953 Added new tests.
+9b379dc3 2007-10-24  David Gilbert  <david.gilbert@object-refinery.com>
+6cfbec25 2007-10-24  David Gilbert  <david.gilbert@object-refinery.com>
+34508241 2007-10-24  David Gilbert  <david.gilbert@object-refinery.com>
+4beac8da 2007-10-24  David Gilbert  <david.gilbert@object-refinery.com>
+f49e60ef Deleted - now in JFreeChart demo collection.
+86d2436c 2007-10-24  David Gilbert  <david.gilbert@object-refinery.com>
+c0d34cc6 Moved these demos to the JFreeChart demo collection.
+281e2c97 Updated e-mail address.
+b99bb33d Updated e-mail address.
+84244dd7 Updated e-mail address.
+e0a296f5 Updated e-mail address.
+1f0780c3 Minor API doc fix.
+146212a5 changed email address to henry.proudhon@ensmp.fr
+24e44a9a 2007-10-23  David Gilbert  <david.gilbert@object-refinery.com>
+9455b769 Source reformatting.
+9bcfd2bb 2007-10-23  David Gilbert  <david.gilbert@object-refinery.com>
+e906b7f5 2007-10-23  David Gilbert  <david.gilbert@object-refinery.com>
+a47e02b8 2007-10-23  David Gilbert  <david.gilbert@object-refinery.com>
+dee9eaaa 2007-10-23  David Gilbert  <david.gilbert@object-refinery.com>
+0452e295 2007-10-23  David Gilbert  <david.gilbert@object-refinery.com>
+2ac72c3c Moved methods around in source file.
+41d155db Moved more code and added API doc comments.
+7682f09b Moved code around and added some documentation.
+7d3bb9c6 2007-10-23  David Gilbert  <david.gilbert@object-refinery.com>
+fed29ee4 Updated API docs.
+790e603d Fixed Eclipse warnings.
+690db652 2007-10-23  David Gilbert  <david.gilbert@object-refinery.com>
+b9ffddb0 2007-10-23  David Gilbert  <david.gilbert@object-refinery.com>
+ac26ac9c Update to match JFreeChart coding style.
+a3d09f99 Updated to match JFreeChart coding style.
+20c7036d Tabs to spaces.
+04878fba Tabs to spaces.
+4705b78e 2007-10-22  Henry Proudhon  <henry.proudhon@insa-lyon.fr>
+e066c9d7 2007-10-22  Henry Proudhon  <henry.proudhon@ensmp.fr>
+6896d785 Minor source reformatting.
+5371b14f Removed tabs.
+5585cafb 2007-10-22  Henry Proudhon  <henry.proudhon@insa-lyon.fr>
+35dbdb97 Convert tabs to spaces, to match JFreeChart source code conventions, and for easier comparison to 1.0.x branch.
+c210aaf8 Added argument check.
+dc8723cb Removed CVS $Id tags.
+ba859c5b Removed CVS $Id tags.
+8c0c670d Renamed ScatterRenderer.java.
+81a4b41a Removed CVS $Id tags.
+733ddd9b Removed CVS $Id tags.
+975b42c3 Removed CVS $Id tags.
+7cc34991 Removed CVS $Id tags.
+13818b4a Renamed ScatterRendererTests.java.
+2d63edc6 Small fix.
+180648bd Removed CVS $Id tags.
+0057bbca Removed CVS $Id tags.
+d2efbd15 Removed CVS $Id tags.
+f057d813 Removed CVS $Id tags.
+4aaebe80 Removed CVS $Id tags.
+778ec55b Removed CVS $Id tags.
+ae006429 Removed CVS $Id tags.
+f2c2a430 Removed CVS $Id tags.
+1bbb5cdd Removed CVS $Id tags.
+c9a15de4 Removed CVS $Id tags.
+09cac68b Removed CVS $Id tags.
+fd16bdf5 Removed CVS $Id tags.
+f492e501 Removed CVS $Id tags.
+33c00d77 Removed CVS $Id tags.
+36df848a Removed CVS $Id tags.
+3c264143 2007-10-17  David Gilbert  <david.gilbert@object-refinery.com>
+fbd16ec8 2007-10-17  David Gilbert  <david.gilbert@object-refinery.com>
+4deeb750 2007-10-16  David Gilbert  <david.gilbert@object-refinery.com>
+8428ea58 Don't fail if swtgraphics2d.jar is not present.
+590f99b0 Don't include CHANGELOG.txt anymore, just the more up-to-date ChangeLog file.
+c8bea4bd Removed CVS $Id tags.
+1a87a91f Updated for upcoming release.
+73bdeb13 Updated version numbers.
+24a0a187 Fixed compile error.
+6d4b89e6 Reorganised imports.
+05779cf1 Removed CVS $Id tags.
+9a9ae093 Removed CVS $Id tags.
+d71a24f0 Updated iText from 2.0.2 to 2.0.6
+1a5c01fe 2007-10-16  David Gilbert  <david.gilbert@object-refinery.com>
+df2db865 2007-10-16  David Gilbert  <david.gilbert@object-refinery.com>
+8cb03201 Fixed compositing issues when having both (i) alpha compositing channel and (ii) awt alpha transparent colors. SWT do not handle color transparency (only in the GC) so a composite object must be maintained and appropriately used when setting colors.
+d86cd4d8 Removed CVS $Id tags.
+c7681026 Removed CVS $Id tags.
+2477089e Removed CVS $Id tags.
+4b999221 Removed CVS $Id tags.
+ac1820b5 Removed CVS $Id tags.
+7debbfb2 Removed CVS $Id tags.
+0e3c4d60 Removed CVS $Id tags.
+889782b1 2007-10-11  David Gilbert  <david.gilbert@object-refinery.com>
+dec4c744 Fixed compile error.
+23c37291 2007-10-11  David Gilbert  <david.gilbert@object-refinery.com>
+c33f0b60 2007-10-11  David Gilbert  <david.gilbert@object-refinery.com>
+6895844d 2007-10-11  David Gilbert  <david.gilbert@object-refinery.com>
+40b31e29 Removed CVS $Id tags.
+a7383dec Removed CVS $Id
+26ad6e60 Removed CVS $Id tags.
+84a95770 Removed CVS $Id tags.
+b833e5e8 Removed CVS $Id tags.
+4d6f8f0b Removed CVS $Id tags.
+d54080e0 Removed CVS $Id tags.
+27b09cf0 Removed CVS $Id tags.
+1792ce46 Removed CVS $Id tags.
+ecc89453 Removed CVS $Id tags.
+8d80cd88 Removed CVS $Id tags.
+80cd0447 Removed CVS $Id tags.
+c513e0a0 Removed CVS $Id tags.
+802f009d Removed CVS $Id tags.
+8719ef21 Removed CVS $Id tags.
+98bdde2c Removed CVS $Id tag.
+1eba0e96 Removed CVS $Id tags.
+a1a4a17e Removed CVS $Id tags.
+d1db0d18 Removed CVS $Id tags.
+178c9abd Removed CVS $Id tags.
+d3445848 Removed CVS $Id tags.
+47eab7a9 Updated version number.
+4335ef3a Removed CVS $Id tags.
+13dfaedb Removed CVS $Id tags.
+f3f766a2 Removed CVS $Id tags.
+e6a1c47a Removed CVS $Id tags.
+6ddeedbe Removed CVS $Id tags.
+dbacccde Removed CVS $Id tags.
+f8a2b045 Removed CVS $Id tags.
+724b3c11 Removed CVS $Id tags.
+c6960622 Removed CVS $Id tags.
+3b9d22fd Removed CVS $Id tags.
+0403700a 2007-10-08  David Gilbert  <david.gilbert@object-refinery.com>
+6d5acda8 Updated credits.
+baf3df8e 2007-10-08  David Gilbert  <david.gilbert@object-refinery.com>
+678915db 2007-10-08  David Gilbert  <david.gilbert@object-refinery.com>
+1a41ac1d Reordered imports.
+ad9ae536 Added contributor.
+2fefc81b 2007-10-08  David Gilbert  <david.gilbert@object-refinery.com>
+00cf4c5d Minor API doc update.
+f86e85e6 Minor API doc edit.
+da77dc6f Removed CVS $Id tags.
+4f6183ce Removed CVS $Id tags.
+076a1d2c Added tests for null items in dataset.
+9901db32 2007-10-08	David Gilbert  <david.gilbert@object-refinery.com>
+0729f818 2007-10-08	David Gilbert  <david.gilbert@object-refinery.com>
+38a28943 2007-10-08  David Gilbert  <david.gilbert@object-refinery.com>
+22453a86 2007-10-08  David Gilbert  <david.gilbert@object-refinery.com>
+7b122a7a Updated API docs.
+f9541b85 Removed CVS $Id tags.
+903384d8 Removed CVS $Id tags.
+741e1eb6 Removed CVS $Id tags.
+8c8b2d6f 2007-10-05  David Gilbert  <david.gilbert@object-refinery.com>
+17d6235e 2007-10-05  David Gilbert  <david.gilbert@object-refinery.com>
+b0cb7aee Added missing test.
+b2ed853e Removed CVS $Id tags.
+75c0aba3 Removed CVS $Id tag.
+d254dfe5 Removed CVS $Id tags.
+9161a509 Removed CVS $Id tags.
+d1d08fd3 Removed CVS $Id tags.
+11de5c9c Removed CVS $Id tags.
+0303d64c Removed CVS $Id tags.
+a73aceb5 Removed CVS $Id tags.
+f4261cf5 Removed CVS $Id tags.
+71f9de6e Removed CVS $Id tags.
+1421065e Removed CVS $Id tags.
+f6e38fcd Removed CVS $Id tags.
+5524d314 Removed CVS $Id tags.
+65be8132 Removed CVS $Id tags.
+c2eea9fb Removed CVS $Id tags.
+3df5ae6d Removed CVS $Id tags.
+7288ce7c Removed CVS $Id tags.
+5c08ee5e Removed CVS $Id tags.
+a5aea78c Removed CVS $Id tags.
+7e44730f Removed CVS $Id tags.
+b3bbf5cc Removed CVS $Id tags.
+7aeed4ea Reordered imports.
+ff181d1e Reorganised imports.
+b6280e72 Reorganised imports.
+311daa7b Removed CVS $Id tags.
+f15cceec Removed CVS $Id tags
+014c274e Removed CVS $Id tags.
+f2fc8761 Removed CVS $Id tags.
+0af38b00 Removed CVS $Id tags.
+f707fcc6 Removed CVS $Id tag.
+7935e46f Removed CVS $Id tags.
+a38e9bc4 Updated version number.
+52748c49 Removed CVS $Id tags.
+d1b177fc Removed CVS $Id tags
+90014ad5 Removed demo.
+8f6def87 Missed from previous commit.
+88f7bbee 2007-10-03  David Gilbert  <david.gilbert@object-refinery.com>
+8a8e376f 2007-10-03  David Gilbert  <david.gilbert@object-refinery.com>
+10cd32e6 API doc updates.
+77892067 Removed CVS $Id tags.
+d7f964c0 Removed CVS $Id tags.
+53b2ed30 2007-10-03  David Gilbert  <david.gilbert@object-refinery.com>
+738b6bc5 2007-10-03  David Gilbert  <david.gilbert@object-refinery.com>
+c5d6a2cc Inserted missing braces.
+0b1f1a44 Removed CVS $Id tags.
+87471a51 2007-10-03  David Gilbert  <david.gilbert@object-refinery.com>
+6ecb0253 2007-10-03  David Gilbert  <david.gilbert@object-refinery.com>
+b6953876 2007-10-03  David Gilbert  <david.gilbert@object-refinery.com>
+e6f8e6f1 2007-10-03  David Gilbert  <david.gilbert@object-refinery.com>
+f656d2a0 Removed CVS $Id tags.
+07cd7faa Removed CVS $Id tags.
+c3a4774c Removed CVS $Id tags.
+dda5f7c1 Removed CVS $Id tags.
+32f91def 2007-10-02  David Gilbert  <david.gilbert@object-refinery.com>
+86e70650 2007-10-02  David Gilbert  <david.gilbert@object-refinery.com>
+94c6d473 2007-10-02  David Gilbert  <david.gilbert@object-refinery.com>
+271859cf 2007-10-02  David Gilbert  <david.gilbert@object-refinery.com>
+dffbee0b Removed CVS $Id tags.
+b6019c0d Removed CVS $Id tags.
+f3299588 Removed CVS $Id tags.
+0072f512 Removed CVS $Id tags.
+cfa916e4 Removed CVS $Id tags.
+4e415bfe 2007-09-28  David Gilbert  <david.gilbert@object-refinery.com>
+cdafc683 2007-09-28  David Gilbert  <david.gilbert@object-refinery.com>
+f36f7bdd Removed CVS $Id tags.
+9d43401d 2007-09-28  David Gilbert  <david.gilbert@object-refinery.com>
+7cd21597 Removed CVS $Id tags.
+25a71cb2 Removed CVS id tags.
+45bede21 Removed CVS $Id tags.
+c0fa19c1 Removed CVS $Id tags.
+7545c2c0 Removed CVS $Id tags.
+76d602e0 2007-09-28  David Gilbert  <david.gilbert@object-refinery.com>
+8b4e5e72 2007-09-28  David Gilbert  <david.gilbert@object-refinery.com>
+5f494208 2007-09-27  David Gilbert  <david.gilbert@object-refinery.com>
+c1c2c46d 2007-09-27  David Gilbert  <david.gilbert@object-refinery.com>
+2e488e40 2007-09-27  David Gilbert  <david.gilbert@object-refinery.com>
+848fa853 Fixed bug in clone() method.
+cfa880f0 Missed in last commit.
+e89b2f20 2007-09-27  David Gilbert  <david.gilbert@object-refinery.com>
+48964be6 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+689ddae4 Minor formatting changes.
+82a442b4 Removed trailing whitespace.
+14f431be 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+fdb1ad7a 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+91f7c842 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+ef54422d 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+56ac46c1 Added @since tag.
+638e5dce 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+65869726 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+e3c8606c 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+ca0d8cb6 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+92174316 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+3cec695e 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+a58d64b1 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+ad56337f 2007-09-26  David Gilbert  <david.gilbert@object-refinery.com>
+df12ec74 2007-09-24  David Gilbert  <david.gilbert@object-refinery.com>
+9444eb11 2007-09-24  David Gilbert  <david.gilbert@object-refinery.com>
+7694e1af 2007-09-24  David Gilbert  <david.gilbert@object-refinery.com>
+3572e5ee 2007-09-24  David Gilbert  <david.gilbert@object-refinery.com>
+4334fc2f 2007-09-24  David Gilbert  <david.gilbert@object-refinery.com>
+eaa21d2d Added missing contributor.
+0b0ddbbe 2007-09-24  David Gilbert  <david.gilbert@object-refinery.com>
+b475c7f6 Adding missing contributor.
+cdd6a5d2 2007-09-21  David Gilbert  <david.gilbert@object-refinery.com>
+9aa46ddc 2007-09-21  David Gilbert  <david.gilbert@object-refinery.com>
+3bf9d37b fixed the alpha channel problem (bug 1737869)
+759e952f 2007-08-28  David Gilbert  <david.gilbert@object-refinery.com>
+f4689443 2007-08-28  David Gilbert  <david.gilbert@object-refinery.com>
+1c867e35 2007-08-28  David Gilbert  <david.gilbert@object-refinery.com>
+3444dce4 2007-08-28  David Gilbert  <david.gilbert@object-refinery.com>
+4d905213 
+7a1f31ba 2007-08-03  David Gilbert  <david.gilbert@object-refinery.com>
+59a7cd61 2007-08-03  David Gilbert  <david.gilbert@object-refinery.com>
+649cb0e5 Missed in previous patch.
+56c277f4 Missed in previous patch.
+55de5b7a 2007-08-03  David Gilbert  <david.gilbert@object-refinery.com>
+2757875e 2007-08-03  David Gilbert  <david.gilbert@object-refinery.com>
+72f8c78b 2007-08-03  David Gilbert  <david.gilbert@object-refinery.com>
+cadb5444 2007-08-03  David Gilbert  <david.gilbert@object-refinery.com>
+84d19819 Updates previously missed.
+bb807f03 2007-08-02  David Gilbert  <david.gilbert@object-refinery.com>
+ae1db648 Updated API docs.
+15782933 2007-08-02  David Gilbert  <david.gilbert@object-refinery.com>
+ec9d6833 API docs.
+6cc6d41d Updated API docs.
+07508e76 API docs.
+3db61d6d 2007-07-31  David Gilbert  <david.gilbert@object-refinery.com>
+3bda4d6c 2007-07-31  David Gilbert  <david.gilbert@object-refinery.com>
+9e6322c3 2007-07-31  David Gilbert  <david.gilbert@object-refinery.com>
+823d15fb 2007-07-25  David Gilbert  <david.gilbert@object-refinery.com>
+5b6f789f 2007-07-25  David Gilbert  <david.gilbert@object-refinery.com>
+ae8a6106 2007-07-25  David Gilbert  <david.gilbert@object-refinery.com>
+05db33d8 2007-07-25  David Gilbert  <david.gilbert@object-refinery.com>
+57f620bb 2007-07-25  David Gilbert  <david.gilbert@object-refinery.com>
+5f149efd 2007-07-25  David Gilbert  <david.gilbert@object-refinery.com>
+a203d92b correct mistake in last commit.
+075e0894 pass mouse mouved events to listening ChartMouseListeners.
+366602c0 2007-07-18	David Gilbert  <david.gilbert@object-refinery.com>
+d2448fde Changelog for previous commit.
+8f2ec7bf 2007-07-18	David Gilbert  <david.gilbert@object-refinery.com>
+1131b8fc Removed unnecesary 'final' tags.
+6ca795d4 2007-07-18  David Gilbert  <david.gilbert@object-refinery.com>
+1ff05310 2007-07-18  David Gilbert  <david.gilbert@object-refinery.com>
+64896add implemented SWT alpha channel.
+0374a451 2007-07-11  David Gilbert  <david.gilbert@object-refinery.com>
+e50f86bc improved the mouse event conversion with buttons and modifiers handling, patch sent by Christoph Beck.
+400d2c5e 2007-07-11  David Gilbert  <david.gilbert@object-refinery.com>
+e50a70bc 2007-07-12  David Gilbert  <david.gilbert@object-refinery.com>
+365c6d9e 2007-07-11  David Gilbert  <david.gilbert@object-refinery.com>
+afe0b00c 2007-07-11  David Gilbert  <david.gilbert@object-refinery.com>
+cb5a4135 2007-07-11  David Gilbert  <david.gilbert@object-refinery.com>
+fea95b18 Reformatted.
+6c199e8d Reformatting.
+46925650 2007-07-11  David Gilbert  <david.gilbert@object-refinery.com>
+f2b4a72e Reformatting.
+2b1f6ef5 2007-07-11  David Gilbert  <david.gilbert@object-refinery.com>
+22a0ac19 2007-07-10  David Gilbert  <david.gilbert@object-refinery.com>
+2f70b199 2007-07-10  David Gilbert  <david.gilbert@object-refinery.com>
+0568fe35 Formatting only.
+b0301dd7 2007-07-10  David Gilbert  <david.gilbert@object-refinery.com>
+7eb868e2 2007-07-10  David Gilbert  <david.gilbert@object-refinery.com>
+36a11276 2007-07-10  David Gilbert  <david.gilbert@object-refinery.com>
+f6aaee1e 2007-07-10  David Gilbert  <david.gilbert@object-refinery.com>
+a3e9293e 2007-06-10  David Gilbert  <david.gilbert@object-refinery.com>
+c7317a49 2007-07-06  David Gilbert  <david.gilbert@object-refinery.com>
+e8fde19d 2007-07-06  David Gilbert  <david.gilbert@object-refinery.com>
+7b31152a 2007-07-06  David Gilbert  <david.gilbert@object-refinery.com>
+c460e277 2007-07-06  David Gilbert  <david.gilbert@object-refinery.com>
+89528e55 2007-07-06  David Gilbert  <david.gilbert@object-refinery.com>
+bd252068 2007-07-06  David Gilbert  <david.gilbert@object-refinery.com>
+f6e53056 fixed NPE when autoranging from popup menu.
+33c6cb35 Fixed clipping issues (those were apparent with multiple plot). Also fixed a bug in zooming with multiple plots.
+5f072c51 added add and remove ChartMouseListener methods.
+cd328a7a 2007-07-03  David Gilbert  <david.gilbert@object-refinery.com>
+cd445804 2007-07-02  David Gilbert  <david.gilbert@object-refinery.com>
+7425e9f4 2007-07-02  David Gilbert  <david.gilbert@object-refinery.com>
+9d29796a Updated API doc comment.
+819d363b 2007-07-02  David Gilbert  <david.gilbert@object-refinery.com>
+be8fd5ed 2007-07-02  David Gilbert  <david.gilbert@object-refinery.com>
+615d7372 Don't need gnujaxp.jar anymore, it was only for JDK 1.3.1 support.
+a5119ef9 Clean up.
+6f8f85d3 Branch for 1.0.x (starts with version 1.0.6).
